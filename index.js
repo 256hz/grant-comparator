@@ -2,8 +2,8 @@ const axios = require('axios');
 const { parse } = require('node-html-parser');
 const prompt = require('prompt');
 
-const onError = (message) => {
-  console.log(message);
+const onError = message => {
+  console.error(message);
   process.exit(1);
 }
 
@@ -35,6 +35,8 @@ const run = async () => {
   if (prompt.history('cookie')?.value) console.log('\nenter another grant ID (or hit ctrl-c to exit)\n');
 
   const { grantId, cookie } = await getInputs();
+  // const grantId = '007242'
+  // const cookie = 'PHPSESSID=m2p07v1931cjbhf2mk776vpd67'
 
   if (!cookie) onError('No cookie entered, see readme for instructions');
   if (!grantId) onError('No grant ID found, see readme for instructions');
@@ -97,7 +99,7 @@ const run = async () => {
       }),
     grantTitle,
     grantId: parsedPennResponse.querySelector('#grant_grant_number').getAttribute('value'),
-    institute: parsedPennResponse.querySelector('[value=18]').childNodes[0]._rawText,
+    institute: parsedPennResponse.querySelector('#grant_funding_source option:checked').childNodes[0].text,
     totalCost: parseInt(parsedPennResponse.querySelector('#grant_total_costs')._attrs.value),
     directCost: parseInt(parsedPennResponse.querySelector('#grant_annual_direct_costs')._attrs.value),
     indirectCost: parseInt(parsedPennResponse.querySelector('#grant_total_costs')._attrs.value) - parseInt(parsedPennResponse.querySelector('#grant_annual_direct_costs')._attrs.value),
@@ -172,11 +174,17 @@ const run = async () => {
         if (govt.names.length !== penn.names.length) return true;
 
         for (const { firstName, lastName } of govt.names) {
-          if (!penn.names.find(name => name.firstName === firstName && name.lastName === lastName)) return true;
+          if (!penn.names.find(name => {
+            return name.firstName.toLowerCase() === firstName.toLowerCase() &&
+              name.lastName.toLowerCase() === lastName.toLowerCase()
+          })) return true;
         }
 
         for (const { firstName, lastName } of penn.names) {
-          if (!govt.names.find(name => name.firstName === firstName && name.lastName === lastName)) return true;
+          if (!govt.names.find(name => {
+            return name.firstName.toLowerCase() === firstName.toLowerCase() &&
+              name.lastName.toLowerCase() === lastName.toLowerCase();
+          })) return true;
         }
 
         return false;
@@ -193,11 +201,15 @@ const run = async () => {
   console.log('')
 
   diffs.forEach(key => {
-    console.log(`${key}: ${
-      key.includes('Date')
-        ? new Date(govt[key]).toLocaleString().split(', ')[0]
-        : JSON.stringify(govt[key])
-      }`);
+    const value = (() => {
+      switch(true) {
+        case key.includes('Date'): return new Date(govt[key]).toLocaleString().split(', ')[0];
+        case key === 'names': return govt.names.map(({ firstName, lastName }) => `${lastName}, ${firstName}`).join('; ');
+        default: return JSON.stringify(govt[key])
+      }
+    })();
+    
+    console.log(`${key}: ${value}`);
   })
 
   run();
