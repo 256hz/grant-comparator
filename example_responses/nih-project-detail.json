@@ -1,0 +1,64 @@
+GET https://reporter.nih.gov/services/Projects/ProjectDetail?projectId=9403246
+
+{
+    "appl_id": 9403246,
+    "fiscal_year": 2018,
+    "duns": "042250712",
+    "award_notice_date": "2017-12-06T00:00:00",
+    "department_type": "GENETICS",
+    "organaztion_type": "SCHOOLS OF MEDICINE",
+    "foa": "PAR-13-375",
+    "foa_url": "https://grants.nih.gov/grants/guide/pa-files/PAR-13-375.html",
+    "cfda_code": "847",
+    "po_name": "MARUVADA, PADMA",
+    "po_email": "",
+    "raw_others_pis": null,
+    "has_pi_email": true,
+    "has_po_email": true,
+    "others_pis": [],
+    "budget_start_date": "2017-12-01T00:00:00",
+    "budget_end_date": "2019-11-30T00:00:00",
+    "project_start_date": "2014-12-01T00:00:00",
+    "project_end_date": "2019-11-30T00:00:00",
+    "contact_pi": {
+        "profile_id": 1920269,
+        "first_name": null,
+        "middle_name": null,
+        "last_name": null,
+        "is_contact_pi": true,
+        "full_name": "TISHKOFF, SARAH ANNE",
+        "title": "PROFESSOR",
+        "email": ""
+    },
+    "organization": {
+        "org_name": "UNIVERSITY OF PENNSYLVANIA",
+        "city": "PHILADELPHIA",
+        "country": "UNITED STATES",
+        "fips_country_code": "US"
+    },
+    "admin_ic": {
+        "code": null,
+        "abbreviation": null,
+        "name": "NATIONAL INSTITUTE OF DIABETES AND DIGESTIVE AND KIDNEY DISEASES"
+    },
+    "cong_dist": {
+        "name": null,
+        "number": "03",
+        "code": "PA"
+    },
+    "study_section": {
+        "irg_code": "ZRG1",
+        "sra_designator_code": "EMNR",
+        "sra_flex_code": null,
+        "group_code": null,
+        "name": "Special Emphasis Panel[ZRG1-EMNR-Q(50)R]",
+        "url": "https://public.csr.nih.gov/StudySections/IntegratedReviewGroups/EMNRIRG/Pages/default.aspx",
+        "cmte_id": null,
+        "cluster_irg_code": "EMNR",
+        "properties": {
+            "StudySectionURL": "https://public.csr.nih.gov/StudySections/IntegratedReviewGroups/{0}IRG/Pages/default.aspx",
+            "StudySectionClusterURL": "https://public.csr.nih.gov/StudySections/IntegratedReviewGroups/{0}IRG/{1}/Pages/default.aspx",
+            "PublicRosterURL": "https://public.era.nih.gov/pubroster/standingCommitteRoster.era?CID={0}"
+        }
+    }
+}

@@ -1,0 +1,1123 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="css/psc_formstyles.css" rel="stylesheet" type="text/css" />
+	<script language="javascript" src="inc/JSisDate.js"></script>
+	<title>Maintain&nbsp;Grant</title>
+</head>
+
+<body topmargin=0 leftmargin=0 class=default_text onLoad="javascript: if (self.initialize) { initialize(); }">
+	<FORM NAME='frmMaint' METHOD='post' ACTION='grants_maint.php'>
+		<!-- Maintain&nbsp;Grant is a place holder that will be replaced in page_controller.php with a passed parameter '$page_title' -->
+		<table width="100%" height="53" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="87" height="53"><a onclick="window.location=this.href; return false;"
+						onkeypress="window.location=this.href; return false;"
+						href="mainmenu.php"><img src="images/pop1.jpg" width="87" height="53" border="0" alt="Back to Menu Page" /></a>
+				</td>
+				<td width="100%" valign="bottom" align="left"
+					style="background-image:url(images/headerbg.jpg); background-repeat:repeat-x; background-position:center">
+					<font style="font-size:30px; color:white;">Maintain&nbsp;Grant</font>
+				</td>
+				<td width="360" height="53" align="left"><img src="images/pop3.jpg" width="344" height="53"></td>
+			</tr>
+		</table>
+		<div class=BigBox style='background-color:#abccdd;'>
+			<input type=hidden id=serial name=serial value='2547' /><input type=hidden id=parent name=parent value='' />
+			<div id='disp_error' name='disp_error' class='default_text error' style='padding: 5px 0px 5px 100px;'></div>
+			<script>
+				function tgl_GenInfo(){	var bt = document.getElementById('btnTglGenInfo');	var an = document.getElementById('addnewGenInfo');	var ph = document.getElementById('pnlhdrGenInfo');	var pl = document.getElementById('pnllistGenInfo');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlGenInfo' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>General&nbsp;Information</span>
+						</td>
+						<td><input type='image' id='btnTglGenInfo' name='btnTglGenInfo' src='images/hide.gif' onClick='tgl_GenInfo(); return false;' /></td>
+						<td style='padding-left:10px;'><a
+								href='grant_irb_maint.php?parent=2547&serial=2547'>Maintain&nbsp;IRB</a></td>
+						<td style='padding-left:200px;'>
+							<input type=image src='images/newyear_1.gif' name=btnNewYear value='New Year' onClick="javascript: window.location='grants_newyear.php?serial=2547'; return false;" /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrGenInfo' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>Type</td>
+									<td class=paddedcell id='grant_type__td' name='grant_type__td'>
+										<select id=grant_type name=grant_type class='default_text' style='width:66px;' width='66px'><option value="522">C06</option><option value="523">D43</option><option value="524">D71</option><option value="525">DP1</option><option value="526">F05</option><option value="527">F06</option><option value="528">F30</option><option value="529">F31</option><option value="530">F32</option><option value="531">F33</option><option value="532">F34</option><option value="533">F37</option><option value="534">F38</option><option value="535">G07</option><option value="536">G08</option><option value="537">G11</option><option value="538">G12</option><option value="539">G13</option><option value="540">G20</option><option value="544">H13</option><option value="545">H79</option><option value="541">HD1</option><option value="542">HD5</option><option value="543">HS5</option><option value="547">K01</option><option value="548">K02</option><option value="549">K04</option><option value="550">K05</option><option value="551">K06</option><option value="552">K07</option><option value="553">K08</option><option value="554">K11</option><option value="555">K12</option><option value="556">K14</option><option value="557">K15</option><option value="558">K16</option><option value="559">K17</option><option value="560">K18</option><option value="561">K20</option><option value="562">K21</option><option value="563">K22</option><option value="564">K23</option><option value="565">K24</option><option value="566">K25</option><option value="567">K26</option><option value="568">K30</option><option value="709">K76</option><option value="546">KD1</option><option value="569">L30</option><option value="570">L32</option><option value="571">L40</option><option value="572">L50</option><option value="573">L60</option><option value="574">M01</option><option value="575">N01</option><option value="576">N02</option><option value="577">N03</option><option value="578">N43</option><option value="579">N44</option><option value="580">P01</option><option value="581">P20</option><option value="582">P30</option><option value="583">P40</option><option value="584">P41</option><option value="585">P42</option><option value="586">P50</option><option value="587">P51</option><option value="588">P60</option><option value="589">P79</option><option value="694">PN1</option><option value="692">PN2</option><option value="591" selected>R01</option><option value="592">R03</option><option value="593">R09</option><option value="594">R10</option><option value="595">R13</option><option value="596">R15</option><option value="597">R18</option><option value="598">R21</option><option value="599">R23</option><option value="600">R24</option><option value="601">R25</option><option value="602">R29</option><option value="603">R33</option><option value="604">R34</option><option value="605">R35</option><option value="606">R36</option><option value="607">R37</option><option value="695">R4</option><option value="608">R41</option><option value="609">R42</option><option value="610">R43</option><option value="611">R44</option><option value="701">R49</option><option value="612">R55</option><option value="613">R56</option><option value="614">R84</option><option value="590">RC1</option><option value="699">RC2</option><option value="698">RC4</option><option value="707">RF1</option><option value="615">S03</option><option value="616">S06</option><option value="690">S07</option><option value="617">S07</option><option value="618">S10</option><option value="619">S11</option><option value="620">S14</option><option value="621">S15</option><option value="622">S20</option><option value="623">S21</option><option value="624">S22</option><option value="626">T01</option><option value="627">T06</option><option value="628">T09</option><option value="629">T14</option><option value="630">T15</option><option value="631">T16</option><option value="632">T22</option><option value="633">T26</option><option value="634">T32</option><option value="635">T34</option><option value="636">T35</option><option value="637">T36</option><option value="638">T37</option><option value="639">T90</option><option value="625">TU2</option><option value="655">U01</option><option value="656">U09</option><option value="665">U10</option><option value="666">U13</option><option value="667">U18</option><option value="668">U19</option><option value="657">U1D</option><option value="658">U1E</option><option value="659">U1F</option><option value="660">U1G</option><option value="661">U1H</option><option value="662">U1J</option><option value="663">U1K</option><option value="664">U1S</option><option value="671">U24</option><option value="669">U2R</option><option value="670">U2T</option><option value="672">U41</option><option value="673">U42</option><option value="674">U43</option><option value="675">U44</option><option value="676">U45</option><option value="702">U48</option><option value="677">U54</option><option value="678">U56</option><option value="679">U69</option><option value="680">U76</option><option value="681">U79</option><option value="682">U94</option><option value="683">U95</option><option value="684">U96</option><option value="685">U97</option><option value="686">U98</option><option value="708">UA3</option><option value="704">UB4</option><option value="640">UC1</option><option value="700">UC2</option><option value="641">UC6</option><option value="642">UD1</option><option value="643">UD3</option><option value="644">UD5</option><option value="645">UD7</option><option value="646">UD8</option><option value="647">UD9</option><option value="706">UF1</option><option value="648">UH1</option><option value="705">UH2</option><option value="703">UL1</option><option value="649">UR1</option><option value="696">UR3</option><option value="650">UR4</option><option value="697">UR49</option><option value="651">UR5</option><option value="652">UR6</option><option value="653">UR7</option><option value="654">US2</option><option value="691">X01</option><option value="693">X02</option><option value="687">Y01</option><option value="688">Y02</option><option value="689">Z01</option><option value="9999999"></option></select><span id=grant_type__spanextra name=grant_type__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Number</td>
+									<td class=paddedcell id='grant_grant_number__td' name='grant_grant_number__td'>
+										<input type=text id=grant_grant_number name=grant_grant_number class='default_text' maxlength=25 size=25 value='DK104339' /><span id=grant_grant_number__spanextra name=grant_grant_number__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Curr&nbsp;Year</td>
+									<td class=paddedcell id='grant_curr_yr__td' name='grant_curr_yr__td'>
+										<input type=text id=grant_curr_yr name=grant_curr_yr class='default_text' maxlength=4 size=4 value='5' /><span id=grant_curr_yr__spanextra name=grant_curr_yr__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Supp</td>
+									<td class=paddedcell id='grant_supplement__td' name='grant_supplement__td'>
+										<input type=text id=grant_supplement name=grant_supplement class='default_text' maxlength=6 size=6 value='' /><span id=grant_supplement__spanextra name=grant_supplement__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Pilot</td>
+									<td class=paddedcell id='grant_ispilot__td' name='grant_ispilot__td'>
+										<input type=checkbox id=grant_ispilot name=grant_ispilot class='default_text' value=1 /><span id=grant_ispilot name=grant_ispilot class='default_text' > </span><span id=grant_ispilot__spanextra name=grant_ispilot__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Pilot&nbsp;Year</td>
+									<td class=paddedcell id='grant_pilot_year__td' name='grant_pilot_year__td'>
+										<input type=text id=grant_pilot_year name=grant_pilot_year class='default_text' maxlength=4 size=4 value='0' /><span id=grant_pilot_year__spanextra name=grant_pilot_year__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>Title</td>
+									<td class=paddedcell id='grant_longtitle__td' name='grant_longtitle__td'>
+										<textarea id=grant_longtitle name=grant_longtitle class='default_text' cols=50 rows=4 maxlength=255 >Integrative Nutrigenomic and Metabolomic Analyses of Africans with Variable Diets</textarea><span id=grant_longtitle__spanextra name=grant_longtitle__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>Funding&nbsp;Source</td>
+									<td class=paddedcell id='grant_funding_source__td' name='grant_funding_source__td'>
+										<select id=grant_funding_source name=grant_funding_source class='default_text' style='width:150px;' width='150px'><option value="10000013"></option><option value="10000174">AARP</option><option value="10000092">ABT Associates</option><option value="10000149">Acad de Historia Dominica</option><option value="10000050">Academy of Korean Studies</option><option value="10000185">Adams County/OMHSAS</option><option value="10000236">AE Foundation</option><option value="10000080">Aetna</option><option value="117">AHRQ, DHHS</option><option value="10000110">AHRQ/DHHS, CHOP</option><option value="10000165">Aileen Getty Foundation</option><option value="10000235">ALACRITY</option><option value="10000157">Alz Assoc & Alz Fdn Ameri</option><option value="10000158">Am Council of Learned Soc</option><option value="10000024">Am Ed Research Assoc</option><option value="10000214">Am Inst for Research</option><option value="10000136">Am Nurses Foundation</option><option value="10000014">American Cancer Society</option><option value="10000091">American Diabetes Associa</option><option value="10000243">American Heart Assoc</option><option value="10000246">American Nurse Cred Ctr</option><option value="10000113">American Staffing Assoc</option><option value="10000169">Annie E. Casey Foundation</option><option value="10000162">Arnold Foundation</option><option value="111">ASA</option><option value="26">ATSDR, CDC</option><option value="10000077">Autism Speaks</option><option value="101">Belgian Science Policy</option><option value="88">BFA, NSF</option><option value="89">BFA/BD, NSF</option><option value="90">BFA/DACS, NSF</option><option value="91">BFA/DFM, NSF</option><option value="92">BFA/DGA, NSF</option><option value="93">BFA/DIAS, NSF</option><option value="49">BIO, NSF</option><option value="50">BIO/DBI, NSF</option><option value="52">BIO/DEB, NSF</option><option value="51">BIO/EF, NSF</option><option value="53">BIO/IOB, NSF</option><option value="54">BIO/MCB, NSF</option><option value="10000190">Bloomberg Philanthropies</option><option value="10000225">BMBF</option><option value="10000229">Boettner Center</option><option value="10000040">Boettner Pilot</option><option value="115">Bradley</option><option value="10000215">British Academy</option><option value="10000159">Brocher Foundation</option><option value="10000021">Brookings Institute</option><option value="10000168">Broward County Children</option><option value="10000051">BU/NIH</option><option value="10000223">Burke Fellowship</option><option value="10000196">CAF</option><option value="10000252">CANADA FDN FOR INNOVATION</option><option value="10000020">Canadian IHR</option><option value="10000017">CDC</option><option value="10000195">CEGA, UC Econ Challenge G</option><option value="10000100">Center for Human Appearan</option><option value="10000264">Chan Zuckerberg</option><option value="10000127">Character Lab</option><option value="10000249">Chocolonely Foundation</option><option value="10000217">CHOP</option><option value="55">CISE, NSF</option><option value="56">CISE/CCF, NSF</option><option value="57">CISE/CNS, NSF</option><option value="58">CISE/IIS, NSF</option><option value="10000038">City of Fresno</option><option value="10000039">City of Los Angeles</option><option value="10000164">City of Philadelphia</option><option value="10000248">CLEF</option><option value="10000224">CMMI</option><option value="10000090">CMS</option><option value="10000211">Colum Dev Eco & Innov </option><option value="10000200">Columbia Global Iniatives</option><option value="10000201">Columbia Global Innovatio</option><option value="10000042">Commonwealth Fund of NY</option><option value="10000240">Commonwealth of Kentucky</option><option value="10000194">CONICYT</option><option value="10000193">CONICYT</option><option value="10000035">Conrad Hilton Foundation</option><option value="10000187">Corp for Nat'l/Comm Srvc</option><option value="10000114">Council of St Nurse Board</option><option value="10000082">Ctr for Medicare & Medica</option><option value="10000028">Ctr for Study of E Asia</option><option value="10000085">CVS Caremark</option><option value="10000186">DFID</option><option value="10000041">DHHS</option><option value="10000271">DHUD</option><option value="10000018">DOD</option><option value="10000019">DoE (PA)</option><option value="10000230">Donahue Foundation</option><option value="106">Drexel</option><option value="59">EHR, NSF</option><option value="62">EHR/DGE, NSF</option><option value="65">EHR/DUE, NSF</option><option value="61">EHR/EPSCoR, NSF</option><option value="60">EHR/ESIE, NSF</option><option value="63">EHR/HRD, NSF</option><option value="64">EHR/REC, NSF</option><option value="10000184">Elwyn Seeds</option><option value="10000059">Emory</option><option value="66">ENG, NSF</option><option value="67">ENG/BES, NSF</option><option value="69">ENG/CMS</option><option value="68">ENG/CTS, NSF</option><option value="70">ENG/DMII, NSF</option><option value="71">ENG/ECS, NSF</option><option value="72">ENG/EEC, NSF</option><option value="73">ENG/OII, NSF</option><option value="10000256">EPA</option><option value="27">EPO, CDC</option><option value="10000004">ESRC</option><option value="10000089">ESRC/IFS</option><option value="10000257">ESRC/Oxford</option><option value="10000002">EU</option><option value="10000253">Facebook</option><option value="10000202">Fdn Human Behavior</option><option value="10000096">Federal Reserve</option><option value="10000097">FEMA</option><option value="10000043">FEP Memorial Home</option><option value="2">FIC</option><option value="10000128">Florida State University</option><option value="10000099">Frank Morgan Jones</option><option value="10000054">Gates Foundation</option><option value="10000148">GDN</option><option value="10000250">Genome Canada</option><option value="74">GEO, NSF</option><option value="75">GEO/ATM, NSF</option><option value="76">GEO/EAR, NSF</option><option value="10000239">Gilliam</option><option value="10000061">GLM/LIC</option><option value="10000088">Gordon and Betty Moore Fo</option><option value="10000199">Govt Tamil Nadu</option><option value="10000062">Grand Challenges Canada</option><option value="10000180">Harvard</option><option value="10000209">Harvard Program Global Ag</option><option value="10000117">Helene Fuld Health Trust</option><option value="110">Hewlett</option><option value="10000107">HFSP</option><option value="10000112">Hillman Foundation</option><option value="10000167">Hilton, CA HCF, NY HCF</option><option value="10000045">Hong Kong Research Counci</option><option value="10000069">Horizon Healthcare</option><option value="10000006">HSRD/HRSA</option><option value="10000032">HUD</option><option value="10000166">HUD, MacArthur, BMGF</option><option value="10000068">Humana</option><option value="10000115">HUP</option><option value="10000076">IES</option><option value="10000212">IGC</option><option value="10000147">IKI</option><option value="10000087">InHealth</option><option value="10000060">Inst for New Econ Thinkin</option><option value="10000098">Inst for Res on Poverty</option><option value="10000025">Inter American Dev Bank</option><option value="94">IRM, NSF</option><option value="98">IRM/Academy, NSF</option><option value="95">IRM/DAS, NSF</option><option value="97">IRM/DIS, NSF</option><option value="96">IRM/HRM, NSF</option><option value="10000260">ITMAT</option><option value="10000247">Jacobs Foundation</option><option value="10000005">JFA</option><option value="10000103">John A Hartford Fdn</option><option value="10000150">John Fell Fund/UOxford</option><option value="10000063">John Templeton Foundation</option><option value="10000263">JOI</option><option value="10000206">Jpal</option><option value="10000116">Kaiser Permante</option><option value="10000120">Kellogg Foundation</option><option value="10000244">Kentucky HEALTH Analysis</option><option value="10000175">Khodadad Family</option><option value="10000046">KIPP</option><option value="10000205">LDI CHIBE</option><option value="10000161">LDI Pilot</option><option value="10000012">Leakey Foundation</option><option value="108">MacArthur</option><option value="10000216">Mack Institute</option><option value="10000160">March of Dimes</option><option value="10000065">Marian S. Ware Foundation</option><option value="10000000">MCH</option><option value="10000154">McMillian Ctr Int'l Study</option><option value="10000101">MD Anderson Cancer Center</option><option value="10000074">MD Dept, Human Resources</option><option value="10000073">MD Governor's Office CC&P</option><option value="105">Measey Foundation</option><option value="116">Mellon</option><option value="10000124">Merck Sharp & Dohme</option><option value="10000047">Mich Retire Research Ctr</option><option value="10000226">Michael J. Fox Foundation</option><option value="10000203">Milton Fund</option><option value="10000262">Missouri Foundation for H</option><option value="10000198">MIT SHASS</option><option value="77">MPS, NSF</option><option value="78">MPS/AST, NSF</option><option value="79">MPS/CHE, NSF</option><option value="80">MPS/DMR, NSF</option><option value="81">MPS/DMS, NSF</option><option value="83">MPS/OMA, NSF</option><option value="82">MPS/PHY, NSF</option><option value="10000023">Nat Academy of Education</option><option value="10000135">Nat Res Found Korea</option><option value="10000011">National Geo</option><option value="10000048">NBER</option><option value="10000131">NCATS</option><option value="28">NCBDDD, CDC</option><option value="4">NCCAM</option><option value="29">NCCDPHP, CDC</option><option value="30">NCEH, CDC</option><option value="31">NCHS, CDC</option><option value="32">NCHSTP, CDC</option><option value="3">NCI</option><option value="33">NCID, CDC</option><option value="34">NCIPC, CDC</option><option value="6">NCRR</option><option value="10000152">NDRI</option><option value="7">NEI</option><option value="10000052">Netspar</option><option value="10000266">New York State Energy Res</option><option value="9">NHGRI</option><option value="8">NHLBI</option><option value="10">NIA</option><option value="10000137">NIA/USC</option><option value="11">NIAAA</option><option value="12">NIAID</option><option value="13">NIAMS</option><option value="14">NIBIB</option><option value="15">NICHD</option><option value="19">NIDA</option><option value="16">NIDCD</option><option value="17">NIDCR</option><option value="18" selected>NIDDK</option><option value="20">NIEHS</option><option value="21">NIGMS</option><option value="10000016">NIH</option><option value="10000072">NIJ</option><option value="22">NIMH</option><option value="5">NIMHD</option><option value="23">NINDS</option><option value="24">NINR</option><option value="35">NIOSH, CDC</option><option value="36">NIP, CDC</option><option value="10000111">NJ Gov Council for Med Re</option><option value="25">NLM</option><option value="10000093">NMHHD</option><option value="10000049">Northwestern</option><option value="10000170">Norway Ctr Fertility Heal</option><option value="10000218">Norwegian Research Counci</option><option value="10000258">NSF EF</option><option value="10000238">NSF IIP</option><option value="85">NSF SBE/BCS</option><option value="87">NSF SBE/SES</option><option value="86">NSF SBE/SRS</option><option value="39">NSF, NSB</option><option value="84">NSF, SBE</option><option value="10000207">Nutricia Foundation</option><option value="10000188">NY State Health Fdn</option><option value="10000033">NYC</option><option value="10000081">NYDOH</option><option value="10000182">NYU</option><option value="37">OD, CDC</option><option value="41">OD, NSF</option><option value="42">OD/OCI, NSF</option><option value="43">OD/OEO, NSF</option><option value="44">OD/OGC, NSF</option><option value="45">OD/OIA, NSF</option><option value="46">OD/OISE, NSF</option><option value="47">OD/OLPA, NSF</option><option value="48">OD/OPP, NSF</option><option value="40">OIG, NSF</option><option value="103">ONSF</option><option value="10000075">PA Board Probation & Paro</option><option value="10000015">PA DOH</option><option value="10000109">PADOH/CHOP</option><option value="10000037">Palm Beach County</option><option value="10000008">PARC Pilot</option><option value="10000084">Patient Centered Outcomes</option><option value="10000142">PCORI</option><option value="10000030">Penn</option><option value="112">Penn CFAR</option><option value="10000192">Penn China Engagement Fun</option><option value="10000219">Penn Fels Conference Ini</option><option value="10000221">Penn Fels Re Init Collab</option><option value="10000108">Penn Genome Frontiers</option><option value="10000094">Penn Global Engagement </option><option value="10000057">Penn Global Initiatives</option><option value="113">Penn Institute Urban Res</option><option value="10000058">Penn IOA</option><option value="10000044">Penn IOA</option><option value="10000241">Penn IREF</option><option value="10000267">Penn Kleinman Center</option><option value="10000067">Penn LDI/UPHS</option><option value="10000232">Penn Perelman SOM</option><option value="10000222">Penn Provost Diversity</option><option value="10000261">Penn PWH</option><option value="10000220">Penn SAS Fac Work Grp</option><option value="10000138">Penn SAS Research/Oppor</option><option value="10000070">Penn SON-Global Health</option><option value="107">Penn State Center for Pre</option><option value="10000009">Penn URF</option><option value="99">Penn URF</option><option value="10000265">Penn Vice Provost for Res</option><option value="10000259">Penn Wharton Dean's Fund</option><option value="10000140">Penn Wharton Pub Pol Init</option><option value="10000213">PennSAS Dean's global inq</option><option value="10000245">PennSAS Make a Difference</option><option value="104">Pfizer</option><option value="10000141">PHA</option><option value="38">PHPPO, CDC</option><option value="10000234">Pixatel Systems</option><option value="10000134">Pop Council</option><option value="10000121">Portuguese Foundation</option><option value="10000181">PSC Mentor Award</option><option value="10000007">PSC/NICHD Pilot</option><option value="10000143">PSU</option><option value="10000118">Public Health Foundation </option><option value="10000183">Quartet</option><option value="10000172">Queensland Ministry of He</option><option value="10000126">R.K.Mellon Family</option><option value="10000053">RAND</option><option value="10000106">Royalty Res Fund/UWa</option><option value="10000010">Russell Sage</option><option value="102">RWJF</option><option value="10000144">Sackler Institute</option><option value="10000078">SAMSHA</option><option value="10000269">School of Social Policy</option><option value="10000173">Sigma Theta Tau</option><option value="10000251">SINGAPORE MINISTRY OF EDU</option><option value="10000022">Sloan Foundation</option><option value="10000228">Social Security Administr</option><option value="10000003">Spencer Foundation</option><option value="10000029">SSHRC-Canada</option><option value="10000155">State of Delaware</option><option value="10000139">State of Hawaii</option><option value="10000086">State of Tennessee</option><option value="10000189">Stevens Inst of Technolog</option><option value="10000034">Stoneleigh Center</option><option value="10000125">Strategic Education Resea</option><option value="10000254">Swedish Foundation</option><option value="10000145">Swiss Agency (SDC)</option><option value="10000146">Swiss NSF</option><option value="100">Switzerland FSIO</option><option value="10000204">TAPITMAT</option><option value="10000255">Temple Hoyne Buell Center</option><option value="10000079">Tennessee Insurance Exchg</option><option value="10000122">The Commonwealth Fund</option><option value="10000156">The Cure PSP Foundation</option><option value="10000095">TIAA-CREF</option><option value="10000270">Trinity Wall Street</option><option value="10000130">Turkish Ministry of Healt</option><option value="10000132">UBS Optimus</option><option value="10000208">UChicago Trust</option><option value="10000242">UCSF</option><option value="10000119">UFlorida/Argentinean Res</option><option value="10000133">UK DfID</option><option value="10000268">UK Research and Innovatio</option><option value="114">UMICH</option><option value="10000178">UNC Cancer Center</option><option value="10000177">UNC Royster Society</option><option value="10000056">United Emerites Foundatio</option><option value="10000179">United Health</option><option value="10000064">University of Chicago</option><option value="10000151">University of Lausanne</option><option value="10000071">Upjohn</option><option value="10000176">Urban Health Solutions </option><option value="10000163">US DoJ, OJJDP</option><option value="10000197">USAID</option><option value="10000104">USDA</option><option value="10000231">UWash</option><option value="10000001">VA</option><option value="10000191">VCAN</option><option value="10000123">Vitality Institute</option><option value="10000102">VNSNY</option><option value="10000026">W. T. Grant Foundation</option><option value="10000129">Walton Family Foundation</option><option value="10000233">Warburg Fund</option><option value="10000153">Wash Ctr for Equitable Gr</option><option value="10000227">Washington State HCA</option><option value="10000083">Weight Watchers</option><option value="10000210">Weiss Family Program Fund</option><option value="10000066">Wenner-Gren Foundation</option><option value="10000036">William Penn Foundation</option><option value="10000031">World Bank</option><option value="10000055">Yale</option><option value="109">Zellerbach</option><option value="9999999"></option></select><span id=grant_funding_source__spanextra name=grant_funding_source__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Current&nbsp;Start&nbsp;Date&nbsp;(mm/dd/yyyy)</td>
+									<td class=paddedcell id='grant_curr_start_date__td'
+										name='grant_curr_start_date__td'>
+										<input type=text size=10 id=grant_curr_start_date name=grant_curr_start_date class='default_text' value='12/01/2018' onblur='return JSisDate(this);' /><span id=grant_curr_start_date__spanextra name=grant_curr_start_date__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Current&nbsp;End&nbsp;Date&nbsp;(mm/dd/yyyy)</td>
+									<td class=paddedcell id='grant_curr_end_date__td' name='grant_curr_end_date__td'>
+										<input type=text size=10 id=grant_curr_end_date name=grant_curr_end_date class='default_text' value='11/30/2019' onblur='return JSisDate(this);' /><span id=grant_curr_end_date__spanextra name=grant_curr_end_date__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Proposal&nbsp;Status</td>
+									<td class=paddedcell id='grant_penn_proposal_status__td'
+										name='grant_penn_proposal_status__td'>
+										<select id=grant_penn_proposal_status name=grant_penn_proposal_status class='default_text' style='width:150px;' width='150px'><option value="2">Advance Account</option><option value="16">Award Bridge Year</option><option value="3">Awarded</option><option value="19">Awarded NCE</option><option value="17">Awarded sub-contract to P</option><option value="4" selected>Closed</option><option value="14">Continued into next year</option><option value="5">In Process</option><option value="6">Negotiation</option><option value="7">Negotiation Complete</option><option value="18">No Cost Extension</option><option value="8">Pending</option><option value="15">Pending Resubmission</option><option value="20">Pending-awaiting funding </option><option value="9">Revised Budget Requested</option><option value="10">Under Development</option><option value="11">Under Review</option><option value="12">Unfunded</option><option value="13">Withdrawn</option><option value="9999999">UNKNOWN</option></select><span id=grant_penn_proposal_status__spanextra name=grant_penn_proposal_status__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Project&nbsp;Start&nbsp;Date&nbsp;(mm/dd/yyyy)</td>
+									<td class=paddedcell id='grant_start_date__td' name='grant_start_date__td'>
+										<input type=text size=10 id=grant_start_date name=grant_start_date class='default_text' value='12/01/2014' onblur='return JSisDate(this);' /><span id=grant_start_date__spanextra name=grant_start_date__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Project&nbsp;End&nbsp;Date&nbsp;(mm/dd/yyyy)</td>
+									<td class=paddedcell id='grant_end_date__td' name='grant_end_date__td'>
+										<input type=text size=10 id=grant_end_date name=grant_end_date class='default_text' value='11/30/2019' onblur='return JSisDate(this);' /><span id=grant_end_date__spanextra name=grant_end_date__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>Review&nbsp;Group</td>
+									<td class=paddedcell id='grant_nih_review_grp__td' name='grant_nih_review_grp__td'>
+										<input type=text id=grant_nih_review_grp name=grant_nih_review_grp class='default_text' maxlength=15 size=15 value='' /><span id=grant_nih_review_grp__spanextra name=grant_nih_review_grp__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Priority&nbsp;Score</td>
+									<td class=paddedcell id='grant_nih_prio_scr__td' name='grant_nih_prio_scr__td'>
+										<input type=text id=grant_nih_prio_scr name=grant_nih_prio_scr class='default_text' maxlength=4 size=4 value='0' /><span id=grant_nih_prio_scr__spanextra name=grant_nih_prio_scr__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Current&nbsp;Annual&nbsp;Direct&nbsp;Cost</td>
+									<td class=paddedcell id='grant_annual_direct_costs__td'
+										name='grant_annual_direct_costs__td'>
+										<input type=text id=grant_annual_direct_costs name=grant_annual_direct_costs class='default_text' maxlength=9 size=9 value='265497' /><span id=grant_annual_direct_costs__spanextra name=grant_annual_direct_costs__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Current&nbsp;Total&nbsp;Cost</td>
+									<td class=paddedcell id='grant_total_costs__td' name='grant_total_costs__td'>
+										<input type=text id=grant_total_costs name=grant_total_costs class='default_text' maxlength=9 size=9 value='0' /><span id=grant_total_costs__spanextra name=grant_total_costs__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>Grant&nbsp;Fund&nbsp;Code</td>
+									<td class=paddedcell id='__td' name='__td'>
+										<div class='default_text spacer'>&nbsp;</div>
+										<span id=__spanextra name=__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>CNAC</td>
+									<td class=paddedcell id='grant_budg_cnac__td' name='grant_budg_cnac__td'>
+										<input type=text id=grant_budg_cnac name=grant_budg_cnac class='default_text' maxlength=3 size=3 value='' /><span id=grant_budg_cnac__spanextra name=grant_budg_cnac__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>ORG</td>
+									<td class=paddedcell id='grant_budg_org__td' name='grant_budg_org__td'>
+										<input type=text id=grant_budg_org name=grant_budg_org class='default_text' maxlength=4 size=4 value='' /><span id=grant_budg_org__spanextra name=grant_budg_org__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>BUDGET</td>
+									<td class=paddedcell id='grant_budg_budget__td' name='grant_budg_budget__td'>
+										<input type=text id=grant_budg_budget name=grant_budg_budget class='default_text' maxlength=1 size=1 value='' /><span id=grant_budg_budget__spanextra name=grant_budg_budget__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>FUND</td>
+									<td class=paddedcell id='grant_budg_fund__td' name='grant_budg_fund__td'>
+										<input type=text id=grant_budg_fund name=grant_budg_fund class='default_text' maxlength=6 size=6 value='' /><span id=grant_budg_fund__spanextra name=grant_budg_fund__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>OBJ</td>
+									<td class=paddedcell id='grant_budg_obj__td' name='grant_budg_obj__td'>
+										<input type=text id=grant_budg_obj name=grant_budg_obj class='default_text' maxlength=4 size=4 value='XXXX' /><span id=grant_budg_obj__spanextra name=grant_budg_obj__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PROG</td>
+									<td class=paddedcell id='grant_budg_program__td' name='grant_budg_program__td'>
+										<input type=text id=grant_budg_program name=grant_budg_program class='default_text' maxlength=4 size=4 value='' /><span id=grant_budg_program__spanextra name=grant_budg_program__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>CREF</td>
+									<td class=paddedcell id='grant_pi_cref__td' name='grant_pi_cref__td'>
+										<input type=text id=grant_pi_cref name=grant_pi_cref class='default_text' maxlength=4 size=4 value='' /><span id=grant_pi_cref__spanextra name=grant_pi_cref__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_RelatedPilot(){	var bt = document.getElementById('btnTglRelatedPilot');	var an = document.getElementById('addnewRelatedPilot');	var ph = document.getElementById('pnlhdrRelatedPilot');	var pl = document.getElementById('pnllistRelatedPilot');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlRelatedPilot' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>Related&nbsp;Pilot</span></td>
+						<td><input type='image' id='btnTglRelatedPilot' name='btnTglRelatedPilot' src='images/hide.gif' onClick='tgl_RelatedPilot(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrRelatedPilot' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>
+										Is&nbsp;this&nbsp;related&nbsp;to&nbsp;any&nbsp;pilot&nbsp;project?</td>
+									<td class=paddedcell id='grant_related__td' name='grant_related__td'>
+										<input type=checkbox id=grant_related name=grant_related class='default_text' value=1 /><span id=grant_related name=grant_related class='default_text' > </span><span id=grant_related__spanextra name=grant_related__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>Name&nbsp;of&nbsp;Pilot</td>
+									<td class=paddedcell id='grant_related_name__td' name='grant_related_name__td'>
+										<input type=text id=grant_related_name name=grant_related_name class='default_text' maxlength=255 size=50 value='Biomarkers of Aging in Ethnically Diverse Africans: An Integrative Genomics Analysis' /><span id=grant_related_name__spanextra name=grant_related_name__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Year&nbsp;of&nbsp;Pilot</td>
+									<td class=paddedcell id='grant_related_year__td' name='grant_related_year__td'>
+										<input type=text id=grant_related_year name=grant_related_year class='default_text' maxlength=4 size=4 value='2012' /><span id=grant_related_year__spanextra name=grant_related_year__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_AdditionalRelatedPilots(){	var bt = document.getElementById('btnTglAdditionalRelatedPilots');	var an = document.getElementById('addnewAdditionalRelatedPilots');	var ph = document.getElementById('pnlhdrAdditionalRelatedPilots');	var pl = document.getElementById('pnllistAdditionalRelatedPilots');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlAdditionalRelatedPilots' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>Additional&nbsp;Related&nbsp;Pilots</span>
+						</td>
+						<td><input type='image' id='btnTglAdditionalRelatedPilots' name='btnTglAdditionalRelatedPilots' src='images/hide.gif' onClick='tgl_AdditionalRelatedPilots(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrAdditionalRelatedPilots' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'></td>
+									<td class=paddedcell id='grant_related_long__td' name='grant_related_long__td'>
+										<textarea id=grant_related_long name=grant_related_long class='default_text' cols=150 rows=20 maxlength=4000 ></textarea><span id=grant_related_long__spanextra name=grant_related_long__spanextra class='default_text' ></span>
+									</td>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_Eligibility(){	var bt = document.getElementById('btnTglEligibility');	var an = document.getElementById('addnewEligibility');	var ph = document.getElementById('pnlhdrEligibility');	var pl = document.getElementById('pnllistEligibility');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlEligibility' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'><span class='caption' style='padding: 0px 20px 0px 10px;'>Eligibility</span>
+						</td>
+						<td><input type='image' id='btnTglEligibility' name='btnTglEligibility' src='images/hide.gif' onClick='tgl_Eligibility(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrEligibility' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>PDB Eligible</td>
+									<td class=paddedcell id='grant_dbsr__td' name='grant_dbsr__td'>
+										<input type=checkbox id=grant_dbsr name=grant_dbsr class='default_text' value=1 /><span id=grant_dbsr name=grant_dbsr class='default_text' > </span><span id=grant_dbsr__spanextra name=grant_dbsr__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PARC Eligible</td>
+									<td class=paddedcell id='grant_parc_eligible__td' name='grant_parc_eligible__td'>
+										<input type=checkbox id=grant_parc_eligible name=grant_parc_eligible class='default_text' value=1 /><span id=grant_parc_eligible name=grant_parc_eligible class='default_text' > </span><span id=grant_parc_eligible__spanextra name=grant_parc_eligible__spanextra class='default_text' ></span>
+									</td>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_SubjectAreas(){	var bt = document.getElementById('btnTglSubjectAreas');	var an = document.getElementById('addnewSubjectAreas');	var ph = document.getElementById('pnlhdrSubjectAreas');	var pl = document.getElementById('pnllistSubjectAreas');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlSubjectAreas' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>Subject&nbsp;Areas</span></td>
+						<td><input type='image' id='btnTglSubjectAreas' name='btnTglSubjectAreas' src='images/hide.gif' onClick='tgl_SubjectAreas(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrSubjectAreas' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>Fertility</td>
+									<td class=paddedcell id='grant_subj_fert__td' name='grant_subj_fert__td'>
+										<input type=checkbox id=grant_subj_fert name=grant_subj_fert class='default_text' value=1 /><span id=grant_subj_fert name=grant_subj_fert class='default_text' > </span><span id=grant_subj_fert__spanextra name=grant_subj_fert__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Mortality</td>
+									<td class=paddedcell id='grant_subj_mort__td' name='grant_subj_mort__td'>
+										<input type=checkbox id=grant_subj_mort name=grant_subj_mort class='default_text' value=1 /><span id=grant_subj_mort name=grant_subj_mort class='default_text' > </span><span id=grant_subj_mort__spanextra name=grant_subj_mort__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Migration</td>
+									<td class=paddedcell id='grant_subj_migr__td' name='grant_subj_migr__td'>
+										<input type=checkbox id=grant_subj_migr name=grant_subj_migr class='default_text' value=1 /><span id=grant_subj_migr name=grant_subj_migr class='default_text' > </span><span id=grant_subj_migr__spanextra name=grant_subj_migr__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Endowments</td>
+									<td class=paddedcell id='grant_subj_endow__td' name='grant_subj_endow__td'>
+										<input type=checkbox id=grant_subj_endow name=grant_subj_endow class='default_text' value=1 /><span id=grant_subj_endow name=grant_subj_endow class='default_text' > </span><span id=grant_subj_endow__spanextra name=grant_subj_endow__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Health</td>
+									<td class=paddedcell id='grant_subj_health__td' name='grant_subj_health__td'>
+										<input type=checkbox id=grant_subj_health name=grant_subj_health class='default_text' value=1 /><span id=grant_subj_health name=grant_subj_health class='default_text' > </span><span id=grant_subj_health__spanextra name=grant_subj_health__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Time&nbsp;Use</td>
+									<td class=paddedcell id='grant_subj_time__td' name='grant_subj_time__td'>
+										<input type=checkbox id=grant_subj_time name=grant_subj_time class='default_text' value=1 /><span id=grant_subj_time name=grant_subj_time class='default_text' > </span><span id=grant_subj_time__spanextra name=grant_subj_time__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Wealth</td>
+									<td class=paddedcell id='grant_subj_wealth__td' name='grant_subj_wealth__td'>
+										<input type=checkbox id=grant_subj_wealth name=grant_subj_wealth class='default_text' value=1 /><span id=grant_subj_wealth name=grant_subj_wealth class='default_text' > </span><span id=grant_subj_wealth__spanextra name=grant_subj_wealth__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Marriage&nbsp;and&nbsp;Family</td>
+									<td class=paddedcell id='grant_subj_marrfam__td' name='grant_subj_marrfam__td'>
+										<input type=checkbox id=grant_subj_marrfam name=grant_subj_marrfam class='default_text' value=1 /><span id=grant_subj_marrfam name=grant_subj_marrfam class='default_text' > </span><span id=grant_subj_marrfam__spanextra name=grant_subj_marrfam__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Temporal&nbsp;Processes</td>
+									<td class=paddedcell id='grant_subj_temppro__td' name='grant_subj_temppro__td'>
+										<input type=checkbox id=grant_subj_temppro name=grant_subj_temppro class='default_text' value=1 /><span id=grant_subj_temppro name=grant_subj_temppro class='default_text' > </span><span id=grant_subj_temppro__spanextra name=grant_subj_temppro__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Contexts</td>
+									<td class=paddedcell id='grant_subj_contexts__td' name='grant_subj_contexts__td'>
+										<input type=checkbox id=grant_subj_contexts name=grant_subj_contexts class='default_text' value=1 /><span id=grant_subj_contexts name=grant_subj_contexts class='default_text' > </span><span id=grant_subj_contexts__spanextra name=grant_subj_contexts__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Methods</td>
+									<td class=paddedcell id='grant_subj_methods__td' name='grant_subj_methods__td'>
+										<input type=checkbox id=grant_subj_methods name=grant_subj_methods class='default_text' value=1 /><span id=grant_subj_methods name=grant_subj_methods class='default_text' > </span><span id=grant_subj_methods__spanextra name=grant_subj_methods__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Policy&nbsp;Evaluation</td>
+									<td class=paddedcell id='grant_subj_poleval__td' name='grant_subj_poleval__td'>
+										<input type=checkbox id=grant_subj_poleval name=grant_subj_poleval class='default_text' value=1 /><span id=grant_subj_poleval name=grant_subj_poleval class='default_text' > </span><span id=grant_subj_poleval__spanextra name=grant_subj_poleval__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>International</td>
+									<td class=paddedcell id='grant_subj_internat__td' name='grant_subj_internat__td'>
+										<input type=checkbox id=grant_subj_internat name=grant_subj_internat class='default_text' value=1 /><span id=grant_subj_internat name=grant_subj_internat class='default_text' > </span><span id=grant_subj_internat__spanextra name=grant_subj_internat__spanextra class='default_text' ></span>
+									</td>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_PDB Program Areas(){	var bt = document.getElementById('btnTglPDB Program Areas');	var an = document.getElementById('addnewPDB Program Areas');	var ph = document.getElementById('pnlhdrPDB Program Areas');	var pl = document.getElementById('pnllistPDB Program Areas');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlPDB Program Areas' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>PDB&nbsp;Program&nbsp;Areas</span>
+						</td>
+						<td><input type='image' id='btnTglPDB Program Areas' name='btnTglPDB Program Areas' src='images/hide.gif' onClick='tgl_PDB Program Areas(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrPDB Program Areas' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>Family&nbsp;Demography/Intergenrational&nbsp;Research
+									</td>
+									<td class=paddedcell id='grant_pdb_prog_area_family_demog__td'
+										name='grant_pdb_prog_area_family_demog__td'>
+										<input type=checkbox id=grant_pdb_prog_area_family_demog name=grant_pdb_prog_area_family_demog class='default_text' value=1 /><span id=grant_pdb_prog_area_family_demog name=grant_pdb_prog_area_family_demog class='default_text' > </span><span id=grant_pdb_prog_area_family_demog__spanextra name=grant_pdb_prog_area_family_demog__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Fertility&nbsp;and&nbsp;Infertility</td>
+									<td class=paddedcell id='grant_pdb_prog_area_fert__td'
+										name='grant_pdb_prog_area_fert__td'>
+										<input type=checkbox id=grant_pdb_prog_area_fert name=grant_pdb_prog_area_fert class='default_text' value=1 /><span id=grant_pdb_prog_area_fert name=grant_pdb_prog_area_fert class='default_text' > </span><span id=grant_pdb_prog_area_fert__spanextra name=grant_pdb_prog_area_fert__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Population&nbsp;Compositon</td>
+									<td class=paddedcell id='grant_pdb_prog_area_pop_comp__td'
+										name='grant_pdb_prog_area_pop_comp__td'>
+										<input type=checkbox id=grant_pdb_prog_area_pop_comp name=grant_pdb_prog_area_pop_comp class='default_text' value=1 /><span id=grant_pdb_prog_area_pop_comp name=grant_pdb_prog_area_pop_comp class='default_text' > </span><span id=grant_pdb_prog_area_pop_comp__spanextra name=grant_pdb_prog_area_pop_comp__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Population&nbsp;Economics</td>
+									<td class=paddedcell id='grant_pdb_prog_area_pop_econ__td'
+										name='grant_pdb_prog_area_pop_econ__td'>
+										<input type=checkbox id=grant_pdb_prog_area_pop_econ name=grant_pdb_prog_area_pop_econ class='default_text' value=1 /><span id=grant_pdb_prog_area_pop_econ name=grant_pdb_prog_area_pop_econ class='default_text' > </span><span id=grant_pdb_prog_area_pop_econ__spanextra name=grant_pdb_prog_area_pop_econ__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Population&nbsp;Mobility</td>
+									<td class=paddedcell id='grant_pdb_prog_area_pop_mobi__td'
+										name='grant_pdb_prog_area_pop_mobi__td'>
+										<input type=checkbox id=grant_pdb_prog_area_pop_mobi name=grant_pdb_prog_area_pop_mobi class='default_text' value=1 /><span id=grant_pdb_prog_area_pop_mobi name=grant_pdb_prog_area_pop_mobi class='default_text' > </span><span id=grant_pdb_prog_area_pop_mobi__spanextra name=grant_pdb_prog_area_pop_mobi__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Spacial&nbsp;Demography</td>
+									<td class=paddedcell id='grant_pdb_prog_area_spacial_demog__td'
+										name='grant_pdb_prog_area_spacial_demog__td'>
+										<input type=checkbox id=grant_pdb_prog_area_spacial_demog name=grant_pdb_prog_area_spacial_demog class='default_text' value=1 /><span id=grant_pdb_prog_area_spacial_demog name=grant_pdb_prog_area_spacial_demog class='default_text' > </span><span id=grant_pdb_prog_area_spacial_demog__spanextra name=grant_pdb_prog_area_spacial_demog__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>STD/HIV/AIDS</td>
+									<td class=paddedcell id='grant_pdb_prog_area_std_aids__td'
+										name='grant_pdb_prog_area_std_aids__td'>
+										<input type=checkbox id=grant_pdb_prog_area_std_aids name=grant_pdb_prog_area_std_aids class='default_text' value=1 /><span id=grant_pdb_prog_area_std_aids name=grant_pdb_prog_area_std_aids class='default_text' > </span><span id=grant_pdb_prog_area_std_aids__spanextra name=grant_pdb_prog_area_std_aids__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>
+										Social/Behvioral&nbsp;Research&nbsp;on&nbsp;Reproductive&nbsp;Programs</td>
+									<td class=paddedcell id='grant_pdb_prog_area_soc_reprod__td'
+										name='grant_pdb_prog_area_soc_reprod__td'>
+										<input type=checkbox id=grant_pdb_prog_area_soc_reprod name=grant_pdb_prog_area_soc_reprod class='default_text' value=1 /><span id=grant_pdb_prog_area_soc_reprod name=grant_pdb_prog_area_soc_reprod class='default_text' > </span><span id=grant_pdb_prog_area_soc_reprod__spanextra name=grant_pdb_prog_area_soc_reprod__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>LifeCourse&nbsp;Health</td>
+									<td class=paddedcell id='grant_pdb_prog_area_life_health__td'
+										name='grant_pdb_prog_area_life_health__td'>
+										<input type=checkbox id=grant_pdb_prog_area_life_health name=grant_pdb_prog_area_life_health class='default_text' value=1 /><span id=grant_pdb_prog_area_life_health name=grant_pdb_prog_area_life_health class='default_text' > </span><span id=grant_pdb_prog_area_life_health__spanextra name=grant_pdb_prog_area_life_health__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Adoption/Kinship</td>
+									<td class=paddedcell id='grant_pdb_prog_area_adoption__td'
+										name='grant_pdb_prog_area_adoption__td'>
+										<input type=checkbox id=grant_pdb_prog_area_adoption name=grant_pdb_prog_area_adoption class='default_text' value=1 /><span id=grant_pdb_prog_area_adoption name=grant_pdb_prog_area_adoption class='default_text' > </span><span id=grant_pdb_prog_area_adoption__spanextra name=grant_pdb_prog_area_adoption__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Biopsych/social</td>
+									<td class=paddedcell id='grant_pdb_prog_area_biopsych__td'
+										name='grant_pdb_prog_area_biopsych__td'>
+										<input type=checkbox id=grant_pdb_prog_area_biopsych name=grant_pdb_prog_area_biopsych class='default_text' value=1 /><span id=grant_pdb_prog_area_biopsych name=grant_pdb_prog_area_biopsych class='default_text' > </span><span id=grant_pdb_prog_area_biopsych__spanextra name=grant_pdb_prog_area_biopsych__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Data&nbsp;Sharing</td>
+									<td class=paddedcell id='grant_pdb_prog_area_data_sharing__td'
+										name='grant_pdb_prog_area_data_sharing__td'>
+										<input type=checkbox id=grant_pdb_prog_area_data_sharing name=grant_pdb_prog_area_data_sharing class='default_text' value=1 /><span id=grant_pdb_prog_area_data_sharing name=grant_pdb_prog_area_data_sharing class='default_text' > </span><span id=grant_pdb_prog_area_data_sharing__spanextra name=grant_pdb_prog_area_data_sharing__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_PDB Research Focus: Demography(){	var bt = document.getElementById('btnTglPDB Research Focus: Demography');	var an = document.getElementById('addnewPDB Research Focus: Demography');	var ph = document.getElementById('pnlhdrPDB Research Focus: Demography');	var pl = document.getElementById('pnllistPDB Research Focus: Demography');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlPDB Research Focus: Demography' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>PDB&nbsp;Research&nbsp;Focus:&nbsp;Demography</span>
+						</td>
+						<td><input type='image' id='btnTglPDB Research Focus: Demography' name='btnTglPDB Research Focus: Demography' src='images/hide.gif' onClick='tgl_PDB Research Focus: Demography(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrPDB Research Focus: Demography' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>PDB&nbsp;Fertility</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_fert__td'
+										name='grant_pdb_rsrch_focus_demog_fert__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_fert name=grant_pdb_rsrch_focus_demog_fert class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_fert name=grant_pdb_rsrch_focus_demog_fert class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_fert__spanextra name=grant_pdb_rsrch_focus_demog_fert__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;Mortality&nbsp;and&nbsp;Morbidity</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_mort__td'
+										name='grant_pdb_rsrch_focus_demog_mort__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_mort name=grant_pdb_rsrch_focus_demog_mort class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_mort name=grant_pdb_rsrch_focus_demog_mort class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_mort__spanextra name=grant_pdb_rsrch_focus_demog_mort__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;Migration</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_migr__td'
+										name='grant_pdb_rsrch_focus_demog_migr__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_migr name=grant_pdb_rsrch_focus_demog_migr class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_migr name=grant_pdb_rsrch_focus_demog_migr class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_migr__spanextra name=grant_pdb_rsrch_focus_demog_migr__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>PDB&nbsp;Population&nbsp;Size</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_pop_size__td'
+										name='grant_pdb_rsrch_focus_demog_pop_size__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_pop_size name=grant_pdb_rsrch_focus_demog_pop_size class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_pop_size name=grant_pdb_rsrch_focus_demog_pop_size class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_pop_size__spanextra name=grant_pdb_rsrch_focus_demog_pop_size__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;Population&nbsp;Distribution</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_pop_dist__td'
+										name='grant_pdb_rsrch_focus_demog_pop_dist__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_pop_dist name=grant_pdb_rsrch_focus_demog_pop_dist class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_pop_dist name=grant_pdb_rsrch_focus_demog_pop_dist class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_pop_dist__spanextra name=grant_pdb_rsrch_focus_demog_pop_dist__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;Nuptiality</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_nupt__td'
+										name='grant_pdb_rsrch_focus_demog_nupt__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_nupt name=grant_pdb_rsrch_focus_demog_nupt class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_nupt name=grant_pdb_rsrch_focus_demog_nupt class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_nupt__spanextra name=grant_pdb_rsrch_focus_demog_nupt__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>PDB&nbsp;Family</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_family__td'
+										name='grant_pdb_rsrch_focus_demog_family__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_family name=grant_pdb_rsrch_focus_demog_family class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_family name=grant_pdb_rsrch_focus_demog_family class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_family__spanextra name=grant_pdb_rsrch_focus_demog_family__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;population&nbsp;growth&nbsp;and&nbsp;decline
+									</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_pop_growth__td'
+										name='grant_pdb_rsrch_focus_demog_pop_growth__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_pop_growth name=grant_pdb_rsrch_focus_demog_pop_growth class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_pop_growth name=grant_pdb_rsrch_focus_demog_pop_growth class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_pop_growth__spanextra name=grant_pdb_rsrch_focus_demog_pop_growth__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;causes&nbsp;of&nbsp;demographic&nbsp;change
+									</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_causes_demog_change__td'
+										name='grant_pdb_rsrch_focus_demog_causes_demog_change__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_causes_demog_change name=grant_pdb_rsrch_focus_demog_causes_demog_change class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_causes_demog_change name=grant_pdb_rsrch_focus_demog_causes_demog_change class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_causes_demog_change__spanextra name=grant_pdb_rsrch_focus_demog_causes_demog_change__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>
+										PDB&nbsp;consequences&nbsp;of&nbsp;demographic&nbsp;change</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_conseq_demog_change__td'
+										name='grant_pdb_rsrch_focus_demog_conseq_demog_change__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_conseq_demog_change name=grant_pdb_rsrch_focus_demog_conseq_demog_change class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_conseq_demog_change name=grant_pdb_rsrch_focus_demog_conseq_demog_change class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_conseq_demog_change__spanextra name=grant_pdb_rsrch_focus_demog_conseq_demog_change__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>other</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_demog_other__td'
+										name='grant_pdb_rsrch_focus_demog_other__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_demog_other name=grant_pdb_rsrch_focus_demog_other class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_demog_other name=grant_pdb_rsrch_focus_demog_other class='default_text' > </span><span id=grant_pdb_rsrch_focus_demog_other__spanextra name=grant_pdb_rsrch_focus_demog_other__spanextra class='default_text' ></span>
+									</td>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_PDB Research Focus: Reproductive Health-Behavioral and social science research(){	var bt = document.getElementById('btnTglPDB Research Focus: Reproductive Health-Behavioral and social science research');	var an = document.getElementById('addnewPDB Research Focus: Reproductive Health-Behavioral and social science research');	var ph = document.getElementById('pnlhdrPDB Research Focus: Reproductive Health-Behavioral and social science research');	var pl = document.getElementById('pnllistPDB Research Focus: Reproductive Health-Behavioral and social science research');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlPDB Research Focus: Reproductive Health-Behavioral and social science research'
+				style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>PDB&nbsp;Research&nbsp;Focus:&nbsp;Reproductive&nbsp;Health-Behavioral&nbsp;and&nbsp;social&nbsp;science&nbsp;research</span>
+						</td>
+						<td><input type='image' id='btnTglPDB Research Focus: Reproductive Health-Behavioral and social science research' name='btnTglPDB Research Focus: Reproductive Health-Behavioral and social science research' src='images/hide.gif' onClick='tgl_PDB Research Focus: Reproductive Health-Behavioral and social science research(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrPDB Research Focus: Reproductive Health-Behavioral and social science research'
+				style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>PDB&nbsp;Family&nbsp;planning</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_rep_ssr_family__td'
+										name='grant_pdb_rsrch_focus_rep_ssr_family__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_rep_ssr_family name=grant_pdb_rsrch_focus_rep_ssr_family class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_rep_ssr_family name=grant_pdb_rsrch_focus_rep_ssr_family class='default_text' > </span><span id=grant_pdb_rsrch_focus_rep_ssr_family__spanextra name=grant_pdb_rsrch_focus_rep_ssr_family__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;infertility</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_rep_ssr_infert__td'
+										name='grant_pdb_rsrch_focus_rep_ssr_infert__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_rep_ssr_infert name=grant_pdb_rsrch_focus_rep_ssr_infert class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_rep_ssr_infert name=grant_pdb_rsrch_focus_rep_ssr_infert class='default_text' > </span><span id=grant_pdb_rsrch_focus_rep_ssr_infert__spanextra name=grant_pdb_rsrch_focus_rep_ssr_infert__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;sexually&nbsp;transmitted&nbsp;disease</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_rep_ssr_trans_dis__td'
+										name='grant_pdb_rsrch_focus_rep_ssr_trans_dis__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_rep_ssr_trans_dis name=grant_pdb_rsrch_focus_rep_ssr_trans_dis class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_rep_ssr_trans_dis name=grant_pdb_rsrch_focus_rep_ssr_trans_dis class='default_text' > </span><span id=grant_pdb_rsrch_focus_rep_ssr_trans_dis__spanextra name=grant_pdb_rsrch_focus_rep_ssr_trans_dis__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>PDB&nbsp;HIV/AIDS</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_rep_ssr_hiv_aids__td'
+										name='grant_pdb_rsrch_focus_rep_ssr_hiv_aids__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_rep_ssr_hiv_aids name=grant_pdb_rsrch_focus_rep_ssr_hiv_aids class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_rep_ssr_hiv_aids name=grant_pdb_rsrch_focus_rep_ssr_hiv_aids class='default_text' > </span><span id=grant_pdb_rsrch_focus_rep_ssr_hiv_aids__spanextra name=grant_pdb_rsrch_focus_rep_ssr_hiv_aids__spanextra class='default_text' ></span>
+									</td>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_PDB Research Focus: Population Health at the population level(){	var bt = document.getElementById('btnTglPDB Research Focus: Population Health at the population level');	var an = document.getElementById('addnewPDB Research Focus: Population Health at the population level');	var ph = document.getElementById('pnlhdrPDB Research Focus: Population Health at the population level');	var pl = document.getElementById('pnllistPDB Research Focus: Population Health at the population level');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlPDB Research Focus: Population Health at the population level' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>PDB&nbsp;Research&nbsp;Focus:&nbsp;Population&nbsp;Health&nbsp;at&nbsp;the&nbsp;population&nbsp;level</span>
+						</td>
+						<td><input type='image' id='btnTglPDB Research Focus: Population Health at the population level' name='btnTglPDB Research Focus: Population Health at the population level' src='images/hide.gif' onClick='tgl_PDB Research Focus: Population Health at the population level(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrPDB Research Focus: Population Health at the population level' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>PDB&nbsp;Human&nbsp;Health</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_phpl_human_health__td'
+										name='grant_pdb_rsrch_focus_phpl_human_health__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_phpl_human_health name=grant_pdb_rsrch_focus_phpl_human_health class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_phpl_human_health name=grant_pdb_rsrch_focus_phpl_human_health class='default_text' > </span><span id=grant_pdb_rsrch_focus_phpl_human_health__spanextra name=grant_pdb_rsrch_focus_phpl_human_health__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;Human&nbsp;Productivity</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_phpl_human_prod__td'
+										name='grant_pdb_rsrch_focus_phpl_human_prod__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_phpl_human_prod name=grant_pdb_rsrch_focus_phpl_human_prod class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_phpl_human_prod name=grant_pdb_rsrch_focus_phpl_human_prod class='default_text' > </span><span id=grant_pdb_rsrch_focus_phpl_human_prod__spanextra name=grant_pdb_rsrch_focus_phpl_human_prod__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;Human&nbsp;Behavior</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_phpl_human_behav__td'
+										name='grant_pdb_rsrch_focus_phpl_human_behav__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_phpl_human_behav name=grant_pdb_rsrch_focus_phpl_human_behav class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_phpl_human_behav name=grant_pdb_rsrch_focus_phpl_human_behav class='default_text' > </span><span id=grant_pdb_rsrch_focus_phpl_human_behav__spanextra name=grant_pdb_rsrch_focus_phpl_human_behav__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>PDB&nbsp;Human&nbsp;Development</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_phpl_human_devel__td'
+										name='grant_pdb_rsrch_focus_phpl_human_devel__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_phpl_human_devel name=grant_pdb_rsrch_focus_phpl_human_devel class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_phpl_human_devel name=grant_pdb_rsrch_focus_phpl_human_devel class='default_text' > </span><span id=grant_pdb_rsrch_focus_phpl_human_devel__spanextra name=grant_pdb_rsrch_focus_phpl_human_devel__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;statistics-statistic&nbsp;modeling</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_phpl_stat_model__td'
+										name='grant_pdb_rsrch_focus_phpl_stat_model__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_phpl_stat_model name=grant_pdb_rsrch_focus_phpl_stat_model class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_phpl_stat_model name=grant_pdb_rsrch_focus_phpl_stat_model class='default_text' > </span><span id=grant_pdb_rsrch_focus_phpl_stat_model__spanextra name=grant_pdb_rsrch_focus_phpl_stat_model__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;gene/environment&nbsp;interactions</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_phpl_env_inter__td'
+										name='grant_pdb_rsrch_focus_phpl_env_inter__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_phpl_env_inter name=grant_pdb_rsrch_focus_phpl_env_inter class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_phpl_env_inter name=grant_pdb_rsrch_focus_phpl_env_inter class='default_text' > </span><span id=grant_pdb_rsrch_focus_phpl_env_inter__spanextra name=grant_pdb_rsrch_focus_phpl_env_inter__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>PDB&nbsp;Policy&nbsp;experiments</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_phpl_poli_exp__td'
+										name='grant_pdb_rsrch_focus_phpl_poli_exp__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_phpl_poli_exp name=grant_pdb_rsrch_focus_phpl_poli_exp class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_phpl_poli_exp name=grant_pdb_rsrch_focus_phpl_poli_exp class='default_text' > </span><span id=grant_pdb_rsrch_focus_phpl_poli_exp__spanextra name=grant_pdb_rsrch_focus_phpl_poli_exp__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>PDB&nbsp;Natural&nbsp;experiments</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_phpl_nat_exp__td'
+										name='grant_pdb_rsrch_focus_phpl_nat_exp__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_phpl_nat_exp name=grant_pdb_rsrch_focus_phpl_nat_exp class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_phpl_nat_exp name=grant_pdb_rsrch_focus_phpl_nat_exp class='default_text' > </span><span id=grant_pdb_rsrch_focus_phpl_nat_exp__spanextra name=grant_pdb_rsrch_focus_phpl_nat_exp__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Other</td>
+									<td class=paddedcell id='grant_pdb_rsrch_focus_phpl_other__td'
+										name='grant_pdb_rsrch_focus_phpl_other__td'>
+										<input type=checkbox id=grant_pdb_rsrch_focus_phpl_other name=grant_pdb_rsrch_focus_phpl_other class='default_text' value=1 /><span id=grant_pdb_rsrch_focus_phpl_other name=grant_pdb_rsrch_focus_phpl_other class='default_text' > </span><span id=grant_pdb_rsrch_focus_phpl_other__spanextra name=grant_pdb_rsrch_focus_phpl_other__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_PARC Research Focus(){	var bt = document.getElementById('btnTglPARC Research Focus');	var an = document.getElementById('addnewPARC Research Focus');	var ph = document.getElementById('pnlhdrPARC Research Focus');	var pl = document.getElementById('pnllistPARC Research Focus');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlPARC Research Focus' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>PARC&nbsp;Research&nbsp;Focus</span>
+						</td>
+						<td><input type='image' id='btnTglPARC Research Focus' name='btnTglPARC Research Focus' src='images/hide.gif' onClick='tgl_PARC Research Focus(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrPARC Research Focus' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'>Biology&nbsp;of&nbsp;Aging</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_bio_age__td'
+										name='grant_parc_rsrch_focus_bio_age__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_bio_age name=grant_parc_rsrch_focus_bio_age class='default_text' value=1 /><span id=grant_parc_rsrch_focus_bio_age name=grant_parc_rsrch_focus_bio_age class='default_text' > </span><span id=grant_parc_rsrch_focus_bio_age__spanextra name=grant_parc_rsrch_focus_bio_age__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Genetics&nbsp;of&nbsp;Aging</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_gene_age__td'
+										name='grant_parc_rsrch_focus_gene_age__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_gene_age name=grant_parc_rsrch_focus_gene_age class='default_text' value=1 /><span id=grant_parc_rsrch_focus_gene_age name=grant_parc_rsrch_focus_gene_age class='default_text' > </span><span id=grant_parc_rsrch_focus_gene_age__spanextra name=grant_parc_rsrch_focus_gene_age__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Demography&nbsp;of&nbsp;Aging</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_demog_age__td'
+										name='grant_parc_rsrch_focus_demog_age__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_demog_age name=grant_parc_rsrch_focus_demog_age class='default_text' value=1 /><span id=grant_parc_rsrch_focus_demog_age name=grant_parc_rsrch_focus_demog_age class='default_text' > </span><span id=grant_parc_rsrch_focus_demog_age__spanextra name=grant_parc_rsrch_focus_demog_age__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Consequences&nbsp;of&nbsp;US&nbsp;Aging</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_cons_us_age__td'
+										name='grant_parc_rsrch_focus_cons_us_age__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_cons_us_age name=grant_parc_rsrch_focus_cons_us_age class='default_text' value=1 /><span id=grant_parc_rsrch_focus_cons_us_age name=grant_parc_rsrch_focus_cons_us_age class='default_text' > </span><span id=grant_parc_rsrch_focus_cons_us_age__spanextra name=grant_parc_rsrch_focus_cons_us_age__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Consequences&nbsp;of&nbsp;Global&nbsp;Aging</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_cons_glob_age__td'
+										name='grant_parc_rsrch_focus_cons_glob_age__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_cons_glob_age name=grant_parc_rsrch_focus_cons_glob_age class='default_text' value=1 /><span id=grant_parc_rsrch_focus_cons_glob_age name=grant_parc_rsrch_focus_cons_glob_age class='default_text' > </span><span id=grant_parc_rsrch_focus_cons_glob_age__spanextra name=grant_parc_rsrch_focus_cons_glob_age__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Determinants&nbsp;of&nbsp;Health</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_det_health__td'
+										name='grant_parc_rsrch_focus_det_health__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_det_health name=grant_parc_rsrch_focus_det_health class='default_text' value=1 /><span id=grant_parc_rsrch_focus_det_health name=grant_parc_rsrch_focus_det_health class='default_text' > </span><span id=grant_parc_rsrch_focus_det_health__spanextra name=grant_parc_rsrch_focus_det_health__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Determinants&nbsp;of&nbsp;Well-Being</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_det_wbeing__td'
+										name='grant_parc_rsrch_focus_det_wbeing__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_det_wbeing name=grant_parc_rsrch_focus_det_wbeing class='default_text' value=1 /><span id=grant_parc_rsrch_focus_det_wbeing name=grant_parc_rsrch_focus_det_wbeing class='default_text' > </span><span id=grant_parc_rsrch_focus_det_wbeing__spanextra name=grant_parc_rsrch_focus_det_wbeing__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Determinants&nbsp;of&nbsp;Longevity</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_det_long__td'
+										name='grant_parc_rsrch_focus_det_long__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_det_long name=grant_parc_rsrch_focus_det_long class='default_text' value=1 /><span id=grant_parc_rsrch_focus_det_long name=grant_parc_rsrch_focus_det_long class='default_text' > </span><span id=grant_parc_rsrch_focus_det_long__spanextra name=grant_parc_rsrch_focus_det_long__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>
+										Effects&nbsp;of&nbsp;Interventions&nbsp;on&nbsp;Population&nbsp;Health</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_eff_pop_health__td'
+										name='grant_parc_rsrch_focus_eff_pop_health__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_eff_pop_health name=grant_parc_rsrch_focus_eff_pop_health class='default_text' value=1 /><span id=grant_parc_rsrch_focus_eff_pop_health name=grant_parc_rsrch_focus_eff_pop_health class='default_text' > </span><span id=grant_parc_rsrch_focus_eff_pop_health__spanextra name=grant_parc_rsrch_focus_eff_pop_health__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Health&nbsp;Trends</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_health_trend__td'
+										name='grant_parc_rsrch_focus_health_trend__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_health_trend name=grant_parc_rsrch_focus_health_trend class='default_text' value=1 /><span id=grant_parc_rsrch_focus_health_trend name=grant_parc_rsrch_focus_health_trend class='default_text' > </span><span id=grant_parc_rsrch_focus_health_trend__spanextra name=grant_parc_rsrch_focus_health_trend__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Health&nbsp;Disparities</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_health_disp__td'
+										name='grant_parc_rsrch_focus_health_disp__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_health_disp name=grant_parc_rsrch_focus_health_disp class='default_text' value=1 /><span id=grant_parc_rsrch_focus_health_disp name=grant_parc_rsrch_focus_health_disp class='default_text' > </span><span id=grant_parc_rsrch_focus_health_disp__spanextra name=grant_parc_rsrch_focus_health_disp__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Population&nbsp;Forcasting</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_pop_forc__td'
+										name='grant_parc_rsrch_focus_pop_forc__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_pop_forc name=grant_parc_rsrch_focus_pop_forc class='default_text' value=1 /><span id=grant_parc_rsrch_focus_pop_forc name=grant_parc_rsrch_focus_pop_forc class='default_text' > </span><span id=grant_parc_rsrch_focus_pop_forc__spanextra name=grant_parc_rsrch_focus_pop_forc__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Economic&nbsp;Forcasting</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_econ_forc__td'
+										name='grant_parc_rsrch_focus_econ_forc__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_econ_forc name=grant_parc_rsrch_focus_econ_forc class='default_text' value=1 /><span id=grant_parc_rsrch_focus_econ_forc name=grant_parc_rsrch_focus_econ_forc class='default_text' > </span><span id=grant_parc_rsrch_focus_econ_forc__spanextra name=grant_parc_rsrch_focus_econ_forc__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Health&nbsp;Forcasting</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_health_forc__td'
+										name='grant_parc_rsrch_focus_health_forc__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_health_forc name=grant_parc_rsrch_focus_health_forc class='default_text' value=1 /><span id=grant_parc_rsrch_focus_health_forc name=grant_parc_rsrch_focus_health_forc class='default_text' > </span><span id=grant_parc_rsrch_focus_health_forc__spanextra name=grant_parc_rsrch_focus_health_forc__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Early&nbsp;Life&nbsp;Conditions</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_early_life_cond__td'
+										name='grant_parc_rsrch_focus_early_life_cond__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_early_life_cond name=grant_parc_rsrch_focus_early_life_cond class='default_text' value=1 /><span id=grant_parc_rsrch_focus_early_life_cond name=grant_parc_rsrch_focus_early_life_cond class='default_text' > </span><span id=grant_parc_rsrch_focus_early_life_cond__spanextra name=grant_parc_rsrch_focus_early_life_cond__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Older&nbsp;Adult&nbsp;Health</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_older_health__td'
+										name='grant_parc_rsrch_focus_older_health__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_older_health name=grant_parc_rsrch_focus_older_health class='default_text' value=1 /><span id=grant_parc_rsrch_focus_older_health name=grant_parc_rsrch_focus_older_health class='default_text' > </span><span id=grant_parc_rsrch_focus_older_health__spanextra name=grant_parc_rsrch_focus_older_health__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Older&nbsp;Adult&nbsp;Behavior</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_older_behav__td'
+										name='grant_parc_rsrch_focus_older_behav__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_older_behav name=grant_parc_rsrch_focus_older_behav class='default_text' value=1 /><span id=grant_parc_rsrch_focus_older_behav name=grant_parc_rsrch_focus_older_behav class='default_text' > </span><span id=grant_parc_rsrch_focus_older_behav__spanextra name=grant_parc_rsrch_focus_older_behav__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Older&nbsp;Adult&nbsp;Well-Being</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_older_wb__td'
+										name='grant_parc_rsrch_focus_older_wb__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_older_wb name=grant_parc_rsrch_focus_older_wb class='default_text' value=1 /><span id=grant_parc_rsrch_focus_older_wb name=grant_parc_rsrch_focus_older_wb class='default_text' > </span><span id=grant_parc_rsrch_focus_older_wb__spanextra name=grant_parc_rsrch_focus_older_wb__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+								<tr>
+									<td class='paddedcell label'>Health&nbsp;Policy, Pensions and Retirement</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_health_ppp__td'
+										name='grant_parc_rsrch_focus_health_ppp__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_health_ppp name=grant_parc_rsrch_focus_health_ppp class='default_text' value=1 /><span id=grant_parc_rsrch_focus_health_ppp name=grant_parc_rsrch_focus_health_ppp class='default_text' > </span><span id=grant_parc_rsrch_focus_health_ppp__spanextra name=grant_parc_rsrch_focus_health_ppp__spanextra class='default_text' ></span>
+									</td>
+									<td class='paddedcell label'>Pensions&nbsp;and&nbsp;Retirement</td>
+									<td class=paddedcell id='grant_parc_rsrch_focus_pens_ret__td'
+										name='grant_parc_rsrch_focus_pens_ret__td'>
+										<input type=checkbox id=grant_parc_rsrch_focus_pens_ret name=grant_parc_rsrch_focus_pens_ret class='default_text' value=1 /><span id=grant_parc_rsrch_focus_pens_ret name=grant_parc_rsrch_focus_pens_ret class='default_text' > </span><span id=grant_parc_rsrch_focus_pens_ret__spanextra name=grant_parc_rsrch_focus_pens_ret__spanextra class='default_text' ></span>
+									</td>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_Abstract(){	var bt = document.getElementById('btnTglAbstract');	var an = document.getElementById('addnewAbstract');	var ph = document.getElementById('pnlhdrAbstract');	var pl = document.getElementById('pnllistAbstract');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlAbstract' style='WIDTH:630px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'><span class='caption' style='padding: 0px 20px 0px 10px;'>Abstract</span></td>
+						<td><input type='image' id='btnTglAbstract' name='btnTglAbstract' src='images/hide.gif' onClick='tgl_Abstract(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrAbstract' style='WIDTH:630px;'>
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td class='paddedcell label'></td>
+									<td class=paddedcell id='grant_abstract_text__td' name='grant_abstract_text__td'>
+										<textarea id=grant_abstract_text name=grant_abstract_text class='default_text' cols=150 rows=20 maxlength=4000 >Perform untargeted and targeted metabolomic profiling in a sample of 1500 ethnically diverse Africans to identify differences in metabolites an metabolic pathways that correlate with diet and anthropometric and cardiovascular phenotypes associated with disease risk. We will integrate these data with a large genomic dataset collected in the same individuals to gain insight into how genetic, nutritional and other environmental factors contribute to variation in cardiometabolic risk traits in ethnically diverse African populations.</textarea><span id=grant_abstract_text__spanextra name=grant_abstract_text__spanextra class='default_text' ></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='default_text spacer'>&nbsp;</div>
+			<input type=image src='images/save_small.gif' name=btnSave value='  Save  ' onClick="javascript: return validateFields();" /><input type=image src='images/cancel_small.gif' name=btnCancel value='Cancel'' /><input type=image src='images/delete_small.gif' name=btnDelete value='Delete' style='padding-left:20px;' onClick="javascript: return confirm('Are you sure you want to delete this record?');" />
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_clcn(){	var bt = document.getElementById('btnTglclcn');	var an = document.getElementById('addnewclcn');	var ph = document.getElementById('pnlhdrclcn');	var pl = document.getElementById('pnllistclcn');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlclcn' style='WIDTH:800px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>Collaborating&nbsp;Countries</span><span id='addnewclcn' name='addnewclcn' class='default_text' style='font-style:italic;'><a href='javascript: window.location="collabcountries.php?parent=2547";'>Add New</a></span>
+						</td>
+						<td><input type='image' id='btnTglclcn' name='btnTglclcn' src='images/hide.gif' onClick='tgl_clcn(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrclcn' style='WIDTH:800px;'>
+				<table cellspacing='0' id='grdclcn' style='border-collapse:collapse;'>
+					<tr>
+						<td class='paddedcell label' width='150px''>Country</td><td class=' paddedcell label'
+							width='125px''>Full&nbsp;Name</td><td class=' paddedcell label'
+							width='125px''>Capital</td><td class=' paddedcell label'
+							width='100px''>Subregion</td><td class=' paddedcell label'
+							width='100px''>Region</td><td class=' paddedcell label' width=100px>&nbsp;</td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnllistclcn' style='overflow: auto; width:800px; max-height:50px;'>
+				<table cellspacing='0' id='grdclcn' style='border-collapse:collapse;'></table>
+			</DIV>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_perf(){	var bt = document.getElementById('btnTglperf');	var an = document.getElementById('addnewperf');	var ph = document.getElementById('pnlhdrperf');	var pl = document.getElementById('pnllistperf');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlperf' style='WIDTH:500px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>Performance&nbsp;Sites</span><span id='addnewperf' name='addnewperf' class='default_text' style='font-style:italic;'><a href='javascript: window.location="performancesites.php?parent=2547";'>Add New</a></span>
+						</td>
+						<td><input type='image' id='btnTglperf' name='btnTglperf' src='images/hide.gif' onClick='tgl_perf(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrperf' style='WIDTH:500px;'>
+				<table cellspacing='0' id='grdperf' style='border-collapse:collapse;'>
+					<tr>
+						<td class='paddedcell label' width='600px''>Site</td><td class=' paddedcell label' width=100px>
+							&nbsp;</td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnllistperf' style='overflow: auto; width:500px; max-height:50px;'>
+				<table cellspacing='0' id='grdperf' style='border-collapse:collapse;'></table>
+			</DIV>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script>
+				function tgl_grant_roles(){	var bt = document.getElementById('btnTglgrant_roles');	var an = document.getElementById('addnewgrant_roles');	var ph = document.getElementById('pnlhdrgrant_roles');	var pl = document.getElementById('pnllistgrant_roles');	if(ph.style.display=='none')	{		if (bt!=null) { bt.src = 'images/hide.gif'; }		if (an!=null) { an.style.display='inline'; }		if (ph!=null) { ph.style.display='block'; }		if (pl!=null) { pl.style.display='block'; }	} else {		if (bt!=null) { bt.src = 'images/show.gif'; }		if (an!=null) { an.style.display='none'; }		if (ph!=null) { ph.style.display='none'; }		if (pl!=null) { pl.style.display='none'; }	}}
+			</script>
+			<DIV id='pnlgrant_roles' style='WIDTH:700px;'>
+				<table width=100%>
+					<tr>
+						<td width='300px'>
+							<span class='caption' style='padding: 0px 20px 0px 10px;'>Key&nbsp;Personnel</span><span id='addnewgrant_roles' name='addnewgrant_roles' class='default_text' style='font-style:italic;'><a href='javascript: window.location="keypersonnel.php?parent=2547";'>Add New</a></span>
+						</td>
+						<td><input type='image' id='btnTglgrant_roles' name='btnTglgrant_roles' src='images/hide.gif' onClick='tgl_grant_roles(); return false;' /></td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnlhdrgrant_roles' style='WIDTH:700px;'>
+				<table cellspacing='0' id='grdgrant_roles' style='border-collapse:collapse;'>
+					<tr>
+						<td class='paddedcell label' width='200px''>Person</td><td class=' paddedcell label'
+							width='100px''>Role</td><td class=' paddedcell label' width='60px''>Months</td><td class='
+							paddedcell label' width='60px''>Month&nbsp;Basis</td><td class=' paddedcell label'
+							width=100px>&nbsp;</td>
+					</tr>
+				</table>
+			</DIV>
+			<DIV id='pnllistgrant_roles' style='overflow: auto; width:700px; max-height:60px;'>
+				<table cellspacing='0' id='grdgrant_roles' style='border-collapse:collapse;'>
+					<tr>
+						<td class=paddedcell width='200px'><a
+								href='javascript: window.location="keypersonnel.php?parent=2547&serial=3910";'><span id=fullname name=fullname class='default_text' >Tishkoff, Sarah</span><span id=fullname__spanextra name=fullname__spanextra class='default_text' ></span></a>
+						</td>
+						<td class=paddedcell width='100px'>
+							<span id=g_r_n_shortname name=g_r_n_shortname class='default_text' >Pilot PI</span><span id=g_r_n_shortname__spanextra name=g_r_n_shortname__spanextra class='default_text' ></span>
+						</td>
+						<td class=paddedcell width='60px'>
+							<span id=grant_roles_personmonths name=grant_roles_personmonths class='default_text' >0.00</span><span id=grant_roles_personmonths__spanextra name=grant_roles_personmonths__spanextra class='default_text' ></span>
+						</td>
+						<td class=paddedcell width='60px'>
+							<span id=grant_roles_basisyear name=grant_roles_basisyear class='default_text' >3</span><span id=grant_roles_basisyear__spanextra name=grant_roles_basisyear__spanextra class='default_text' ></span>
+						</td>
+						<td class=paddedcell><a href="keypersonnel.php?parent=2547&serial=3910&childDelete=D"
+								onClick="javascript: return confirm('Are you sure you want to delete this record?');">Delete</a>
+						</td>
+					</tr>
+				</table>
+			</DIV>
+			<div class='default_text spacer'>&nbsp;</div>
+			<script language="javascript" src="inc/ajax.js"></script>
+		</div>
+	</form>
+	<div id="footer">
+		<table border="0" cellpadding="3" cellspacing="0" width="100%">
+			<tr>
+				<td colspan=4>
+					<hr width="100%">
+				</td>
+			</tr>
+			<tr>
+				<td width="111" height="57"><a onclick="window.open(this.href); return false;"
+						onkeypress="window.open(this.href); return false;"
+						href="http://www.upenn.edu"><img src="images/pennlink.jpg" width="111" height="57" border="0" alt="Visit Penn's website" /></a>
+				</td>
+				<td width="100%" Class="footer">
+
+					Copyright &copy; 2007, University of Pennsylvania<br />
+      3451 Walnut Street, Philadelphia, PA 19104 &#183; 215-898-5000<br />
+					<a href="http://www.upenn.edu/computing/security/copyright.html">Copyright Information</a> | <a
+						href="http://www.upenn.edu/privacy/">Privacy
+						Policy </a>| <a href="http://www.upenn.edu/about/disclaimer.php">Disclaimer</a>
+
+				</td>
+				<td class="footer" style="vertical-align:bottom;">version&nbsp;0.7&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>
+<script language="javascript">
+	<!--
+	var disp_error = '';
+var ret = true;
+function initialize() {
+	setTimeout(function() { document.getElementById('grant_type').focus(); },10);
+	return true;
+}
+function validateFields() {
+	if (document.forms[0].testjava){
+		if (document.forms[0].testjava.checked==false)
+			return true;
+	}
+	disp_error = '';
+	ret = true;
+	var n = document.getElementById('grant_curr_yr');
+	if (n!=null && n.value.length > 0){
+		if (isNaN(n.value)){
+			disp_error = disp_error + 'Curr&nbsp;Year must be a number.<br />'
+			ret = false;
+		}
+	}
+	var n = document.getElementById('grant_pilot_year');
+	if (n!=null && n.value.length > 0){
+		if (isNaN(n.value)){
+			disp_error = disp_error + 'Pilot&nbsp;Year must be a number.<br />'
+			ret = false;
+		}
+	}
+	var d = document.getElementById('grant_curr_start_date');
+	if (d!=null && d.value.length > 0){
+		if (!JSisDate(d))
+			return false;
+	}
+	var d = document.getElementById('grant_curr_end_date');
+	if (d!=null && d.value.length > 0){
+		if (!JSisDate(d))
+			return false;
+	}
+	var d = document.getElementById('grant_start_date');
+	if (d!=null && d.value.length > 0){
+		if (!JSisDate(d))
+			return false;
+	}
+	var d = document.getElementById('grant_end_date');
+	if (d!=null && d.value.length > 0){
+		if (!JSisDate(d))
+			return false;
+	}
+	var n = document.getElementById('grant_nih_prio_scr');
+	if (n!=null && n.value.length > 0){
+		if (isNaN(n.value)){
+			disp_error = disp_error + 'Priority&nbsp;Score must be a number.<br />'
+			ret = false;
+		}
+	}
+	var n = document.getElementById('grant_annual_direct_costs');
+	if (n!=null && n.value.length > 0){
+		if (isNaN(n.value)){
+			disp_error = disp_error + 'Current&nbsp;Annual&nbsp;Direct&nbsp;Cost must be a number.<br />'
+			ret = false;
+		}
+	}
+	var n = document.getElementById('grant_total_costs');
+	if (n!=null && n.value.length > 0){
+		if (isNaN(n.value)){
+			disp_error = disp_error + 'Current&nbsp;Total&nbsp;Cost must be a number.<br />'
+			ret = false;
+		}
+	}
+	var n = document.getElementById('grant_related_year');
+	if (n!=null && n.value.length > 0){
+		if (isNaN(n.value)){
+			disp_error = disp_error + 'Year&nbsp;of&nbsp;Pilot must be a number.<br />'
+			ret = false;
+		}
+	}
+	if (self.validateForm) { validateForm(); }
+	if (!ret) {
+		de = document.getElementById('disp_error');
+		de.innerHTML = disp_error;
+		return ret;
+	}
+	return true;
+}
+tgl_AdditionalRelatedPilots();
+tgl_Abstract();
+	-->
+</script>
+<script language='javascript' src="inc/isFieldEntered.js"></script>
+<script language="javascript">
+	<!--
+	/* Collection Group */
+var grant_funding_source = document.getElementById('grant_funding_source');
+var grant_funding_source__spanextra = document.getElementById('grant_funding_source__spanextra');
+var grant_funding_source_onchange = grant_funding_source.onchange;
+grant_funding_source.onchange = function() { 
+	if (grant_funding_source_onchange) grant_funding_source_onchange(); 
+	grant_funding_source_change(); 
+}
+function grant_funding_source_change() {
+	getResultXML('gfst_lookupXML','','',grant_funding_source.value,stateChangedGFS);
+}
+function stateChangedGFS() 
+{
+	if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+	{
+		var xmlDoc = xmlHttp.responseXML.documentElement;
+		if (xmlDoc==null) 
+		{
+			grant_funding_source__spanextra.innerHTML = '';
+			return;
+		}
+		grant_funding_source__spanextra.innerHTML = '<br />' + getXmlNodeValue(xmlDoc,'g_f_s_t_name');
+		xmlHttp = null;
+	} 
+}
+grant_funding_source_change();
+
+function validateForm() {
+	var num = document.getElementById('grant_grant_number');
+	if (num!=null){
+		var l = num.value.length;
+		if (l>0 && l<6){
+			disp_error = disp_error + 'Number must be blank or at least six characters.';
+			ret = false;
+		}
+	}
+	return true;
+}
+	-->
+</script>

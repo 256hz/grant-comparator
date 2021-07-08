@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href="css/psc_formstyles.css" rel="stylesheet" type="text/css" />
+  <script language="javascript" src="inc/JSisDate.js"></script>
+  <title>Grants&nbsp;Search</title>
+</head>
+
+<body topmargin=0 leftmargin=0 class=default_text onLoad="javascript: if (self.initialize) { initialize(); }">
+  <FORM NAME='frmMaint' METHOD='post' ACTION='grants_list.php'>
+    <!-- Grants&nbsp;Search is a place holder that will be replaced in page_controller.php with a passed parameter '$page_title' -->
+    <table width="100%" height="53" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="87" height="53"><a onclick="window.location=this.href; return false;"
+            onkeypress="window.location=this.href; return false;" href="mainmenu.php"><img src="images/pop1.jpg"
+              width="87" height="53" border="0" alt="Back to Menu Page" /></a></td>
+        <td width="100%" valign="bottom" align="left"
+          style="background-image:url(images/headerbg.jpg); background-repeat:repeat-x; background-position:center">
+          <font style="font-size:30px; color:white;">Grants&nbsp;Search</font>
+        </td>
+        <td width="360" height="53" align="left"><img src="images/pop3.jpg" width="344" height="53"></td>
+      </tr>
+    </table>
+    <span style='position:absolute; right:10px; width:50%; text-align:right;'><a
+        href='mainmenu.php'>Main&nbsp;Menu</a>&nbsp;</span>
+    <div class=BigBox style='background-color:#abccdd;'><span class='caption' style='padding: 0px 20px 0px 10px;'>Search
+        Criteria</span>
+      <table width=560>
+        <tr>
+          <td style='text-align:left; vertical-align:top;'>
+            <table width=45%>
+              <tr>
+                <td>Number</td>
+                <td><input type=text id=post_grant_grant_number name=post_grant_grant_number maxlength=25 size=20
+                    value="104339" /></td>
+              </tr>
+              <tr>
+                <td>Title</td>
+                <td><input type=text id=post_grant_longtitle name=post_grant_longtitle maxlength=255 size=20 value="" />
+                </td>
+              </tr>
+              <tr>
+                <td>Type</td>
+                <td><input type=text id=post_grant_type_shortname name=post_grant_type_shortname maxlength=40 size=20
+                    value="" /></td>
+              </tr>
+              <tr>
+                <td>Funding&nbsp;Type</td>
+                <td><select id=post_g_f_s_t_name name=post_g_f_s_t_name class='default_text textbox' style='width:20em;'
+                    width='20em'>
+                    <option value="0" selected>--all--</option>
+                    <option value="3">Corporate</option>
+                    <option value="1">Federal</option>
+                    <option value="7">Foreign</option>
+                    <option value="2">Foundation</option>
+                    <option value="6">Internal</option>
+                    <option value="4">Private</option>
+                    <option value="9">Professional Organization</option>
+                    <option value="8">State/Local Government</option>
+                    <option value="5">University (External)</option>
+                    <option value="9999999">UNKNOWN</option>
+                  </select>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Funding&nbsp;Status</td>
+                <td><select id=post_g_f_s_shortname name=post_g_f_s_shortname class='default_text textbox'
+                    style='width:20em;' width='20em'>
+                    <option value="10000013"></option>
+                    <option value="0" selected>--all--</option>
+                    <option value="10000174">AARP</option>
+                    <option value="10000092">ABT Associates</option>
+                    <option value="10000149">Acad de Historia Dominica</option>
+                    <option value="10000050">Academy of Korean Studies</option>
+                    <option value="10000185">Adams County/OMHSAS</option>
+                    <option value="10000236">AE Foundation</option>
+                    <option value="10000080">Aetna</option>
+                    <option value="117">AHRQ, DHHS</option>
+                    <option value="10000110">AHRQ/DHHS, CHOP</option>
+                    <option value="10000165">Aileen Getty Foundation</option>
+                    <option value="10000235">ALACRITY</option>
+                    <option value="10000157">Alz Assoc & Alz Fdn Ameri</option>
+                    <option value="10000158">Am Council of Learned Soc</option>
+                    <option value="10000024">Am Ed Research Assoc</option>
+                    <option value="10000214">Am Inst for Research</option>
+                    <option value="10000136">Am Nurses Foundation</option>
+                    <option value="10000014">American Cancer Society</option>
+                    <option value="10000091">American Diabetes Associa</option>
+                    <option value="10000243">American Heart Assoc</option>
+                    <option value="10000246">American Nurse Cred Ctr</option>
+                    <option value="10000113">American Staffing Assoc</option>
+                    <option value="10000169">Annie E. Casey Foundation</option>
+                    <option value="10000162">Arnold Foundation</option>
+                    <option value="111">ASA</option>
+                    <option value="26">ATSDR, CDC</option>
+                    <option value="10000077">Autism Speaks</option>
+                    <option value="101">Belgian Science Policy</option>
+                    <option value="88">BFA, NSF</option>
+                    <option value="89">BFA/BD, NSF</option>
+                    <option value="90">BFA/DACS, NSF</option>
+                    <option value="91">BFA/DFM, NSF</option>
+                    <option value="92">BFA/DGA, NSF</option>
+                    <option value="93">BFA/DIAS, NSF</option>
+                    <option value="49">BIO, NSF</option>
+                    <option value="50">BIO/DBI, NSF</option>
+                    <option value="52">BIO/DEB, NSF</option>
+                    <option value="51">BIO/EF, NSF</option>
+                    <option value="53">BIO/IOB, NSF</option>
+                    <option value="54">BIO/MCB, NSF</option>
+                    <option value="10000190">Bloomberg Philanthropies</option>
+                    <option value="10000225">BMBF</option>
+                    <option value="10000229">Boettner Center</option>
+                    <option value="10000040">Boettner Pilot</option>
+                    <option value="115">Bradley</option>
+                    <option value="10000215">British Academy</option>
+                    <option value="10000159">Brocher Foundation</option>
+                    <option value="10000021">Brookings Institute</option>
+                    <option value="10000168">Broward County Children</option>
+                    <option value="10000051">BU/NIH</option>
+                    <option value="10000223">Burke Fellowship</option>
+                    <option value="10000196">CAF</option>
+                    <option value="10000252">CANADA FDN FOR INNOVATION</option>
+                    <option value="10000020">Canadian IHR</option>
+                    <option value="10000017">CDC</option>
+                    <option value="10000195">CEGA, UC Econ Challenge G</option>
+                    <option value="10000100">Center for Human Appearan</option>
+                    <option value="10000264">Chan Zuckerberg</option>
+                    <option value="10000127">Character Lab</option>
+                    <option value="10000249">Chocolonely Foundation</option>
+                    <option value="10000217">CHOP</option>
+                    <option value="55">CISE, NSF</option>
+                    <option value="56">CISE/CCF, NSF</option>
+                    <option value="57">CISE/CNS, NSF</option>
+                    <option value="58">CISE/IIS, NSF</option>
+                    <option value="10000038">City of Fresno</option>
+                    <option value="10000039">City of Los Angeles</option>
+                    <option value="10000164">City of Philadelphia</option>
+                    <option value="10000248">CLEF</option>
+                    <option value="10000224">CMMI</option>
+                    <option value="10000090">CMS</option>
+                    <option value="10000211">Colum Dev Eco & Innov </option>
+                    <option value="10000200">Columbia Global Iniatives</option>
+                    <option value="10000201">Columbia Global Innovatio</option>
+                    <option value="10000042">Commonwealth Fund of NY</option>
+                    <option value="10000240">Commonwealth of Kentucky</option>
+                    <option value="10000193">CONICYT</option>
+                    <option value="10000194">CONICYT</option>
+                    <option value="10000035">Conrad Hilton Foundation</option>
+                    <option value="10000187">Corp for Nat'l/Comm Srvc</option>
+                    <option value="10000114">Council of St Nurse Board</option>
+                    <option value="10000082">Ctr for Medicare & Medica</option>
+                    <option value="10000028">Ctr for Study of E Asia</option>
+                    <option value="10000085">CVS Caremark</option>
+                    <option value="10000186">DFID</option>
+                    <option value="10000041">DHHS</option>
+                    <option value="10000271">DHUD</option>
+                    <option value="10000018">DOD</option>
+                    <option value="10000019">DoE (PA)</option>
+                    <option value="10000230">Donahue Foundation</option>
+                    <option value="106">Drexel</option>
+                    <option value="59">EHR, NSF</option>
+                    <option value="62">EHR/DGE, NSF</option>
+                    <option value="65">EHR/DUE, NSF</option>
+                    <option value="61">EHR/EPSCoR, NSF</option>
+                    <option value="60">EHR/ESIE, NSF</option>
+                    <option value="63">EHR/HRD, NSF</option>
+                    <option value="64">EHR/REC, NSF</option>
+                    <option value="10000184">Elwyn Seeds</option>
+                    <option value="10000059">Emory</option>
+                    <option value="66">ENG, NSF</option>
+                    <option value="67">ENG/BES, NSF</option>
+                    <option value="69">ENG/CMS</option>
+                    <option value="68">ENG/CTS, NSF</option>
+                    <option value="70">ENG/DMII, NSF</option>
+                    <option value="71">ENG/ECS, NSF</option>
+                    <option value="72">ENG/EEC, NSF</option>
+                    <option value="73">ENG/OII, NSF</option>
+                    <option value="10000256">EPA</option>
+                    <option value="27">EPO, CDC</option>
+                    <option value="10000004">ESRC</option>
+                    <option value="10000089">ESRC/IFS</option>
+                    <option value="10000257">ESRC/Oxford</option>
+                    <option value="10000002">EU</option>
+                    <option value="10000253">Facebook</option>
+                    <option value="10000202">Fdn Human Behavior</option>
+                    <option value="10000096">Federal Reserve</option>
+                    <option value="10000097">FEMA</option>
+                    <option value="10000043">FEP Memorial Home</option>
+                    <option value="2">FIC</option>
+                    <option value="10000128">Florida State University</option>
+                    <option value="10000099">Frank Morgan Jones</option>
+                    <option value="10000054">Gates Foundation</option>
+                    <option value="10000148">GDN</option>
+                    <option value="10000250">Genome Canada</option>
+                    <option value="74">GEO, NSF</option>
+                    <option value="75">GEO/ATM, NSF</option>
+                    <option value="76">GEO/EAR, NSF</option>
+                    <option value="10000239">Gilliam</option>
+                    <option value="10000061">GLM/LIC</option>
+                    <option value="10000088">Gordon and Betty Moore Fo</option>
+                    <option value="10000199">Govt Tamil Nadu</option>
+                    <option value="10000062">Grand Challenges Canada</option>
+                    <option value="10000180">Harvard</option>
+                    <option value="10000209">Harvard Program Global Ag</option>
+                    <option value="10000117">Helene Fuld Health Trust</option>
+                    <option value="110">Hewlett</option>
+                    <option value="10000107">HFSP</option>
+                    <option value="10000112">Hillman Foundation</option>
+                    <option value="10000167">Hilton, CA HCF, NY HCF</option>
+                    <option value="10000045">Hong Kong Research Counci</option>
+                    <option value="10000069">Horizon Healthcare</option>
+                    <option value="10000006">HSRD/HRSA</option>
+                    <option value="10000032">HUD</option>
+                    <option value="10000166">HUD, MacArthur, BMGF</option>
+                    <option value="10000068">Humana</option>
+                    <option value="10000115">HUP</option>
+                    <option value="10000076">IES</option>
+                    <option value="10000212">IGC</option>
+                    <option value="10000147">IKI</option>
+                    <option value="10000087">InHealth</option>
+                    <option value="10000060">Inst for New Econ Thinkin</option>
+                    <option value="10000098">Inst for Res on Poverty</option>
+                    <option value="10000025">Inter American Dev Bank</option>
+                    <option value="94">IRM, NSF</option>
+                    <option value="98">IRM/Academy, NSF</option>
+                    <option value="95">IRM/DAS, NSF</option>
+                    <option value="97">IRM/DIS, NSF</option>
+                    <option value="96">IRM/HRM, NSF</option>
+                    <option value="10000260">ITMAT</option>
+                    <option value="10000247">Jacobs Foundation</option>
+                    <option value="10000005">JFA</option>
+                    <option value="10000103">John A Hartford Fdn</option>
+                    <option value="10000150">John Fell Fund/UOxford</option>
+                    <option value="10000063">John Templeton Foundation</option>
+                    <option value="10000263">JOI</option>
+                    <option value="10000206">Jpal</option>
+                    <option value="10000116">Kaiser Permante</option>
+                    <option value="10000120">Kellogg Foundation</option>
+                    <option value="10000244">Kentucky HEALTH Analysis</option>
+                    <option value="10000175">Khodadad Family</option>
+                    <option value="10000046">KIPP</option>
+                    <option value="10000205">LDI CHIBE</option>
+                    <option value="10000161">LDI Pilot</option>
+                    <option value="10000012">Leakey Foundation</option>
+                    <option value="108">MacArthur</option>
+                    <option value="10000216">Mack Institute</option>
+                    <option value="10000160">March of Dimes</option>
+                    <option value="10000065">Marian S. Ware Foundation</option>
+                    <option value="10000000">MCH</option>
+                    <option value="10000154">McMillian Ctr Int'l Study</option>
+                    <option value="10000101">MD Anderson Cancer Center</option>
+                    <option value="10000074">MD Dept, Human Resources</option>
+                    <option value="10000073">MD Governor's Office CC&P</option>
+                    <option value="105">Measey Foundation</option>
+                    <option value="116">Mellon</option>
+                    <option value="10000124">Merck Sharp & Dohme</option>
+                    <option value="10000047">Mich Retire Research Ctr</option>
+                    <option value="10000226">Michael J. Fox Foundation</option>
+                    <option value="10000203">Milton Fund</option>
+                    <option value="10000262">Missouri Foundation for H</option>
+                    <option value="10000198">MIT SHASS</option>
+                    <option value="77">MPS, NSF</option>
+                    <option value="78">MPS/AST, NSF</option>
+                    <option value="79">MPS/CHE, NSF</option>
+                    <option value="80">MPS/DMR, NSF</option>
+                    <option value="81">MPS/DMS, NSF</option>
+                    <option value="83">MPS/OMA, NSF</option>
+                    <option value="82">MPS/PHY, NSF</option>
+                    <option value="10000023">Nat Academy of Education</option>
+                    <option value="10000135">Nat Res Found Korea</option>
+                    <option value="10000011">National Geo</option>
+                    <option value="10000048">NBER</option>
+                    <option value="10000131">NCATS</option>
+                    <option value="28">NCBDDD, CDC</option>
+                    <option value="4">NCCAM</option>
+                    <option value="29">NCCDPHP, CDC</option>
+                    <option value="30">NCEH, CDC</option>
+                    <option value="31">NCHS, CDC</option>
+                    <option value="32">NCHSTP, CDC</option>
+                    <option value="3">NCI</option>
+                    <option value="33">NCID, CDC</option>
+                    <option value="34">NCIPC, CDC</option>
+                    <option value="6">NCRR</option>
+                    <option value="10000152">NDRI</option>
+                    <option value="7">NEI</option>
+                    <option value="10000052">Netspar</option>
+                    <option value="10000266">New York State Energy Res</option>
+                    <option value="9">NHGRI</option>
+                    <option value="8">NHLBI</option>
+                    <option value="10">NIA</option>
+                    <option value="10000137">NIA/USC</option>
+                    <option value="11">NIAAA</option>
+                    <option value="12">NIAID</option>
+                    <option value="13">NIAMS</option>
+                    <option value="14">NIBIB</option>
+                    <option value="15">NICHD</option>
+                    <option value="19">NIDA</option>
+                    <option value="16">NIDCD</option>
+                    <option value="17">NIDCR</option>
+                    <option value="18">NIDDK</option>
+                    <option value="20">NIEHS</option>
+                    <option value="21">NIGMS</option>
+                    <option value="10000016">NIH</option>
+                    <option value="10000072">NIJ</option>
+                    <option value="22">NIMH</option>
+                    <option value="5">NIMHD</option>
+                    <option value="23">NINDS</option>
+                    <option value="24">NINR</option>
+                    <option value="35">NIOSH, CDC</option>
+                    <option value="36">NIP, CDC</option>
+                    <option value="10000111">NJ Gov Council for Med Re</option>
+                    <option value="25">NLM</option>
+                    <option value="10000093">NMHHD</option>
+                    <option value="10000049">Northwestern</option>
+                    <option value="10000170">Norway Ctr Fertility Heal</option>
+                    <option value="10000218">Norwegian Research Counci</option>
+                    <option value="10000258">NSF EF</option>
+                    <option value="10000238">NSF IIP</option>
+                    <option value="85">NSF SBE/BCS</option>
+                    <option value="87">NSF SBE/SES</option>
+                    <option value="86">NSF SBE/SRS</option>
+                    <option value="39">NSF, NSB</option>
+                    <option value="84">NSF, SBE</option>
+                    <option value="10000207">Nutricia Foundation</option>
+                    <option value="10000188">NY State Health Fdn</option>
+                    <option value="10000033">NYC</option>
+                    <option value="10000081">NYDOH</option>
+                    <option value="10000182">NYU</option>
+                    <option value="37">OD, CDC</option>
+                    <option value="41">OD, NSF</option>
+                    <option value="42">OD/OCI, NSF</option>
+                    <option value="43">OD/OEO, NSF</option>
+                    <option value="44">OD/OGC, NSF</option>
+                    <option value="45">OD/OIA, NSF</option>
+                    <option value="46">OD/OISE, NSF</option>
+                    <option value="47">OD/OLPA, NSF</option>
+                    <option value="48">OD/OPP, NSF</option>
+                    <option value="40">OIG, NSF</option>
+                    <option value="103">ONSF</option>
+                    <option value="10000075">PA Board Probation & Paro</option>
+                    <option value="10000015">PA DOH</option>
+                    <option value="10000109">PADOH/CHOP</option>
+                    <option value="10000037">Palm Beach County</option>
+                    <option value="10000008">PARC Pilot</option>
+                    <option value="10000084">Patient Centered Outcomes</option>
+                    <option value="10000142">PCORI</option>
+                    <option value="10000030">Penn</option>
+                    <option value="112">Penn CFAR</option>
+                    <option value="10000192">Penn China Engagement Fun</option>
+                    <option value="10000219">Penn Fels Conference Ini</option>
+                    <option value="10000221">Penn Fels Re Init Collab</option>
+                    <option value="10000108">Penn Genome Frontiers</option>
+                    <option value="10000094">Penn Global Engagement </option>
+                    <option value="10000057">Penn Global Initiatives</option>
+                    <option value="113">Penn Institute Urban Res</option>
+                    <option value="10000058">Penn IOA</option>
+                    <option value="10000044">Penn IOA</option>
+                    <option value="10000241">Penn IREF</option>
+                    <option value="10000267">Penn Kleinman Center</option>
+                    <option value="10000067">Penn LDI/UPHS</option>
+                    <option value="10000232">Penn Perelman SOM</option>
+                    <option value="10000222">Penn Provost Diversity</option>
+                    <option value="10000261">Penn PWH</option>
+                    <option value="10000220">Penn SAS Fac Work Grp</option>
+                    <option value="10000138">Penn SAS Research/Oppor</option>
+                    <option value="10000070">Penn SON-Global Health</option>
+                    <option value="107">Penn State Center for Pre</option>
+                    <option value="10000009">Penn URF</option>
+                    <option value="99">Penn URF</option>
+                    <option value="10000265">Penn Vice Provost for Res</option>
+                    <option value="10000259">Penn Wharton Dean's Fund</option>
+                    <option value="10000140">Penn Wharton Pub Pol Init</option>
+                    <option value="10000213">PennSAS Dean's global inq</option>
+                    <option value="10000245">PennSAS Make a Difference</option>
+                    <option value="104">Pfizer</option>
+                    <option value="10000141">PHA</option>
+                    <option value="38">PHPPO, CDC</option>
+                    <option value="10000234">Pixatel Systems</option>
+                    <option value="10000134">Pop Council</option>
+                    <option value="10000121">Portuguese Foundation</option>
+                    <option value="10000181">PSC Mentor Award</option>
+                    <option value="10000007">PSC/NICHD Pilot</option>
+                    <option value="10000143">PSU</option>
+                    <option value="10000118">Public Health Foundation </option>
+                    <option value="10000183">Quartet</option>
+                    <option value="10000172">Queensland Ministry of He</option>
+                    <option value="10000126">R.K.Mellon Family</option>
+                    <option value="10000053">RAND</option>
+                    <option value="10000106">Royalty Res Fund/UWa</option>
+                    <option value="10000010">Russell Sage</option>
+                    <option value="102">RWJF</option>
+                    <option value="10000144">Sackler Institute</option>
+                    <option value="10000078">SAMSHA</option>
+                    <option value="10000269">School of Social Policy</option>
+                    <option value="10000173">Sigma Theta Tau</option>
+                    <option value="10000251">SINGAPORE MINISTRY OF EDU</option>
+                    <option value="10000022">Sloan Foundation</option>
+                    <option value="10000228">Social Security Administr</option>
+                    <option value="10000003">Spencer Foundation</option>
+                    <option value="10000029">SSHRC-Canada</option>
+                    <option value="10000155">State of Delaware</option>
+                    <option value="10000139">State of Hawaii</option>
+                    <option value="10000086">State of Tennessee</option>
+                    <option value="10000189">Stevens Inst of Technolog</option>
+                    <option value="10000034">Stoneleigh Center</option>
+                    <option value="10000125">Strategic Education Resea</option>
+                    <option value="10000254">Swedish Foundation</option>
+                    <option value="10000145">Swiss Agency (SDC)</option>
+                    <option value="10000146">Swiss NSF</option>
+                    <option value="100">Switzerland FSIO</option>
+                    <option value="10000204">TAPITMAT</option>
+                    <option value="10000255">Temple Hoyne Buell Center</option>
+                    <option value="10000079">Tennessee Insurance Exchg</option>
+                    <option value="10000122">The Commonwealth Fund</option>
+                    <option value="10000156">The Cure PSP Foundation</option>
+                    <option value="10000095">TIAA-CREF</option>
+                    <option value="10000270">Trinity Wall Street</option>
+                    <option value="10000130">Turkish Ministry of Healt</option>
+                    <option value="10000132">UBS Optimus</option>
+                    <option value="10000208">UChicago Trust</option>
+                    <option value="10000242">UCSF</option>
+                    <option value="10000119">UFlorida/Argentinean Res</option>
+                    <option value="10000133">UK DfID</option>
+                    <option value="10000268">UK Research and Innovatio</option>
+                    <option value="114">UMICH</option>
+                    <option value="10000178">UNC Cancer Center</option>
+                    <option value="10000177">UNC Royster Society</option>
+                    <option value="10000056">United Emerites Foundatio</option>
+                    <option value="10000179">United Health</option>
+                    <option value="10000064">University of Chicago</option>
+                    <option value="10000151">University of Lausanne</option>
+                    <option value="10000071">Upjohn</option>
+                    <option value="10000176">Urban Health Solutions </option>
+                    <option value="10000163">US DoJ, OJJDP</option>
+                    <option value="10000197">USAID</option>
+                    <option value="10000104">USDA</option>
+                    <option value="10000231">UWash</option>
+                    <option value="10000001">VA</option>
+                    <option value="10000191">VCAN</option>
+                    <option value="10000123">Vitality Institute</option>
+                    <option value="10000102">VNSNY</option>
+                    <option value="10000026">W. T. Grant Foundation</option>
+                    <option value="10000129">Walton Family Foundation</option>
+                    <option value="10000233">Warburg Fund</option>
+                    <option value="10000153">Wash Ctr for Equitable Gr</option>
+                    <option value="10000227">Washington State HCA</option>
+                    <option value="10000083">Weight Watchers</option>
+                    <option value="10000210">Weiss Family Program Fund</option>
+                    <option value="10000066">Wenner-Gren Foundation</option>
+                    <option value="10000036">William Penn Foundation</option>
+                    <option value="10000031">World Bank</option>
+                    <option value="10000055">Yale</option>
+                    <option value="109">Zellerbach</option>
+                  </select>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Proposal&nbsp;Status</td>
+                <td><select id=post_g_p_p_s_name name=post_g_p_p_s_name class='default_text textbox' style='width:20em;'
+                    width='20em'>
+                    <option value="0" selected>--all--</option>
+                    <option value="2">Advance Account</option>
+                    <option value="16">Award Bridge Year</option>
+                    <option value="3">Awarded</option>
+                    <option value="19">Awarded NCE</option>
+                    <option value="17">Awarded sub-contract to P</option>
+                    <option value="4">Closed</option>
+                    <option value="14">Continued into next year</option>
+                    <option value="5">In Process</option>
+                    <option value="6">Negotiation</option>
+                    <option value="7">Negotiation Complete</option>
+                    <option value="18">No Cost Extension</option>
+                    <option value="8">Pending</option>
+                    <option value="15">Pending Resubmission</option>
+                    <option value="20">Pending-awaiting funding </option>
+                    <option value="9">Revised Budget Requested</option>
+                    <option value="10">Under Development</option>
+                    <option value="11">Under Review</option>
+                    <option value="12">Unfunded</option>
+                    <option value="9999999">UNKNOWN</option>
+                    <option value="13">Withdrawn</option>
+                  </select>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td><select id=post_grant_roles_role name=post_grant_roles_role class='default_text textbox'
+                    style='width:20em;' width='20em'>
+                    <option value="0" selected>--all--</option>
+                    <option value="24">Advisor</option>
+                    <option value="14">Advisory Board Member</option>
+                    <option value="12">Advisory Committee Member</option>
+                    <option value="7">Co-Investigator</option>
+                    <option value="3">Co-PI</option>
+                    <option value="15">Consultant</option>
+                    <option value="30">Core Leader</option>
+                    <option value="17">Core PI</option>
+                    <option value="9">Demographer</option>
+                    <option value="22">Economist</option>
+                    <option value="20">Faculty</option>
+                    <option value="11">Investigator</option>
+                    <option value="13">Key Personnel</option>
+                    <option value="4">Mentor</option>
+                    <option value="31">MPI</option>
+                    <option value="28">Parent PI</option>
+                    <option value="2">PI</option>
+                    <option value="27">Pilot Co PI</option>
+                    <option value="26">Pilot PI</option>
+                    <option value="18">Postdoc</option>
+                    <option value="19">Predoc</option>
+                    <option value="6">Program Associate</option>
+                    <option value="5">Program Faculty</option>
+                    <option value="10">Researcher</option>
+                    <option value="8">Scholar</option>
+                    <option value="16">Section Head</option>
+                    <option value="29">Site PI</option>
+                    <option value="23">Sociologist</option>
+                    <option value="25">Staff</option>
+                    <option value="21">Statistician</option>
+                    <option value="9999999">UNKNOWN</option>
+                  </select>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Last&nbsp;Name</td>
+                <td><input type=text id=post_person_lastname name=post_person_lastname maxlength=35 size=20 value="" />
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td style='text-align:left; vertical-align:top;'>
+            <table width=45%></table>
+          </td>
+          <td style='text-align:left; vertical-align:top;'>Show:<select id=post_HidPerPage name=post_HidPerPage>
+              <option value="10">10 per page</option>
+              <option value="15">15 per page</option>
+              <option value="30">30 per page</option>
+              <option value="99" selected>All on one page</option>
+            </select>
+            <p /><input type=image id=btnSearch name=btnSearch src='images/search_small.gif' value='Search'
+              onClick='javascript: document.forms[0].post_HidAlpha.value=""; eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();' /><input
+              type=image id=btnSearch name=btnSearch src='images/clear_search.gif' value='Clear'
+              onClick='javascript: document.forms[0].post_Submit.value="N"; document.forms[0].submit();' />
+            <p /><input type=image id=btnAdd name=btnAdd src='images/addnew_small.gif' value='AddNew'
+              onClick='javascript: document.forms[0].action="grants_maint.php";  document.forms[0].submit();' /></td>
+        </tr>
+      </table>
+    </div>
+    <div class=default_text><input type=hidden name=post_HidPage value='0' /><input type=hidden name=post_HidAlpha
+        value='' /><input type=hidden name=post_HidSort value='' /><input type=hidden name=post_HidSortOrder
+        value='' /><input type=hidden name=post_Submit value=Y />
+      <table width=100%>
+        <tr>
+          <td><code><a class=selected
+                href='javascript: document.forms[0].post_HidAlpha.value=""; eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();'>All</a>&nbsp;<a
+                href='javascript: document.forms[0].post_HidAlpha.value="I"; eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();'>I</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <td style='text-align:right; vertical-align:bottom;'>4&nbsp;records&nbsp;meeting&nbsp;criteria.</td>
+        </tr>
+      </table>
+    </div>
+    <table width=100%><a
+        href='javascript: document.forms[0].post_HidSort.value="grant_serial";  document.forms[0].post_HidSortOrder.value="";  eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();'></a>
+      </TH>
+      <TH><a class=selected
+          href='javascript: document.forms[0].post_HidSort.value="grant_longtitle";  document.forms[0].post_HidSortOrder.value="DESC";  eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();'>Title
+          <img src='images/up.gif' width='12' height='10' border='0'></a> </TH>
+      <TH><a
+          href='javascript: document.forms[0].post_HidSort.value="number";  document.forms[0].post_HidSortOrder.value="";  eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();'>Number</a>
+      </TH>
+      <TH><a
+          href='javascript: document.forms[0].post_HidSort.value="grant_type_shortname";  document.forms[0].post_HidSortOrder.value="";  eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();'>Type</a>
+      </TH>
+      <TH><a
+          href='javascript: document.forms[0].post_HidSort.value="g_f_s_t_name";  document.forms[0].post_HidSortOrder.value="";  eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();'>Funding
+          Type</a> </TH>
+      <TH><a
+          href='javascript: document.forms[0].post_HidSort.value="g_f_s_shortname";  document.forms[0].post_HidSortOrder.value="";  eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();'>Funding
+          Source</a> </TH>
+      <TH><a
+          href='javascript: document.forms[0].post_HidSort.value="g_p_p_s_name";  document.forms[0].post_HidSortOrder.value="";  eval("document.forms[0].post_HidPage.value=0"); document.forms[0].submit();'>Proposal
+          Status</a> </TH>
+      <tr class=grid>
+        <td style='width:350px;'><a
+            href='javascript: document.forms[0].action="grants_maint.php?serial=2547"; document.forms[0].submit();'>Integrative
+            Nutrigenomic and Metabolomic Analyses of Africans with Variable Diets</a></td>
+        <td style='text-align:left'>DK104339-5--0-0</td>
+        <td style='text-align:left'>R01</td>
+        <td style='text-align:left'>Federal</td>
+        <td style='text-align:left'>NIDDK</td>
+        <td style='text-align:left'>Closed</td>
+      </tr>
+      <tr class=altgrid>
+        <td style='width:350px;'><a
+            href='javascript: document.forms[0].action="grants_maint.php?serial=1674"; document.forms[0].submit();'>Integrative
+            Nutrigenomic and Metabolomic Analyses of Africans with Variable Diets, National Institutes of Health</a>
+        </td>
+        <td style='text-align:left'>DK 104339-1--0-0</td>
+        <td style='text-align:left'>R01</td>
+        <td style='text-align:left'>Federal</td>
+        <td style='text-align:left'>NIDDK</td>
+        <td style='text-align:left'>Continued into next year</td>
+      </tr>
+      <tr class=grid>
+        <td style='width:350px;'><a
+            href='javascript: document.forms[0].action="grants_maint.php?serial=1818"; document.forms[0].submit();'>Integrative
+            Nutrigenomic and Metabolomic Analyses of Africans with Variable Diets, National Institutes of Health</a>
+        </td>
+        <td style='text-align:left'>DK104339-2--0-0</td>
+        <td style='text-align:left'>R01</td>
+        <td style='text-align:left'>Federal</td>
+        <td style='text-align:left'>NIDDK</td>
+        <td style='text-align:left'>Continued into next year</td>
+      </tr>
+      <tr class=altgrid>
+        <td style='width:350px;'><a
+            href='javascript: document.forms[0].action="grants_maint.php?serial=2546"; document.forms[0].submit();'>Integrative
+            Nutrigenomic and Metabolomic Analyses of Africans with Variable Diets, National Institutes of Health</a>
+        </td>
+        <td style='text-align:left'>DK104339-3--0-0</td>
+        <td style='text-align:left'>R01</td>
+        <td style='text-align:left'>Federal</td>
+        <td style='text-align:left'>NIDDK</td>
+        <td style='text-align:left'>Continued into next year</td>
+      </tr>
+    </table>
+    <script language="javascript" src="inc/ajax.js"></script>
+    </div>
+  </form>
+  <div id="footer">
+    <table border="0" cellpadding="3" cellspacing="0" width="100%">
+      <tr>
+        <td colspan=4>
+          <hr width="100%">
+        </td>
+      </tr>
+      <tr>
+        <td width="111" height="57"><a onclick="window.open(this.href); return false;"
+            onkeypress="window.open(this.href); return false;" href="http://www.upenn.edu"><img
+              src="images/pennlink.jpg" width="111" height="57" border="0" alt="Visit Penn's website" /></a></td>
+        <td width="100%" Class="footer">
+
+          Copyright &copy; 2007, University of Pennsylvania<br />
+          3451 Walnut Street, Philadelphia, PA 19104 &#183; 215-898-5000<br />
+          <a href="http://www.upenn.edu/computing/security/copyright.html">Copyright Information</a> | <a
+            href="http://www.upenn.edu/privacy/">Privacy
+            Policy </a>| <a href="http://www.upenn.edu/about/disclaimer.php">Disclaimer</a>
+
+        </td>
+        <td class="footer" style="vertical-align:bottom;">version&nbsp;0.7&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

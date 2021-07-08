@@ -1,0 +1,18 @@
+GET https://reporter.nih.gov/services/Projects/ProjectFundingDetail?projectId=9403246
+
+{
+    "appl_id": 9403246,
+    "fy": 2018,
+    "total_funding": 356318.0,
+    "direct_cost": 265497.0,
+    "indirect_cost": 90821.0,
+    "funding_i_cs": [
+        {
+            "fy": 2018,
+            "code": "DK",
+            "name": "NATIONAL INSTITUTE OF DIABETES AND DIGESTIVE AND KIDNEY DISEASES",
+            "abbreviation": "NIDDK",
+            "total_cost": 356318.0
+        }
+    ]
+}

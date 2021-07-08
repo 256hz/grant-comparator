@@ -1,0 +1,1024 @@
+POST https://api.reporter.nih.gov/v1/projects/Search
+
+body: {
+    "criteria":
+    {
+        "project_nums": "????DK104339*"
+    }
+}
+
+{
+    "meta": {
+        "search_id": null,
+        "total": 9,
+        "offset": 0,
+        "limit": 50,
+        "sort_field": null,
+        "sort_order": "ASC",
+        "sorted_by_relevance": true,
+        "properties": {}
+    },
+    "results": [
+        {
+            "appl_id": 10409015,
+            "subproject_id": null,
+            "fiscal_year": 2021,
+            "org_name": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+            "org_city": "ANN ARBOR",
+            "org_state": "MI",
+            "org_state_name": null,
+            "dept_type": null,
+            "project_num": "3F31HD104339-01S1",
+            "project_serial_num": "HD104339",
+            "org_country": "UNITED STATES",
+            "award_type": "3",
+            "activity_code": "F31",
+            "award_amount": 2500,
+            "is_active": true,
+            "is_territory": false,
+            "project_num_split": {
+                "appl_type_code": "3",
+                "activity_code": "F31",
+                "ic_code": "HD",
+                "serial_num": "104339",
+                "support_year": "01",
+                "full_support_year": "01S1",
+                "suffix_code": "S1"
+            },
+            "principal_investigators": [
+                {
+                    "profile_id": 15569931,
+                    "first_name": "Callie",
+                    "middle_name": "",
+                    "last_name": "Swanepoel",
+                    "is_contact_pi": true,
+                    "full_name": "Callie  Swanepoel",
+                    "title": null,
+                    "email": null
+                }
+            ],
+            "contact_pi_name": "SWANEPOEL, CALLIE ",
+            "program_officers": [
+                {
+                    "first_name": "Stuart",
+                    "middle_name": "B.",
+                    "last_name": "Moss",
+                    "full_name": "Stuart B. Moss",
+                    "email": null
+                }
+            ],
+            "agency_ic_admin": {
+                "code": "HD",
+                "abbreviation": "NICHD",
+                "name": "Eunice Kennedy Shriver National Institute of Child Health and Human Development"
+            },
+            "agency_ic_fundings": [
+                {
+                    "fy": 2021,
+                    "code": "HD",
+                    "name": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
+                    "abbreviation": "NICHD",
+                    "total_cost": 2500.0
+                }
+            ],
+            "cong_dist": "MI-12",
+            "spending_categories": null,
+            "project_start_date": "2021-06-01T04:00:00Z",
+            "project_end_date": "2022-04-30T04:00:00Z",
+            "organization_type": {
+                "name": null,
+                "code": "10",
+                "is_other": true
+            },
+            "all_text": null,
+            "foa": "PA20272",
+            "full_foa": "PA-20-272",
+            "full_study_section": {
+                "irg_code": "",
+                "sra_designator_code": "",
+                "sra_flex_code": "",
+                "group_code": "20",
+                "name": null,
+                "url": null,
+                "cmte_id": null,
+                "cluster_irg_code": null,
+                "properties": {}
+            },
+            "award_notice_date": "2021-05-28T04:00:00Z",
+            "is_new": false,
+            "mechanism_code_dc": "TR",
+            "core_project_num": "F31HD104339",
+            "terms": "Evolution ; Genes ; Sex Chromosomes ; Gonosomes ; ",
+            "pref_terms": "Evolution;Genes;Sex Chromosomes",
+            "abstract_text": "ABSTRACT\nN/A-this section is not applicable.",
+            "project_title": "Tracking the Rapid Evolution of Sex Chromosome Palindromes and Their Genes",
+            "phr_text": "PROJECT NARRATIVE\nN/A-this section is not applicable.",
+            "spending_categories_desc": null,
+            "awd_doc_num": "FHD104339A",
+            "init_encumbrance_date": "2021-05-28T04:25:53Z",
+            "can_task": [
+                "2021.100"
+            ],
+            "special_topic_code": [
+                "20"
+            ],
+            "agency_code": "NIH",
+            "covid_response": null
+        },
+        {
+            "appl_id": 10140883,
+            "subproject_id": null,
+            "fiscal_year": 2021,
+            "org_name": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+            "org_city": "ANN ARBOR",
+            "org_state": "MI",
+            "org_state_name": null,
+            "dept_type": null,
+            "project_num": "1F31HD104339-01",
+            "project_serial_num": "HD104339",
+            "org_country": "UNITED STATES",
+            "award_type": "1",
+            "activity_code": "F31",
+            "award_amount": 38807,
+            "is_active": true,
+            "is_territory": false,
+            "project_num_split": {
+                "appl_type_code": "1",
+                "activity_code": "F31",
+                "ic_code": "HD",
+                "serial_num": "104339",
+                "support_year": "01",
+                "full_support_year": "01",
+                "suffix_code": ""
+            },
+            "principal_investigators": [
+                {
+                    "profile_id": 15569931,
+                    "first_name": "Callie",
+                    "middle_name": "",
+                    "last_name": "Swanepoel",
+                    "is_contact_pi": true,
+                    "full_name": "Callie  Swanepoel",
+                    "title": null,
+                    "email": null
+                }
+            ],
+            "contact_pi_name": "SWANEPOEL, CALLIE ",
+            "program_officers": [
+                {
+                    "first_name": "Stuart",
+                    "middle_name": "B.",
+                    "last_name": "Moss",
+                    "full_name": "Stuart B. Moss",
+                    "email": null
+                }
+            ],
+            "agency_ic_admin": {
+                "code": "HD",
+                "abbreviation": "NICHD",
+                "name": "Eunice Kennedy Shriver National Institute of Child Health and Human Development"
+            },
+            "agency_ic_fundings": [
+                {
+                    "fy": 2021,
+                    "code": "HD",
+                    "name": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
+                    "abbreviation": "NICHD",
+                    "total_cost": 38807.0
+                }
+            ],
+            "cong_dist": "MI-12",
+            "spending_categories": null,
+            "project_start_date": "2021-05-01T04:00:00Z",
+            "project_end_date": "2024-04-30T04:00:00Z",
+            "organization_type": {
+                "name": null,
+                "code": "10",
+                "is_other": true
+            },
+            "all_text": null,
+            "foa": "PA19195",
+            "full_foa": "PA-19-195",
+            "full_study_section": {
+                "irg_code": "ZRG1",
+                "sra_designator_code": "F08",
+                "sra_flex_code": "M",
+                "group_code": "20",
+                "name": null,
+                "url": null,
+                "cmte_id": null,
+                "cluster_irg_code": null,
+                "properties": {}
+            },
+            "award_notice_date": "2020-11-19T05:00:00Z",
+            "is_new": false,
+            "mechanism_code_dc": "TR",
+            "core_project_num": "F31HD104339",
+            "terms": "skills ; novel ; Positioning Attribute ; Position ; Property ; Address ; Data ; Detection ; in vivo ; Genomic Segment ; genomic region ; Molecular ; design ; designing ; Population ; multidisciplinary ; genome scale ; genomewide ; genome-wide ; arm ; entire genome ; full genome ; whole genome ; experiment ; experimental research ; experimental study ; preservation ; male fertility ; Automobile Driving ; driving ; Biological Assay ; Assay ; Bioassay ; Biologic Assays ; Biology ; Evolution ; Fertility ; Fecundability ; Fecundity ; Foundations ; Gene Conversion ; Genes ; Male Infertility ; Mice ; Mice Mammals ; Murine ; Mus ; Nucleotides ; pressure ; Primates ; Primates Mammals ; Publishing ; Genetic Recombination ; DNA Recombination ; Recombination ; Sex Chromosomes ; Gonosomes ; sperm cell ; Sperm ; Spermatozoa ; zoosperm ; Testing ; Testis ; Testicles ; Time ; X Chromosome ; Molecular Genetics ; base ; Variant ; Variation ; Link ; Training ; insight ; Genetic ; Knowledge ; Frequencies ; ",
+            "pref_terms": "Address;Automobile Driving;Biological Assay;Biology;Data;Detection;Evolution;Fertility;Foundations;Frequencies;Gene Conversion;Genes;Genetic;Genetic Recombination;Genomic Segment;Knowledge;Link;Male Infertility;Molecular;Molecular Genetics;Mus;Nucleotides;Population;Positioning Attribute;Primates;Property;Publishing;Sex Chromosomes;Testing;Testis;Time;Training;Variant;X Chromosome;arm;base;design;experimental study;genome-wide;in vivo;insight;male fertility;multidisciplinary;novel;preservation;pressure;skills;sperm cell;whole genome",
+            "abstract_text": "ABSTRACT\nIn many species, genes and genomic regions involved in male fertility evolve rapidly. Mammalian sex\nchromosomes are enriched for rapidly evolving large palindromic sequences harboring testis-specific genes.\nHowever, the mechanism driving rapid evolution of X- and Y- palindromes and their associated genes is poorly\nunderstood. I propose that intra-palindrome gene conversion – the “copying” of sequence from one palindrome\narm to the other via recombination – is the primary mechanism driving X- and Y- palindrome evolution. The\npremise of this proposal is based upon observations from my recently published findings in mouse and previous\nstudies in primates that X- and Y-palindromes, respectively, undergo on-going intra-palindrome gene conversion.\nTo address the rapid evolution of X- and Y-palindromic sequences, I will first identify whether selective pressures\n(i.e. positive or purifying selection) influence the sequence evolution of X- and Y- palindromes in mice. This will\nbe the first systematic analysis of both X- and Y-palindrome sequence evolution within a single species to\nunderstand the selective pressures governing their evolution. I will also develop a novel assay to address, for\nthe first time, the in vivo frequencies of X- and Y- intra-palindrome gene conversion. Understanding the evolution\nof X- and Y- palindromes and in vivo frequencies of intra-palindrome gene conversion will provide valuable\ninsights into the rapid evolution of genomic regions important for male fertility.",
+            "project_title": "Tracking the Rapid Evolution of Sex Chromosome Palindromes and Their Genes",
+            "phr_text": "PROJECT NARRATIVE\nMammalian sex chromosomes are enriched for rapidly evolving large palindromic sequences harboring genes\nessential for male fertility. The mechanism underlying the rapid evolution of X- and Y- palindromes and their\ngenes is poorly understood due to a lack of systematic evolutionary and in vivo studies. My proposed\nexperiments will address the mechanism of X- and Y- palindrome evolution with important implications to our\nunderstanding of male infertility.",
+            "spending_categories_desc": null,
+            "awd_doc_num": "FHD104339A",
+            "init_encumbrance_date": "2020-11-19T06:29:22Z",
+            "can_task": [
+                "2021.100"
+            ],
+            "special_topic_code": null,
+            "agency_code": "NIH",
+            "covid_response": null
+        },
+        {
+            "appl_id": 10057274,
+            "subproject_id": null,
+            "fiscal_year": 2021,
+            "org_name": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
+            "org_city": "BIRMINGHAM",
+            "org_state": "AL",
+            "org_state_name": null,
+            "dept_type": "ANATOMY/CELL BIOLOGY",
+            "project_num": "5R01NS104339-04",
+            "project_serial_num": "NS104339",
+            "org_country": "UNITED STATES",
+            "award_type": "5",
+            "activity_code": "R01",
+            "award_amount": 379306,
+            "is_active": true,
+            "is_territory": false,
+            "project_num_split": {
+                "appl_type_code": "5",
+                "activity_code": "R01",
+                "ic_code": "NS",
+                "serial_num": "104339",
+                "support_year": "04",
+                "full_support_year": "04",
+                "suffix_code": ""
+            },
+            "principal_investigators": [
+                {
+                    "profile_id": 10141336,
+                    "first_name": "Anita",
+                    "middle_name": "",
+                    "last_name": "Hjelmeland",
+                    "is_contact_pi": true,
+                    "full_name": "Anita  Hjelmeland",
+                    "title": null,
+                    "email": null
+                }
+            ],
+            "contact_pi_name": "HJELMELAND, ANITA ",
+            "program_officers": [
+                {
+                    "first_name": "JANE",
+                    "middle_name": "W.",
+                    "last_name": "FOUNTAIN",
+                    "full_name": "JANE W. FOUNTAIN",
+                    "email": null
+                }
+            ],
+            "agency_ic_admin": {
+                "code": "NS",
+                "abbreviation": "NINDS",
+                "name": "National Institute of Neurological Disorders and Stroke"
+            },
+            "agency_ic_fundings": [
+                {
+                    "fy": 2021,
+                    "code": "NS",
+                    "name": "National Institute of Neurological Disorders and Stroke",
+                    "abbreviation": "NINDS",
+                    "total_cost": 379306.0
+                }
+            ],
+            "cong_dist": "AL-07",
+            "spending_categories": null,
+            "project_start_date": "2017-12-15T05:00:00Z",
+            "project_end_date": "2022-11-30T05:00:00Z",
+            "organization_type": {
+                "name": "SCHOOLS OF MEDICINE",
+                "code": "10",
+                "is_other": false
+            },
+            "all_text": null,
+            "foa": "PA16160",
+            "full_foa": "PA-16-160",
+            "full_study_section": {
+                "irg_code": "TCB",
+                "sra_designator_code": "",
+                "sra_flex_code": "",
+                "group_code": "",
+                "name": null,
+                "url": null,
+                "cmte_id": null,
+                "cluster_irg_code": null,
+                "properties": {}
+            },
+            "award_notice_date": "2020-11-26T05:00:00Z",
+            "is_new": false,
+            "mechanism_code_dc": "RP",
+            "core_project_num": "R01NS104339",
+            "terms": "Adult ; 21+ years old ; Adult Human ; adulthood ; Age ; ages ; inhibitor/antagonist ; inhibitor ; Antioxidants ; anti-oxidant ; Brain Diseases ; Brain Disorders ; Encephalon Diseases ; Intracranial CNS Disorders ; Intracranial Central Nervous System Disorders ; Brain Neoplasms ; Brain Neoplasia ; Brain Tumors ; tumors in the brain ; Brain Pathology ; Complementary DNA ; cDNA ; Malignant Neoplasms ; Cancers ; Malignant Tumor ; malignancy ; neoplasm/cancer ; cell growth ; Cellular Expansion ; Cellular Growth ; Cells ; Cell Body ; DNA Repair ; DNA Damage Repair ; Unscheduled DNA Synthesis ; Enzymes ; Enzyme Gene ; Equilibrium ; balance ; balance function ; Future ; Grade IV Astrocytic Neoplasm ; Grade IV Astrocytic Tumor ; Grade IV Astrocytoma ; glioblastoma multiforme ; spongioblastoma multiforme ; Glioblastoma ; Glial Cell Tumors ; Glial Neoplasm ; Glial Tumor ; Neuroglial Neoplasm ; Neuroglial Tumor ; glial-derived tumor ; neuroglia neoplasm ; neuroglia tumor ; Glioma ; Generalized Growth ; Tissue Growth ; ontogeny ; Growth ; GTP ; Guanosine Triphosphate ; In Vitro ; Intermediary Metabolism ; Metabolic Processes ; Metabolism ; Mice ; Mice Mammals ; Murine ; Mus ; Endogenous Nitrate Vasodilator ; Endothelium-Derived Nitric Oxide ; Mononitrogen Monoxide ; Nitrogen Monoxide ; Nitrogen Protoxide ; endothelial cell derived relaxing factor ; Nitric Oxide ; Nitrogen ; O element ; O2 element ; Oxygen ; Patients ; Pharmacology ; Phenotype ; Phosphorylation ; Protein Phosphorylation ; outcome forecast ; Prognosis ; Proteins ; Publications ; Scientific Publication ; Radiation therapy ; Radiotherapeutics ; Radiotherapy ; radiation treatment ; radio-therapy ; treatment with radiation ; Messenger RNA ; mRNA ; Role ; social role ; Serine ; L-Serine ; Signal Transduction ; Cell Communication and Signaling ; Cell Signaling ; Intracellular Communication and Signaling ; Signal Transduction Systems ; Signaling ; biological signal transduction ; stem cells ; Progenitor Cells ; Superoxides ; Superoxide Anion ; Superoxide Radical ; Tissues ; Body Tissues ; Genetic Transcription ; Gene Transcription ; RNA Expression ; Transcription ; Tumor Stem Cells ; Neoplastic Colony-Forming Units ; Neoplastic Stem Cells ; tetrahydrobiopterin ; BH4 ; BPH4 ; H4B ; H4biopterin ; THBP ; temozolomide ; Temodal ; Temodar ; methazolastone ; Mediating ; Data Set ; Dataset ; Malignant neoplasm of brain ; Brain Cancer ; Malignant Tumor of the Brain ; detector ; improved ; Clinical ; Biological ; GTP Cyclohydrolase I ; GTPCH1 ; Oxidative Stress ; Therapeutic ; Genetic ; Specimen ; Research Specimen ; Xenograft procedure ; Heterograft ; Heterologous Transplantation ; Xenograft ; Xenotransplantation ; xeno-transplant ; xeno-transplantation ; Recurrent tumor ; Recurrent Neoplasm ; neoplasm recurrence ; Malignant Glioma ; Malignant Glial Neoplasm ; Malignant Glial Tumor ; Malignant Neuroglial Neoplasm ; Malignant Neuroglial Tumor ; tumor growth ; novel ; member ; Primary Brain Neoplasms ; Primary Brain Tumors ; Regulation ; Modeling ; Sampling ; irradiation ; Metabolic Pathway ; prevent ; preventing ; Radio ; small molecule ; CD44 gene ; CD44 ; MDU3 ; Pgp1 ; Mediator of activation protein ; Mediator ; Mediator of Activation ; Data ; Prediction of Response to Therapy ; predict therapeutic response ; predict therapy response ; predict treatment response ; therapy prediction ; treatment prediction ; treatment response prediction ; in vivo ; Cancer Etiology ; Cancer Cause ; Cell Maintenance ; Cell Growth and Maintenance ; Patient-Focused Outcomes ; Patient outcome ; Patient-Centered Outcomes ; Signaling Molecule ; Characteristics ; Molecular ; Pathway interactions ; pathway ; therapy resistant ; resistance to therapy ; resistant to therapy ; therapeutic resistance ; treatment resistance ; new approaches ; novel approaches ; novel strategy ; novel strategies ; Outcome ; tumorigenic ; shRNA ; short hairpin RNA ; small hairpin RNA ; chemotherapy ; tumor ; overexpress ; overexpression ; standard of care ; response to treatment ; therapeutic response ; treatment response ; treatment strategy ; bio-markers ; biologic marker ; biomarker ; Biological Markers ; cancer cell metabolism ; cancer metabolism ; tumor cell metabolism ; tumor metabolism ; gene signatures ; genetic signature ; Intratumoral heterogeneity ; heterogeneity in tumors ; intra-tumoral heterogeneity ; intratumor heterogeneity ; tumor heterogeneity ; pre-clinical trial ; preclinical trial ; survival outcome ; expression subtypes ; molecular sub-types ; molecular subsets ; molecular subtypes ; patient subgroups ; patient subpopulations ; patient subtypes ; patient subsets ; cancer death in children ; cancer mortality in children ; cancer related death in children ; childhood cancer death ; childhood cancer mortality ; progenitor Cell growth ; stem cell growth ; ",
+            "pref_terms": "Adult;Age;Antioxidants;Biological;Biological Markers;Brain Diseases;Brain Neoplasms;Brain Pathology;CD44 gene;Cancer Etiology;Cell Maintenance;Cells;Characteristics;Clinical;Complementary DNA;DNA Repair;Data;Data Set;Enzymes;Equilibrium;Future;GTP Cyclohydrolase I;Genetic;Genetic Transcription;Glioblastoma;Glioma;Growth;Guanosine Triphosphate;In Vitro;Malignant Glioma;Malignant Neoplasms;Malignant neoplasm of brain;Mediating;Mediator of activation protein;Messenger RNA;Metabolic Pathway;Metabolism;Modeling;Molecular;Mus;Nitric Oxide;Nitrogen;Outcome;Oxidative Stress;Oxygen;Pathway interactions;Patient-Focused Outcomes;Patients;Pharmacology;Phenotype;Phosphorylation;Prediction of Response to Therapy;Primary Brain Neoplasms;Proteins;Publications;Radiation therapy;Radio;Recurrent tumor;Regulation;Role;Sampling;Serine;Signal Transduction;Signaling Molecule;Specimen;Superoxides;Therapeutic;Tissues;Tumor Stem Cells;Xenograft procedure;cell growth;chemotherapy;childhood cancer mortality;detector;genetic signature;improved;in vivo;inhibitor/antagonist;irradiation;member;molecular subtypes;novel;novel strategies;outcome forecast;overexpression;patient subsets;preclinical trial;prevent;small hairpin RNA;small molecule;standard of care;stem cell growth;stem cells;survival outcome;temozolomide;tetrahydrobiopterin;therapy resistant;treatment response;treatment strategy;tumor;tumor growth;tumor heterogeneity;tumor metabolism;tumorigenic",
+            "abstract_text": "ABSTRACT\nBiosynthetic metabolic pathways provide the building blocks required for cell growth and generate important\ncell signaling molecules, including reactive species. When dysregulated, these pathways can contribute to\nbrain pathologies including brain tumors. We determined that one biosynthetic pathway involving GTP\ncyclohydrolase I (GCH1) as the rate-limiting step contributes to the growth of brain tumors and is elevated in\nthe neoplastic stem cell subpopulation. In patient sample datasets, increased levels of GCH1 also correlate\nwith poor outcomes. These data suggest the importance of understanding the biological and molecular roles of\nGCH1. We have therefore proposed to determine if GCH1 is critical for regulating reactive species balance in\nglioma and maintaining neoplastic stem cell characteristics. Potential novel downstream mediators of GCH1\neffects will be validated. Pharmacologic and genetic inhibition of GCH1 will determine if targeting of GCH1 is\nsufficient to decrease glioma growth alone or in combination with standard of care. We anticipate these studies\nwill determine if GCH1 or another molecule in the same biosynthetic pathway should be a further investigated\nas a biomarker for either outcome or therapeutic response. We hope that our studies will provide a greater\nunderstanding of the mechanisms through which metabolism is altered in brain disease and inform future novel\ntreatment strategies.",
+            "project_title": "Biosynthetic Metabolic Pathway Regulation of Glioma Growth",
+            "phr_text": "PROJECT NARRATIVE\nAlterations of metabolic pathways that provide building blocks required for continued growth and generate\nimportant reactive molecules for cell signaling have significant impact on brain pathologies including brain\ntumors. We have determined a metabolic pathway contributes to neoplastic stem cell growth and are seeking\nto better understand this mechanism. We are using novel strategies to target metabolism in preclinical trials\nand believe that our studies will provide new understanding of brain disease.\n!",
+            "spending_categories_desc": null,
+            "awd_doc_num": "RNS104339A",
+            "init_encumbrance_date": "2020-11-26T05:18:44Z",
+            "can_task": [
+                "2021.100"
+            ],
+            "special_topic_code": [
+                "CI"
+            ],
+            "agency_code": "NIH",
+            "covid_response": null
+        },
+        {
+            "appl_id": 9612414,
+            "subproject_id": null,
+            "fiscal_year": 2019,
+            "org_name": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
+            "org_city": "BIRMINGHAM",
+            "org_state": "AL",
+            "org_state_name": null,
+            "dept_type": "ANATOMY/CELL BIOLOGY",
+            "project_num": "5R01NS104339-02",
+            "project_serial_num": "NS104339",
+            "org_country": "UNITED STATES",
+            "award_type": "5",
+            "activity_code": "R01",
+            "award_amount": 379651,
+            "is_active": false,
+            "is_territory": false,
+            "project_num_split": {
+                "appl_type_code": "5",
+                "activity_code": "R01",
+                "ic_code": "NS",
+                "serial_num": "104339",
+                "support_year": "02",
+                "full_support_year": "02",
+                "suffix_code": ""
+            },
+            "principal_investigators": [
+                {
+                    "profile_id": 10141336,
+                    "first_name": "Anita",
+                    "middle_name": "",
+                    "last_name": "Hjelmeland",
+                    "is_contact_pi": true,
+                    "full_name": "Anita  Hjelmeland",
+                    "title": null,
+                    "email": null
+                }
+            ],
+            "contact_pi_name": "HJELMELAND, ANITA ",
+            "program_officers": [
+                {
+                    "first_name": "JANE",
+                    "middle_name": "W.",
+                    "last_name": "FOUNTAIN",
+                    "full_name": "JANE W. FOUNTAIN",
+                    "email": null
+                }
+            ],
+            "agency_ic_admin": {
+                "code": "NS",
+                "abbreviation": "NINDS",
+                "name": "National Institute of Neurological Disorders and Stroke"
+            },
+            "agency_ic_fundings": [
+                {
+                    "fy": 2019,
+                    "code": "NS",
+                    "name": "National Institute of Neurological Disorders and Stroke",
+                    "abbreviation": "NINDS",
+                    "total_cost": 379651.0
+                }
+            ],
+            "cong_dist": "AL-07",
+            "spending_categories": [
+                117,
+                118,
+                132,
+                176,
+                3641,
+                3584,
+                525,
+                729,
+                796,
+                802
+            ],
+            "project_start_date": "2017-12-15T05:00:00Z",
+            "project_end_date": "2022-11-30T05:00:00Z",
+            "organization_type": {
+                "name": "SCHOOLS OF MEDICINE",
+                "code": "10",
+                "is_other": false
+            },
+            "all_text": null,
+            "foa": "PA16160",
+            "full_foa": "PA-16-160",
+            "full_study_section": {
+                "irg_code": "TCB",
+                "sra_designator_code": "",
+                "sra_flex_code": "",
+                "group_code": "",
+                "name": null,
+                "url": null,
+                "cmte_id": null,
+                "cluster_irg_code": null,
+                "properties": {}
+            },
+            "award_notice_date": "2018-12-04T05:00:00Z",
+            "is_new": false,
+            "mechanism_code_dc": "RP",
+            "core_project_num": "R01NS104339",
+            "terms": "Adult ; adulthood ; Adult Human ; 21+ years old ; Age ; ages ; inhibitor/antagonist ; inhibitor ; Antioxidants ; anti-oxidant ; Brain Diseases ; Intracranial Central Nervous System Disorders ; Intracranial CNS Disorders ; Encephalon Diseases ; Brain Disorders ; Brain Neoplasms ; tumors in the brain ; Brain Tumors ; Brain Neoplasia ; Brain Pathology ; Complementary DNA ; cDNA ; Malignant Neoplasms ; neoplasm/cancer ; malignancy ; Malignant Tumor ; Cancers ; Cellular Growth ; Cellular Expansion ; cell growth ; Cell Body ; Cells ; Unscheduled DNA Synthesis ; DNA Damage Repair ; DNA Repair ; Enzyme Gene ; Enzymes ; balance function ; balance ; Equilibrium ; Future ; spongioblastoma multiforme ; glioblastoma multiforme ; Grade IV Astrocytoma ; Grade IV Astrocytic Tumor ; Grade IV Astrocytic Neoplasm ; Glioblastoma ; neuroglia tumor ; neuroglia neoplasm ; glial-derived tumor ; Neuroglial Tumor ; Neuroglial Neoplasm ; Glial Tumor ; Glial Neoplasm ; Glial Cell Tumors ; Glioma ; ontogeny ; Tissue Growth ; Generalized Growth ; Growth ; GTP ; Guanosine Triphosphate ; In Vitro ; Metabolic Processes ; Intermediary Metabolism ; Metabolism ; Murine ; Mice Mammals ; Mice ; Mus ; endothelial cell derived relaxing factor ; Nitrogen Protoxide ; Nitrogen Monoxide ; Mononitrogen Monoxide ; Endothelium-Derived Nitric Oxide ; Endogenous Nitrate Vasodilator ; Nitric Oxide ; Nitrogen ; O2 element ; O element ; Oxygen ; Patients ; Pharmacology ; Phenotype ; Protein Phosphorylation ; Phosphorylation ; Prognosis ; outcome forecast ; Proteins ; Scientific Publication ; Publications ; treatment with radiation ; radio-therapy ; radiation treatment ; Radiotherapy ; Radiotherapeutics ; Radiation therapy ; mRNA ; Messenger RNA ; social role ; Role ; L-Serine ; Serine ; biological signal transduction ; Signaling ; Signal Transduction Systems ; Intracellular Communication and Signaling ; Cell Signaling ; Cell Communication and Signaling ; Signal Transduction ; Progenitor Cells ; Stem cells ; Superoxide Radical ; Superoxide Anion ; Superoxides ; Body Tissues ; Tissues ; Transcription ; RNA Expression ; Gene Transcription ; Genetic Transcription ; Tumor Initiators ; Neoplastic Stem Cells ; Neoplastic Colony-Forming Units ; Tumor Stem Cells ; THBP ; H4biopterin ; H4B ; BPH4 ; BH4 ; tetrahydrobiopterin ; methazolastone ; Temodar ; Temodal ; temozolomide ; Mediating ; Dataset ; Data Set ; Malignant neoplasm of brain ; Malignant Tumor of the Brain ; Brain Cancer ; detector ; improved ; Clinical ; Biological ; GTP Cyclohydrolase I ; GTPCH1 ; Oxidative Stress ; Therapeutic ; Genetic ; Specimen ; Research Specimen ; Xenograft procedure ; xeno-transplantation ; xeno-transplant ; Xenotransplantation ; Xenograft ; Heterologous Transplantation ; Heterograft ; Recurrent tumor ; neoplasm recurrence ; Recurrent Neoplasm ; Malignant Glioma ; Malignant Neuroglial Tumor ; Malignant Neuroglial Neoplasm ; Malignant Glial Tumor ; Malignant Glial Neoplasm ; tumor growth ; novel ; member ; Primary Brain Neoplasms ; Primary Brain Tumors ; Regulation ; Modeling ; Sampling ; irradiation ; Metabolic Pathway ; preventing ; prevent ; Radio ; small molecule ; CD44 gene ; Pgp1 ; MDU3 ; CD44 ; Mediator of activation protein ; Mediator of Activation ; Mediator ; Data ; Prediction of Response to Therapy ; treatment response prediction ; treatment prediction ; therapy prediction ; predict treatment response ; predict therapy response ; predict therapeutic response ; in vivo ; Cancer Etiology ; Cancer Cause ; Cell Maintenance ; Cell Growth and Maintenance ; Patient-Focused Outcomes ; Patient-Centered Outcomes ; Patient outcome ; Signaling Molecule ; Characteristics ; Molecular ; Pathway interactions ; pathway ; therapy resistant ; treatment resistance ; therapeutic resistance ; resistant to therapy ; resistance to therapy ; feeding ; novel strategies ; novel strategy ; novel approaches ; new approaches ; Outcome ; tumorigenic ; small hairpin RNA ; short hairpin RNA ; shRNA ; chemotherapy ; tumor ; overexpression ; overexpress ; standard of care ; treatment response ; therapeutic response ; response to treatment ; treatment strategy ; Biological Markers ; biomarker ; biologic marker ; bio-markers ; tumor metabolism ; tumor cell metabolism ; cancer metabolism ; cancer cell metabolism ; genetic signature ; gene signatures ; tumor heterogeneity ; intratumor heterogeneity ; intra-tumoral heterogeneity ; heterogeneity in tumors ; Intratumoral heterogeneity ; preclinical trial ; pre-clinical trial ; survival outcome ; molecular subtypes ; molecular subsets ; molecular sub-types ; expression subtypes ; patient subsets ; patient subtypes ; patient subpopulations ; patient subgroups ; childhood cancer mortality ; childhood cancer death ; cancer related death in children ; cancer mortality in children ; cancer death in children ; ",
+            "pref_terms": "Adult;Age;Antioxidants;Biological;Biological Markers;Brain Diseases;Brain Neoplasms;Brain Pathology;CD44 gene;Cancer Etiology;Cell Maintenance;Cells;Characteristics;Clinical;Complementary DNA;DNA Repair;Data;Data Set;Enzymes;Equilibrium;Future;GTP Cyclohydrolase I;Genetic;Genetic Transcription;Glioblastoma;Glioma;Growth;Guanosine Triphosphate;In Vitro;Malignant Glioma;Malignant Neoplasms;Malignant neoplasm of brain;Mediating;Mediator of activation protein;Messenger RNA;Metabolic Pathway;Metabolism;Modeling;Molecular;Mus;Nitric Oxide;Nitrogen;Outcome;Oxidative Stress;Oxygen;Pathway interactions;Patient-Focused Outcomes;Patients;Pharmacology;Phenotype;Phosphorylation;Prediction of Response to Therapy;Primary Brain Neoplasms;Proteins;Publications;Radiation therapy;Radio;Recurrent tumor;Regulation;Role;Sampling;Serine;Signal Transduction;Signaling Molecule;Specimen;Stem cells;Superoxides;Therapeutic;Tissues;Tumor Initiators;Tumor Stem Cells;Xenograft procedure;cell growth;chemotherapy;childhood cancer mortality;detector;feeding;genetic signature;improved;in vivo;inhibitor/antagonist;irradiation;member;molecular subtypes;novel;novel strategies;outcome forecast;overexpression;patient subsets;preclinical trial;prevent;small hairpin RNA;small molecule;standard of care;survival outcome;temozolomide;tetrahydrobiopterin;therapy resistant;treatment response;treatment strategy;tumor;tumor growth;tumor heterogeneity;tumor metabolism;tumorigenic",
+            "abstract_text": "ABSTRACT\nBiosynthetic metabolic pathways provide the building blocks required for cell growth and generate important\ncell signaling molecules, including reactive species. When dysregulated, these pathways can contribute to\nbrain pathologies including brain tumors. We determined that one biosynthetic pathway involving GTP\ncyclohydrolase I (GCH1) as the rate-limiting step contributes to the growth of brain tumors and is elevated in\nthe neoplastic stem cell subpopulation. In patient sample datasets, increased levels of GCH1 also correlate\nwith poor outcomes. These data suggest the importance of understanding the biological and molecular roles of\nGCH1. We have therefore proposed to determine if GCH1 is critical for regulating reactive species balance in\nglioma and maintaining neoplastic stem cell characteristics. Potential novel downstream mediators of GCH1\neffects will be validated. Pharmacologic and genetic inhibition of GCH1 will determine if targeting of GCH1 is\nsufficient to decrease glioma growth alone or in combination with standard of care. We anticipate these studies\nwill determine if GCH1 or another molecule in the same biosynthetic pathway should be a further investigated\nas a biomarker for either outcome or therapeutic response. We hope that our studies will provide a greater\nunderstanding of the mechanisms through which metabolism is altered in brain disease and inform future novel\ntreatment strategies.",
+            "project_title": "Biosynthetic Metabolic Pathway Regulation of Glioma Growth",
+            "phr_text": "PROJECT NARRATIVE\nAlterations of metabolic pathways that provide building blocks required for continued growth and generate\nimportant reactive molecules for cell signaling have significant impact on brain pathologies including brain\ntumors. We have determined a metabolic pathway contributes to neoplastic stem cell growth and are seeking\nto better understand this mechanism. We are using novel strategies to target metabolism in preclinical trials\nand believe that our studies will provide new understanding of brain disease.\n!",
+            "spending_categories_desc": "Brain Cancer; Brain Disorders; Cancer; Clinical Research; Health Disparities; Minority Health; Neurosciences; Rare Diseases; Stem Cell Research; Stem Cell Research - Nonembryonic - Human",
+            "awd_doc_num": "RNS104339A",
+            "init_encumbrance_date": "2018-12-04T05:03:43Z",
+            "can_task": [
+                "2019.100"
+            ],
+            "special_topic_code": null,
+            "agency_code": "NIH",
+            "covid_response": null
+        },
+        {
+            "appl_id": 9423686,
+            "subproject_id": null,
+            "fiscal_year": 2018,
+            "org_name": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
+            "org_city": "BIRMINGHAM",
+            "org_state": "AL",
+            "org_state_name": null,
+            "dept_type": "ANATOMY/CELL BIOLOGY",
+            "project_num": "1R01NS104339-01",
+            "project_serial_num": "NS104339",
+            "org_country": "UNITED STATES",
+            "award_type": "1",
+            "activity_code": "R01",
+            "award_amount": 403333,
+            "is_active": false,
+            "is_territory": false,
+            "project_num_split": {
+                "appl_type_code": "1",
+                "activity_code": "R01",
+                "ic_code": "NS",
+                "serial_num": "104339",
+                "support_year": "01",
+                "full_support_year": "01",
+                "suffix_code": ""
+            },
+            "principal_investigators": [
+                {
+                    "profile_id": 10141336,
+                    "first_name": "Anita",
+                    "middle_name": "",
+                    "last_name": "Hjelmeland",
+                    "is_contact_pi": true,
+                    "full_name": "Anita  Hjelmeland",
+                    "title": null,
+                    "email": null
+                }
+            ],
+            "contact_pi_name": "HJELMELAND, ANITA ",
+            "program_officers": [
+                {
+                    "first_name": "JANE",
+                    "middle_name": "W.",
+                    "last_name": "FOUNTAIN",
+                    "full_name": "JANE W. FOUNTAIN",
+                    "email": null
+                }
+            ],
+            "agency_ic_admin": {
+                "code": "NS",
+                "abbreviation": "NINDS",
+                "name": "National Institute of Neurological Disorders and Stroke"
+            },
+            "agency_ic_fundings": [
+                {
+                    "fy": 2018,
+                    "code": "NS",
+                    "name": "National Institute of Neurological Disorders and Stroke",
+                    "abbreviation": "NINDS",
+                    "total_cost": 403333.0
+                }
+            ],
+            "cong_dist": "AL-07",
+            "spending_categories": [
+                117,
+                118,
+                132,
+                176,
+                3641,
+                3584,
+                525,
+                729,
+                796,
+                802
+            ],
+            "project_start_date": "2017-12-15T05:00:00Z",
+            "project_end_date": "2022-11-30T05:00:00Z",
+            "organization_type": {
+                "name": "SCHOOLS OF MEDICINE",
+                "code": "10",
+                "is_other": false
+            },
+            "all_text": null,
+            "foa": "PA16160",
+            "full_foa": "PA-16-160",
+            "full_study_section": {
+                "irg_code": "TCB",
+                "sra_designator_code": "",
+                "sra_flex_code": "",
+                "group_code": "",
+                "name": null,
+                "url": null,
+                "cmte_id": null,
+                "cluster_irg_code": null,
+                "properties": {}
+            },
+            "award_notice_date": "2017-12-09T05:00:00Z",
+            "is_new": false,
+            "mechanism_code_dc": "RP",
+            "core_project_num": "R01NS104339",
+            "terms": "Intracranial Central Nervous System Disorders ; Intracranial CNS Disorders ; Encephalon Diseases ; Brain Disorders ; Brain Neoplasms ; tumors in the brain ; Brain Tumors ; Brain Neoplasia ; Brain Pathology ; Complementary DNA ; cDNA ; Malignant Neoplasms ; neoplasm/cancer ; malignancy ; Malignant Tumor ; Cancers ; cell growth ; Cellular Growth ; Cellular Expansion ; Cells ; Cell Body ; DNA Repair ; Unscheduled DNA Synthesis ; DNA Damage Repair ; Enzymes ; Enzyme Gene ; Equilibrium ; balance function ; balance ; Future ; Glioblastoma ; spongioblastoma multiforme ; glioblastoma multiforme ; Grade IV Astrocytoma ; Grade IV Astrocytic Tumor ; Grade IV Astrocytic Neoplasm ; Glioma ; neuroglia tumor ; neuroglia neoplasm ; glial-derived tumor ; Neuroglial Tumor ; Neuroglial Neoplasm ; Glial Tumor ; Glial Neoplasm ; Glial Cell Tumors ; Growth ; ontogeny ; Tissue Growth ; Generalized Growth ; Guanosine Triphosphate ; GTP ; In Vitro ; Metabolism ; Metabolic Processes ; Intermediary Metabolism ; Mus ; Murine ; Mice Mammals ; Mice ; Nitric Oxide ; endothelial cell derived relaxing factor ; Nitrogen Protoxide ; Nitrogen Monoxide ; Mononitrogen Monoxide ; Endothelium-Derived Nitric Oxide ; Endogenous Nitrate Vasodilator ; Nitrogen ; N2 element ; N element ; Oxygen ; O2 element ; O element ; Patients ; Pharmacology ; Phenotype ; Phosphorylation ; Protein Phosphorylation ; outcome forecast ; Prognosis ; Proteins ; Publications ; Scientific Publication ; Radiation therapy ; treatment with radiation ; radio-therapy ; radiation treatment ; Radiotherapy ; Radiotherapeutics ; Messenger RNA ; mRNA ; Role ; social role ; Serine ; L-Serine ; Signal Transduction ; biological signal transduction ; Signaling ; Signal Transduction Systems ; Intracellular Communication and Signaling ; Cell Signaling ; Cell Communication and Signaling ; Stem cells ; Progenitor Cells ; Superoxides ; Superoxide Radical ; Superoxide Anion ; Tissues ; Body Tissues ; Genetic Transcription ; Transcription ; RNA Expression ; Gene Transcription ; Tumor Initiators ; Tumor Stem Cells ; Neoplastic Stem Cells ; Neoplastic Colony-Forming Units ; tetrahydrobiopterin ; THBP ; H4biopterin ; H4B ; BPH4 ; BH4 ; temozolomide ; methazolastone ; Temodar ; Temodal ; Mediating ; Data Set ; Dataset ; Malignant Tumor of the Brain ; Brain Cancer ; Malignant neoplasm of brain ; detector ; improved ; Clinical ; Biological ; GTPCH1 ; GTP Cyclohydrolase I ; Oxidative Stress ; Therapeutic ; Genetic ; Specimen ; Research Specimen ; Xenograft procedure ; xeno-transplantation ; xeno-transplant ; Xenotransplantation ; Xenograft ; Heterologous Transplantation ; Heterograft ; Recurrent tumor ; neoplasm recurrence ; Recurrent Neoplasm ; Malignant Glioma ; Malignant Neuroglial Tumor ; Malignant Neuroglial Neoplasm ; Malignant Glial Tumor ; Malignant Glial Neoplasm ; tumor growth ; novel ; member ; Primary Brain Neoplasms ; Primary Brain Tumors ; Regulation ; Modeling ; Sampling ; irradiation ; Metabolic Pathway ; prevent ; preventing ; Radio ; small molecule ; CD44 gene ; Pgp1 ; MDU3 ; CD44 ; Mediator of activation protein ; Mediator of Activation ; Mediator ; Data ; Prediction of Response to Therapy ; treatment response prediction ; treatment prediction ; therapy prediction ; predict treatment response ; predict therapy response ; predict therapeutic response ; in vivo ; Cancer Cause ; Cancer Etiology ; Cell Growth and Maintenance ; Cell Maintenance ; Patient-Centered Outcomes ; Patient outcome ; Patient-Focused Outcomes ; Signaling Molecule ; Characteristics ; Molecular ; pathway ; Pathway interactions ; treatment resistance ; therapeutic resistance ; resistant to therapy ; resistance to therapy ; therapy resistant ; feeding ; novel strategy ; novel approaches ; new approaches ; novel strategies ; Outcome ; tumorigenic ; short hairpin RNA ; shRNA ; small hairpin RNA ; chemotherapy ; tumor ; overexpress ; over-expression ; overexpression ; standard of care ; therapeutic response ; response to treatment ; treatment response ; treatment strategy ; biomarker ; biologic marker ; bio-markers ; Biological Markers ; tumor cell metabolism ; cancer metabolism ; cancer cell metabolism ; tumor metabolism ; gene signatures ; genetic signature ; intratumor heterogeneity ; intra-tumoral heterogeneity ; heterogeneity in tumors ; Intratumoral heterogeneity ; tumor heterogeneity ; pre-clinical trial ; preclinical trial ; survival outcome ; molecular subsets ; molecular sub-types ; expression subtypes ; molecular subtypes ; patient subtypes ; patient subpopulations ; patient subgroups ; patient subsets ; childhood cancer death ; cancer related death in children ; cancer mortality in children ; cancer death in children ; childhood cancer mortality ; Adult ; adulthood ; Adult Human ; 21+ years old ; Age ; ages ; inhibitor/antagonist ; inhibitor ; Antioxidants ; anti-oxidant ; Brain Diseases ; ",
+            "pref_terms": "Adult;Age;Antioxidants;Biological;Biological Markers;Brain Diseases;Brain Neoplasms;Brain Pathology;CD44 gene;Cancer Etiology;Cell Maintenance;Cells;Characteristics;Clinical;Complementary DNA;DNA Repair;Data;Data Set;Enzymes;Equilibrium;Future;GTP Cyclohydrolase I;Genetic;Genetic Transcription;Glioblastoma;Glioma;Growth;Guanosine Triphosphate;In Vitro;Malignant Glioma;Malignant Neoplasms;Malignant neoplasm of brain;Mediating;Mediator of activation protein;Messenger RNA;Metabolic Pathway;Metabolism;Modeling;Molecular;Mus;Nitric Oxide;Nitrogen;Outcome;Oxidative Stress;Oxygen;Pathway interactions;Patient-Focused Outcomes;Patients;Pharmacology;Phenotype;Phosphorylation;Prediction of Response to Therapy;Primary Brain Neoplasms;Proteins;Publications;Radiation therapy;Radio;Recurrent tumor;Regulation;Role;Sampling;Serine;Signal Transduction;Signaling Molecule;Specimen;Stem cells;Superoxides;Therapeutic;Tissues;Tumor Initiators;Tumor Stem Cells;Xenograft procedure;cell growth;chemotherapy;childhood cancer mortality;detector;feeding;genetic signature;improved;in vivo;inhibitor/antagonist;irradiation;member;molecular subtypes;novel;novel strategies;outcome forecast;overexpression;patient subsets;preclinical trial;prevent;small hairpin RNA;small molecule;standard of care;survival outcome;temozolomide;tetrahydrobiopterin;therapy resistant;treatment response;treatment strategy;tumor;tumor growth;tumor heterogeneity;tumor metabolism;tumorigenic",
+            "abstract_text": "ABSTRACT\nBiosynthetic metabolic pathways provide the building blocks required for cell growth and generate important\ncell signaling molecules, including reactive species. When dysregulated, these pathways can contribute to\nbrain pathologies including brain tumors. We determined that one biosynthetic pathway involving GTP\ncyclohydrolase I (GCH1) as the rate-limiting step contributes to the growth of brain tumors and is elevated in\nthe neoplastic stem cell subpopulation. In patient sample datasets, increased levels of GCH1 also correlate\nwith poor outcomes. These data suggest the importance of understanding the biological and molecular roles of\nGCH1. We have therefore proposed to determine if GCH1 is critical for regulating reactive species balance in\nglioma and maintaining neoplastic stem cell characteristics. Potential novel downstream mediators of GCH1\neffects will be validated. Pharmacologic and genetic inhibition of GCH1 will determine if targeting of GCH1 is\nsufficient to decrease glioma growth alone or in combination with standard of care. We anticipate these studies\nwill determine if GCH1 or another molecule in the same biosynthetic pathway should be a further investigated\nas a biomarker for either outcome or therapeutic response. We hope that our studies will provide a greater\nunderstanding of the mechanisms through which metabolism is altered in brain disease and inform future novel\ntreatment strategies.",
+            "project_title": "Biosynthetic Metabolic Pathway Regulation of Glioma Growth",
+            "phr_text": "PROJECT NARRATIVE\nAlterations of metabolic pathways that provide building blocks required for continued growth and generate\nimportant reactive molecules for cell signaling have significant impact on brain pathologies including brain\ntumors. We have determined a metabolic pathway contributes to neoplastic stem cell growth and are seeking\nto better understand this mechanism. We are using novel strategies to target metabolism in preclinical trials\nand believe that our studies will provide new understanding of brain disease.\n!",
+            "spending_categories_desc": "Brain Cancer; Brain Disorders; Cancer; Clinical Research; Health Disparities; Minority Health; Neurosciences; Rare Diseases; Stem Cell Research; Stem Cell Research - Nonembryonic - Human",
+            "awd_doc_num": "RNS104339A",
+            "init_encumbrance_date": "2017-12-09T05:00:45Z",
+            "can_task": [
+                "2018.100"
+            ],
+            "special_topic_code": null,
+            "agency_code": "NIH",
+            "covid_response": null
+        },
+        {
+            "appl_id": 9403246,
+            "subproject_id": null,
+            "fiscal_year": 2018,
+            "org_name": "UNIVERSITY OF PENNSYLVANIA",
+            "org_city": "PHILADELPHIA",
+            "org_state": "PA",
+            "org_state_name": null,
+            "dept_type": "GENETICS",
+            "project_num": "5R01DK104339-04",
+            "project_serial_num": "DK104339",
+            "org_country": "UNITED STATES",
+            "award_type": "5",
+            "activity_code": "R01",
+            "award_amount": 356318,
+            "is_active": false,
+            "is_territory": false,
+            "project_num_split": {
+                "appl_type_code": "5",
+                "activity_code": "R01",
+                "ic_code": "DK",
+                "serial_num": "104339",
+                "support_year": "04",
+                "full_support_year": "04",
+                "suffix_code": ""
+            },
+            "principal_investigators": [
+                {
+                    "profile_id": 1920269,
+                    "first_name": "Sarah",
+                    "middle_name": "Anne",
+                    "last_name": "Tishkoff",
+                    "is_contact_pi": true,
+                    "full_name": "Sarah Anne Tishkoff",
+                    "title": null,
+                    "email": null
+                }
+            ],
+            "contact_pi_name": "TISHKOFF, SARAH ANNE",
+            "program_officers": [
+                {
+                    "first_name": "Padma",
+                    "middle_name": "",
+                    "last_name": "Maruvada",
+                    "full_name": "Padma  Maruvada",
+                    "email": null
+                }
+            ],
+            "agency_ic_admin": {
+                "code": "DK",
+                "abbreviation": "NIDDK",
+                "name": "National Institute of Diabetes and Digestive and Kidney Diseases"
+            },
+            "agency_ic_fundings": [
+                {
+                    "fy": 2018,
+                    "code": "DK",
+                    "name": "National Institute of Diabetes and Digestive and Kidney Diseases",
+                    "abbreviation": "NIDDK",
+                    "total_cost": 356318.0
+                }
+            ],
+            "cong_dist": "PA-03",
+            "spending_categories": [
+                140,
+                176,
+                276,
+                3641,
+                320,
+                3584,
+                536,
+                551,
+                701,
+                3724
+            ],
+            "project_start_date": "2014-12-01T05:00:00Z",
+            "project_end_date": "2019-11-30T05:00:00Z",
+            "organization_type": {
+                "name": "SCHOOLS OF MEDICINE",
+                "code": "10",
+                "is_other": false
+            },
+            "all_text": null,
+            "foa": "PAR13375",
+            "full_foa": "PAR-13-375",
+            "full_study_section": {
+                "irg_code": "ZRG1",
+                "sra_designator_code": "EMNR",
+                "sra_flex_code": "Q",
+                "group_code": "50",
+                "name": null,
+                "url": null,
+                "cmte_id": null,
+                "cluster_irg_code": null,
+                "properties": {}
+            },
+            "award_notice_date": "2017-12-06T05:00:00Z",
+            "is_new": false,
+            "mechanism_code_dc": "RP",
+            "core_project_num": "R01DK104339",
+            "terms": "adult onset diabetes ; Type II diabetes ; Type II Diabetes Mellitus ; Type 2 diabetes ; Type 2 Diabetes Mellitus ; T2DM ; T2D ; T2 DM ; Stable Diabetes Mellitus ; Slow-Onset Diabetes Mellitus ; Noninsulin Dependent Diabetes Mellitus ; Non-Insulin Dependent Diabetes ; NIDDM ; Maturity-Onset Diabetes Mellitus ; MODY ; Ketosis-Resistant Diabetes Mellitus ; Adult-Onset Diabetes Mellitus ; Diet ; dietary ; Disease ; Disorder ; Environment ; Ethiopia ; Food ; Food or Food Product ; Geography ; Health ; Human ; Modern Man ; Human Genetics ; Metabolic Diseases ; metabolism disorder ; Thesaurismosis ; Metabolic Disorder ; Metabolism ; Metabolic Processes ; Intermediary Metabolism ; Modernization ; nutrition ; Obesity ; obese population ; obese person ; obese people ; obese ; corpulentia ; corpulency ; corpulence ; adiposity ; Phenotype ; Plasma ; Reticuloendothelial System, Serum, Plasma ; Plasma Serum ; Blood Plasma ; Play ; Research ; Risk ; Role ; social role ; Mass Spectrum Analysis ; Mass Spectrum Analyses ; Mass Spectrum ; Mass Spectroscopy ; Mass Spectrometry ; Mass Photometry/Spectrum Analysis ; Tanzania ; Technology ; Testing ; Genetic Variation ; Genetic Diversity ; African American ; black American ; Black Populations ; Afroamerican ; Afro American ; Data Set ; Dataset ; Site ; Clinical ; Variation ; Variant ; insight ; Individual ; African ; Metabolic ; Genetic ; tool ; Frequencies ; Complex ; Source ; Pattern ; trait ; disorder risk ; disease risk ; Environmental Risk Factor ; environmental risk ; Environmental Factor ; Single Nucleotide Polymorphism ; Single Base Polymorphism ; Sampling ; Genomics ; Meta-Analysis ; Meta-Analyses ; Data Pooling ; Clinical Trial Overviews ; Metabolic Pathway ; metabolomics ; metabonomics ; metabolism measurement ; Data ; Indigenous ; Intake ; Macronutrients ; Macronutrients Nutrition ; nutritious ; Nutritional ; pathway ; Pathway interactions ; genomic variant ; allelic variant ; allele variant ; Gene variant ; genetic variant ; data integration ; Population ; public health relevance ; biomarker ; biologic marker ; bio-markers ; Biological Markers ; genomewide ; genome scale ; genome-wide ; exomes ; exome ; nutrigenomics ; nutritional genomics ; genomic variation ; cardiometabolic risk ; metabotype ; metabolic phenotype ; metabolic profile ; metabonome ; metabolome ; phenotypic data ; marker identification ; biomarker identification ; full genome ; entire genome ; whole genome ; ethnically diverse ; ethnic diversity ; cardiometabolic ; cardiometabolism ; Affect ; Africa ; Agriculture ; agricultural ; Botswana ; Bechuanaland ; Cardiovascular Diseases ; cardiovascular disorder ; Cardiovascular system ; circulatory system ; Heart Vascular ; Cardiovascular Organ System ; Cardiovascular Body System ; Cardiovascular ; Comparative Study ; Non-Insulin-Dependent Diabetes Mellitus ; type two diabetes ; type II DM ; type 2 DM ; maturity onset diabetes ; ketosis resistant diabetes ; ",
+            "pref_terms": "Affect;Africa;African;African American;Agriculture;Biological Markers;Botswana;Cardiovascular Diseases;Cardiovascular system;Clinical;Comparative Study;Complex;Data;Data Set;Diet;Disease;Environment;Environmental Risk Factor;Ethiopia;Food;Frequencies;Genetic;Genetic Variation;Genomics;Geography;Health;Human;Human Genetics;Indigenous;Individual;Intake;Macronutrients Nutrition;Mass Spectrum Analysis;Meta-Analysis;Metabolic;Metabolic Diseases;Metabolic Pathway;Metabolism;Modernization;Non-Insulin-Dependent Diabetes Mellitus;Nutritional;Obesity;Pathway interactions;Pattern;Phenotype;Plasma;Play;Population;Research;Risk;Role;Sampling;Single Nucleotide Polymorphism;Site;Source;Tanzania;Technology;Testing;Variant;biomarker identification;cardiometabolic risk;cardiometabolism;data integration;disorder risk;ethnic diversity;exome;genetic variant;genome-wide;genomic variation;insight;metabolic phenotype;metabolic profile;metabolome;metabolomics;nutrition;nutritional genomics;phenotypic data;public health relevance;tool;trait;whole genome",
+            "abstract_text": "﻿   \nDESCRIPTION (provided by applicant): Most studies of human genomic variation, nutrition, and metabolic traits have focused on non- African populations. However, Africa is an important region to study as it is the site of origin of modern humans. Africa contains the greatest levels o human genetic variation and is the source of the worldwide range expansion of modern humans to regions outside of Africa. Several common complex diseases of metabolic origin, such as obesity, type 2 diabetes and certain cardiovascular diseases occur at higher frequency in African Americans, and are on the rise in urban centers in Africa. It has been postulated that this\nis due to genetic variants adaptive for past environments with intermittent access to food but maladaptive in nutritionally replete \"Westernized\" environments. Metabolomics technology has begun to provide insight into metabolic processes and can be used for biomarker identification for disease risk and provide insight into metabolic pathways associated with risk. Given the intimate relationship between nutrition and metabolism and subsequent disease risk, metabolomics provides a unique and powerful tool in nutritional research. In this proposal, we will exploit metabolomic profiling to interrogate extant plasma from a unique set of ethnically diverse, well phenotyped indigenous African populations who practice different subsistence patterns (agriculture, pastoralism, agro- pastoralism, and hunting-gathering) who vary markedly in markers of cardiometabolic risk. We will perform untargeted metabolomics profiling in a sample of 365 individuals and will do targeted profiling of informative metabolites in a sample of 1500 ethnically diverse Africans to identify differences in metabolites and metabolic pathways that correlate with diet and anthropometric and cardiovascular phenotypes associated with disease risk. We will integrate these data with a large genome-wide Single Nucleotide Polymorphism (SNP) and whole genome sequence dataset collected in the same individuals to gain insight into how genetic, nutritional and other environmental factors contribute to variation in cardiometabolic risk traits in ethnically diverse African populations.",
+            "project_title": "Integrative nutrigenomic and metabolomic analyses of Africans with variable diets",
+            "phr_text": "PUBLIC HEALTH RELEVANCE: We will perform untargeted and targeted metabolomic profiling in a sample of 1500 ethnically diverse Africans to identify differences in metabolites an metabolic pathways that correlate with diet and anthropometric and cardiovascular phenotypes associated with disease risk. We will integrate these data with a large genomic dataset collected in the same individuals to gain insight into how genetic, nutritional and other environmental factors contribute to variation in cardiometabolic risk traits in ethnically diverse African populations.",
+            "spending_categories_desc": "Cardiovascular; Clinical Research; Genetics; Health Disparities; Human Genome; Minority Health; Nutrition; Obesity; Prevention; Women's Health",
+            "awd_doc_num": "RDK104339A",
+            "init_encumbrance_date": "2017-12-06T05:03:25Z",
+            "can_task": [
+                "2018.100"
+            ],
+            "special_topic_code": null,
+            "agency_code": "NIH",
+            "covid_response": null
+        },
+        {
+            "appl_id": 9186547,
+            "subproject_id": null,
+            "fiscal_year": 2017,
+            "org_name": "UNIVERSITY OF PENNSYLVANIA",
+            "org_city": "PHILADELPHIA",
+            "org_state": "PA",
+            "org_state_name": null,
+            "dept_type": "GENETICS",
+            "project_num": "5R01DK104339-03",
+            "project_serial_num": "DK104339",
+            "org_country": "UNITED STATES",
+            "award_type": "5",
+            "activity_code": "R01",
+            "award_amount": 356131,
+            "is_active": false,
+            "is_territory": false,
+            "project_num_split": {
+                "appl_type_code": "5",
+                "activity_code": "R01",
+                "ic_code": "DK",
+                "serial_num": "104339",
+                "support_year": "03",
+                "full_support_year": "03",
+                "suffix_code": ""
+            },
+            "principal_investigators": [
+                {
+                    "profile_id": 1920269,
+                    "first_name": "Sarah",
+                    "middle_name": "Anne",
+                    "last_name": "Tishkoff",
+                    "is_contact_pi": true,
+                    "full_name": "Sarah Anne Tishkoff",
+                    "title": null,
+                    "email": null
+                }
+            ],
+            "contact_pi_name": "TISHKOFF, SARAH ANNE",
+            "program_officers": [
+                {
+                    "first_name": "Padma",
+                    "middle_name": "",
+                    "last_name": "Maruvada",
+                    "full_name": "Padma  Maruvada",
+                    "email": null
+                }
+            ],
+            "agency_ic_admin": {
+                "code": "DK",
+                "abbreviation": "NIDDK",
+                "name": "National Institute of Diabetes and Digestive and Kidney Diseases"
+            },
+            "agency_ic_fundings": [
+                {
+                    "fy": 2017,
+                    "code": "DK",
+                    "name": "National Institute of Diabetes and Digestive and Kidney Diseases",
+                    "abbreviation": "NIDDK",
+                    "total_cost": 356131.0
+                }
+            ],
+            "cong_dist": "PA-03",
+            "spending_categories": [
+                140,
+                176,
+                276,
+                3641,
+                320,
+                3584,
+                536,
+                551,
+                701
+            ],
+            "project_start_date": "2014-12-01T05:00:00Z",
+            "project_end_date": "2018-11-30T05:00:00Z",
+            "organization_type": {
+                "name": "SCHOOLS OF MEDICINE",
+                "code": "10",
+                "is_other": false
+            },
+            "all_text": null,
+            "foa": "PAR13375",
+            "full_foa": "PAR-13-375",
+            "full_study_section": {
+                "irg_code": "ZRG1",
+                "sra_designator_code": "EMNR",
+                "sra_flex_code": "Q",
+                "group_code": "50",
+                "name": null,
+                "url": null,
+                "cmte_id": null,
+                "cluster_irg_code": null,
+                "properties": {}
+            },
+            "award_notice_date": "2016-12-16T05:00:00Z",
+            "is_new": false,
+            "mechanism_code_dc": "RP",
+            "core_project_num": "R01DK104339",
+            "terms": "Affect ; Africa ; agricultural ; Agriculture ; Bechuanaland ; Botswana ; cardiovascular disorder ; Cardiovascular Diseases ; circulatory system ; Heart Vascular ; Cardiovascular Organ System ; Cardiovascular Body System ; Cardiovascular ; Cardio-vascular ; Cardiovascular system ; Comparative Study ; type II DM ; type 2 DM ; maturity onset diabetes ; ketosis resistant diabetes ; adult onset diabetes ; Type II diabetes ; Type II Diabetes Mellitus ; Type 2 diabetes ; Type 2 Diabetes Mellitus ; T2DM ; T2D ; T2 DM ; Stable Diabetes Mellitus ; Slow-Onset Diabetes Mellitus ; Noninsulin Dependent Diabetes Mellitus ; Non-Insulin Dependent Diabetes ; NIDDM ; Maturity-Onset Diabetes Mellitus ; MODY ; Ketosis-Resistant Diabetes Mellitus ; Adult-Onset Diabetes Mellitus ; Non-Insulin-Dependent Diabetes Mellitus ; dietary ; Diet ; Disorder ; Disease ; Environment ; Ethiopia ; Food or Food Product ; Food ; Geography ; Health ; Modern Man ; Human ; Human Genetics ; Metabolic Diseases ; metabolism disorder ; Thesaurismosis ; Metabolic Disorder ; Metabolism ; Metabolic Processes ; Intermediary Metabolism ; Modernization ; nutrition ; Obesity ; obese population ; obese person ; obese people ; obese ; corpulentia ; corpulency ; corpulence ; adiposity ; Phenotype ; Plasma ; Reticuloendothelial System, Serum, Plasma ; Plasma Serum ; Blood Plasma ; Play ; Research ; Risk ; Role ; social role ; Mass Spectrum Analysis ; Mass Spectrum Analyses ; Mass Spectrum ; Mass Spectroscopy ; Mass Spectrometry ; Mass Photometry/Spectrum Analysis ; Tanzania ; Technology ; Testing ; Genetic Diversity ; Genetic Variation ; black American ; Black Populations ; Afroamerican ; Afro American ; African American ; Dataset ; Data Set ; Site ; Clinical ; Variation ; Variant ; insight ; Individual ; African ; Metabolic ; Genetic ; tool ; Frequencies ; Complex ; Source ; Pattern ; trait ; disorder risk ; disease risk ; Environmental Risk Factor ; environmental risk ; Environmental Factor ; Single Nucleotide Polymorphism ; Single Base Polymorphism ; Sampling ; Genomics ; Meta-Analysis ; Meta-Analyses ; Data Pooling ; Clinical Trial Overviews ; Metabolic Pathway ; metabolomics ; metabonomics ; metabolism measurement ; Data ; Indigenous ; Intake ; Macronutrients ; Macronutrients Nutrition ; nutritious ; Nutritional ; pathway ; Pathway interactions ; genomic variant ; allelic variant ; allele variant ; Gene variant ; genetic variant ; data integration ; Population ; public health relevance ; Biological Markers ; biomarker ; biologic marker ; bio-markers ; genome-wide ; genomewide ; genome scale ; exome ; exomes ; nutritional genomics ; nutrigenomics ; genomic variation ; cardiometabolic risk ; cardio-metabolic risk ; metabolic phenotype ; metabolic profile ; metabolome ; metabonome ; phenotypic data ; biomarker identification ; marker identification ; whole genome ; entire genome ; ethnic diversity ; ethnically diverse ; ",
+            "pref_terms": "Affect;Africa;African;African American;Agriculture;Biological Markers;Botswana;Cardiovascular Diseases;Cardiovascular system;Clinical;Comparative Study;Complex;Data;Data Set;Diet;Disease;Environment;Environmental Risk Factor;Ethiopia;Food;Frequencies;Genetic;Genetic Variation;Genomics;Geography;Health;Human;Human Genetics;Indigenous;Individual;Intake;Macronutrients Nutrition;Mass Spectrum Analysis;Meta-Analysis;Metabolic;Metabolic Diseases;Metabolic Pathway;Metabolism;Modernization;Non-Insulin-Dependent Diabetes Mellitus;Nutritional;Obesity;Pathway interactions;Pattern;Phenotype;Plasma;Play;Population;Research;Risk;Role;Sampling;Single Nucleotide Polymorphism;Site;Source;Tanzania;Technology;Testing;Variant;biomarker identification;cardiometabolic risk;data integration;disorder risk;ethnic diversity;exome;genetic variant;genome-wide;genomic variation;insight;metabolic phenotype;metabolic profile;metabolome;metabolomics;nutrition;nutritional genomics;phenotypic data;public health relevance;tool;trait;whole genome",
+            "abstract_text": "﻿   \nDESCRIPTION (provided by applicant): Most studies of human genomic variation, nutrition, and metabolic traits have focused on non- African populations. However, Africa is an important region to study as it is the site of origin of modern humans. Africa contains the greatest levels o human genetic variation and is the source of the worldwide range expansion of modern humans to regions outside of Africa. Several common complex diseases of metabolic origin, such as obesity, type 2 diabetes and certain cardiovascular diseases occur at higher frequency in African Americans, and are on the rise in urban centers in Africa. It has been postulated that this\nis due to genetic variants adaptive for past environments with intermittent access to food but maladaptive in nutritionally replete \"Westernized\" environments. Metabolomics technology has begun to provide insight into metabolic processes and can be used for biomarker identification for disease risk and provide insight into metabolic pathways associated with risk. Given the intimate relationship between nutrition and metabolism and subsequent disease risk, metabolomics provides a unique and powerful tool in nutritional research. In this proposal, we will exploit metabolomic profiling to interrogate extant plasma from a unique set of ethnically diverse, well phenotyped indigenous African populations who practice different subsistence patterns (agriculture, pastoralism, agro- pastoralism, and hunting-gathering) who vary markedly in markers of cardiometabolic risk. We will perform untargeted metabolomics profiling in a sample of 365 individuals and will do targeted profiling of informative metabolites in a sample of 1500 ethnically diverse Africans to identify differences in metabolites and metabolic pathways that correlate with diet and anthropometric and cardiovascular phenotypes associated with disease risk. We will integrate these data with a large genome-wide Single Nucleotide Polymorphism (SNP) and whole genome sequence dataset collected in the same individuals to gain insight into how genetic, nutritional and other environmental factors contribute to variation in cardiometabolic risk traits in ethnically diverse African populations.",
+            "project_title": "Integrative nutrigenomic and metabolomic analyses of Africans with variable diets",
+            "phr_text": "PUBLIC HEALTH RELEVANCE: We will perform untargeted and targeted metabolomic profiling in a sample of 1500 ethnically diverse Africans to identify differences in metabolites an metabolic pathways that correlate with diet and anthropometric and cardiovascular phenotypes associated with disease risk. We will integrate these data with a large genomic dataset collected in the same individuals to gain insight into how genetic, nutritional and other environmental factors contribute to variation in cardiometabolic risk traits in ethnically diverse African populations.",
+            "spending_categories_desc": "Cardiovascular; Clinical Research; Genetics; Health Disparities; Human Genome; Minority Health; Nutrition; Obesity; Prevention",
+            "awd_doc_num": "RDK104339A",
+            "init_encumbrance_date": "2016-12-16T05:00:00Z",
+            "can_task": [
+                "2017.100"
+            ],
+            "special_topic_code": null,
+            "agency_code": "NIH",
+            "covid_response": null
+        },
+        {
+            "appl_id": 8974405,
+            "subproject_id": null,
+            "fiscal_year": 2016,
+            "org_name": "UNIVERSITY OF PENNSYLVANIA",
+            "org_city": "PHILADELPHIA",
+            "org_state": "PA",
+            "org_state_name": null,
+            "dept_type": "GENETICS",
+            "project_num": "5R01DK104339-02",
+            "project_serial_num": "DK104339",
+            "org_country": "UNITED STATES",
+            "award_type": "5",
+            "activity_code": "R01",
+            "award_amount": 355956,
+            "is_active": false,
+            "is_territory": false,
+            "project_num_split": {
+                "appl_type_code": "5",
+                "activity_code": "R01",
+                "ic_code": "DK",
+                "serial_num": "104339",
+                "support_year": "02",
+                "full_support_year": "02",
+                "suffix_code": ""
+            },
+            "principal_investigators": [
+                {
+                    "profile_id": 1920269,
+                    "first_name": "Sarah",
+                    "middle_name": "Anne",
+                    "last_name": "Tishkoff",
+                    "is_contact_pi": true,
+                    "full_name": "Sarah Anne Tishkoff",
+                    "title": null,
+                    "email": null
+                }
+            ],
+            "contact_pi_name": "TISHKOFF, SARAH ANNE",
+            "program_officers": [
+                {
+                    "first_name": "Padma",
+                    "middle_name": "",
+                    "last_name": "Maruvada",
+                    "full_name": "Padma  Maruvada",
+                    "email": null
+                }
+            ],
+            "agency_ic_admin": {
+                "code": "DK",
+                "abbreviation": "NIDDK",
+                "name": "National Institute of Diabetes and Digestive and Kidney Diseases"
+            },
+            "agency_ic_fundings": [
+                {
+                    "fy": 2016,
+                    "code": "DK",
+                    "name": "National Institute of Diabetes and Digestive and Kidney Diseases",
+                    "abbreviation": "NIDDK",
+                    "total_cost": 355956.0
+                }
+            ],
+            "cong_dist": "PA-03",
+            "spending_categories": [
+                108,
+                140,
+                176,
+                276,
+                320,
+                536,
+                551,
+                701
+            ],
+            "project_start_date": "2014-12-01T05:00:00Z",
+            "project_end_date": "2018-11-30T05:00:00Z",
+            "organization_type": {
+                "name": "SCHOOLS OF MEDICINE",
+                "code": "10",
+                "is_other": false
+            },
+            "all_text": null,
+            "foa": "PAR13375",
+            "full_foa": "PAR-13-375",
+            "full_study_section": {
+                "irg_code": "ZRG1",
+                "sra_designator_code": "EMNR",
+                "sra_flex_code": "Q",
+                "group_code": "50",
+                "name": null,
+                "url": null,
+                "cmte_id": null,
+                "cluster_irg_code": null,
+                "properties": {}
+            },
+            "award_notice_date": "2015-11-23T05:00:00Z",
+            "is_new": false,
+            "mechanism_code_dc": "RP",
+            "core_project_num": "R01DK104339",
+            "terms": "Affect ; Africa ; agricultural ; Agriculture ; Bechuanaland ; Botswana ; cardiovascular disorder ; Cardiovascular Diseases ; circulatory system ; Heart Vascular ; Cardiovascular Organ System ; Cardiovascular Body System ; Cardiovascular ; Cardio-vascular ; Cardiovascular system ; Comparative Study ; type II DM ; type 2 DM ; maturity onset diabetes ; ketosis resistant diabetes ; adult onset diabetes ; Type II diabetes ; Type II Diabetes Mellitus ; Type 2 diabetes ; Type 2 Diabetes Mellitus ; T2DM ; T2D ; T2 DM ; Stable Diabetes Mellitus ; Slow-Onset Diabetes Mellitus ; Noninsulin Dependent Diabetes Mellitus ; Non-Insulin Dependent Diabetes ; NIDDM ; Maturity-Onset Diabetes Mellitus ; MODY ; Ketosis-Resistant Diabetes Mellitus ; Adult-Onset Diabetes Mellitus ; Non-Insulin-Dependent Diabetes Mellitus ; dietary ; Diet ; Disorder ; Disease ; Environment ; Ethiopia ; Food or Food Product ; Food ; Geography ; Health ; Modern Man ; Human ; Human Genetics ; metabolism disorder ; Thesaurismosis ; Metabolic Disorder ; Metabolic Diseases ; Metabolic Processes ; Intermediary Metabolism ; Metabolism ; nutrition ; obese population ; obese person ; obese people ; obese ; corpulentia ; corpulency ; corpulence ; adiposity ; Obesity ; Phenotype ; Reticuloendothelial System, Serum, Plasma ; Plasma Serum ; Blood Plasma ; Plasma ; Play ; Research ; Risk ; social role ; Role ; Mass Spectrum Analyses ; Mass Spectrum ; Mass Spectroscopy ; Mass Spectrometry ; Mass Photometry/Spectrum Analysis ; Mass Spectrum Analysis ; Tanzania ; Technology ; Testing ; Variation (Genetics) ; Genetic Variation ; Genetic Diversity ; African American ; black American ; Black Populations ; Afroamerican ; Afro American ; Data Set ; Dataset ; Site ; Clinical ; Variation ; Variant ; insight ; Individual ; African ; Metabolic ; Genetic ; tool ; Frequencies ; Complex ; Source ; Pattern ; trait ; disease risk ; disorder risk ; environmental risk ; Environmental Factor ; Environmental Risk Factor ; Single Base Polymorphism ; Single Nucleotide Polymorphism ; Sampling ; Genomics ; Meta-Analyses ; Data Pooling ; Clinical Trial Overviews ; Meta-Analysis ; Metabolic Pathway ; metabonomics ; metabolism measurement ; metabolomics ; genome sequencing ; Data ; Indigenous ; Intake ; Macronutrients ; Macronutrients Nutrition ; nutritious ; Nutritional ; pathway ; Pathway interactions ; nutritionally related genetics ; nutritional genetics ; nutrigenetics ; nutrition related genetics ; genomic variant ; allelic variant ; allele variant ; Gene variant ; genetic variant ; data integration ; Population ; Biological Markers ; biomarker ; biologic marker ; bio-markers ; genome-wide ; genomewide ; genome scale ; exome ; exomes ; nutritional genomics ; nutrigenomics ; genomic variation ; cardiometabolic risk ; cardio-metabolic risk ; metabolic profile ; metabolome ; metabonome ; phenotypic data ; biomarker identification ; marker identification ; whole genome ; entire genome ; ethnic diversity ; ethnically diverse ; ",
+            "pref_terms": "Affect;Africa;African;African American;Agriculture;Biological Markers;Botswana;Cardiovascular Diseases;Cardiovascular system;Clinical;Comparative Study;Complex;Data;Data Set;Diet;Disease;Environment;Environmental Risk Factor;Ethiopia;Food;Frequencies;Genetic;Genetic Variation;Genomics;Geography;Health;Human;Human Genetics;Indigenous;Individual;Intake;Macronutrients Nutrition;Mass Spectrum Analysis;Meta-Analysis;Metabolic;Metabolic Diseases;Metabolic Pathway;Metabolism;Non-Insulin-Dependent Diabetes Mellitus;Nutritional;Obesity;Pathway interactions;Pattern;Phenotype;Plasma;Play;Population;Research;Risk;Role;Sampling;Single Nucleotide Polymorphism;Site;Source;Tanzania;Technology;Testing;Variant;biomarker identification;cardiometabolic risk;data integration;disorder risk;ethnic diversity;exome;genetic variant;genome sequencing;genome-wide;genomic variation;insight;metabolic profile;metabolome;metabolomics;nutrition;nutrition related genetics;nutritional genomics;phenotypic data;tool;trait;whole genome",
+            "abstract_text": "﻿   \nDESCRIPTION (provided by applicant): Most studies of human genomic variation, nutrition, and metabolic traits have focused on non- African populations. However, Africa is an important region to study as it is the site of origin of modern humans. Africa contains the greatest levels o human genetic variation and is the source of the worldwide range expansion of modern humans to regions outside of Africa. Several common complex diseases of metabolic origin, such as obesity, type 2 diabetes and certain cardiovascular diseases occur at higher frequency in African Americans, and are on the rise in urban centers in Africa. It has been postulated that this\nis due to genetic variants adaptive for past environments with intermittent access to food but maladaptive in nutritionally replete \"Westernized\" environments. Metabolomics technology has begun to provide insight into metabolic processes and can be used for biomarker identification for disease risk and provide insight into metabolic pathways associated with risk. Given the intimate relationship between nutrition and metabolism and subsequent disease risk, metabolomics provides a unique and powerful tool in nutritional research. In this proposal, we will exploit metabolomic profiling to interrogate extant plasma from a unique set of ethnically diverse, well phenotyped indigenous African populations who practice different subsistence patterns (agriculture, pastoralism, agro- pastoralism, and hunting-gathering) who vary markedly in markers of cardiometabolic risk. We will perform untargeted metabolomics profiling in a sample of 365 individuals and will do targeted profiling of informative metabolites in a sample of 1500 ethnically diverse Africans to identify differences in metabolites and metabolic pathways that correlate with diet and anthropometric and cardiovascular phenotypes associated with disease risk. We will integrate these data with a large genome-wide Single Nucleotide Polymorphism (SNP) and whole genome sequence dataset collected in the same individuals to gain insight into how genetic, nutritional and other environmental factors contribute to variation in cardiometabolic risk traits in ethnically diverse African populations.",
+            "project_title": "Integrative nutrigenomic and metabolomic analyses of Africans with variable diets",
+            "phr_text": "PUBLIC HEALTH RELEVANCE: We will perform untargeted and targeted metabolomic profiling in a sample of 1500 ethnically diverse Africans to identify differences in metabolites an metabolic pathways that correlate with diet and anthropometric and cardiovascular phenotypes associated with disease risk. We will integrate these data with a large genomic dataset collected in the same individuals to gain insight into how genetic, nutritional and other environmental factors contribute to variation in cardiometabolic risk traits in ethnically diverse African populations.",
+            "spending_categories_desc": "Biotechnology; Cardiovascular; Clinical Research; Genetics; Human Genome; Nutrition; Obesity; Prevention",
+            "awd_doc_num": "RDK104339A",
+            "init_encumbrance_date": "2015-11-23T05:00:00Z",
+            "can_task": [
+                "2016.100"
+            ],
+            "special_topic_code": null,
+            "agency_code": "NIH",
+            "covid_response": null
+        },
+        {
+            "appl_id": 8825139,
+            "subproject_id": null,
+            "fiscal_year": 2015,
+            "org_name": "UNIVERSITY OF PENNSYLVANIA",
+            "org_city": "PHILADELPHIA",
+            "org_state": "PA",
+            "org_state_name": null,
+            "dept_type": "GENETICS",
+            "project_num": "1R01DK104339-01",
+            "project_serial_num": "DK104339",
+            "org_country": "UNITED STATES",
+            "award_type": "1",
+            "activity_code": "R01",
+            "award_amount": 369668,
+            "is_active": false,
+            "is_territory": false,
+            "project_num_split": {
+                "appl_type_code": "1",
+                "activity_code": "R01",
+                "ic_code": "DK",
+                "serial_num": "104339",
+                "support_year": "01",
+                "full_support_year": "01",
+                "suffix_code": ""
+            },
+            "principal_investigators": [
+                {
+                    "profile_id": 1920269,
+                    "first_name": "Sarah",
+                    "middle_name": "Anne",
+                    "last_name": "Tishkoff",
+                    "is_contact_pi": true,
+                    "full_name": "Sarah Anne Tishkoff",
+                    "title": null,
+                    "email": null
+                }
+            ],
+            "contact_pi_name": "TISHKOFF, SARAH ANNE",
+            "program_officers": [
+                {
+                    "first_name": "Padma",
+                    "middle_name": "",
+                    "last_name": "Maruvada",
+                    "full_name": "Padma  Maruvada",
+                    "email": null
+                }
+            ],
+            "agency_ic_admin": {
+                "code": "DK",
+                "abbreviation": "NIDDK",
+                "name": "National Institute of Diabetes and Digestive and Kidney Diseases"
+            },
+            "agency_ic_fundings": [
+                {
+                    "fy": 2015,
+                    "code": "DK",
+                    "name": "National Institute of Diabetes and Digestive and Kidney Diseases",
+                    "abbreviation": "NIDDK",
+                    "total_cost": 369668.0
+                }
+            ],
+            "cong_dist": "PA-03",
+            "spending_categories": [
+                108,
+                140,
+                176,
+                276,
+                320,
+                536,
+                551,
+                701
+            ],
+            "project_start_date": "2014-12-01T05:00:00Z",
+            "project_end_date": "2018-11-30T05:00:00Z",
+            "organization_type": {
+                "name": "SCHOOLS OF MEDICINE",
+                "code": "10",
+                "is_other": false
+            },
+            "all_text": null,
+            "foa": "PAR13375",
+            "full_foa": "PAR-13-375",
+            "full_study_section": {
+                "irg_code": "ZRG1",
+                "sra_designator_code": "EMNR",
+                "sra_flex_code": "Q",
+                "group_code": "50",
+                "name": null,
+                "url": null,
+                "cmte_id": null,
+                "cluster_irg_code": null,
+                "properties": {}
+            },
+            "award_notice_date": "2014-11-21T05:00:00Z",
+            "is_new": false,
+            "mechanism_code_dc": "RP",
+            "core_project_num": "R01DK104339",
+            "terms": "Affect ; Africa ; agricultural ; Agriculture ; Bechuanaland ; Botswana ; cardiovascular disorder ; Cardiovascular Diseases ; circulatory system ; Heart Vascular ; Cardiovascular system (all sites) ; Cardiovascular Organ System ; Cardiovascular Body System ; Cardiovascular ; Cardiovascular system ; Comparative Study ; type II DM ; type 2 DM ; maturity onset diabetes ; ketosis resistant diabetes ; adult onset diabetes ; Type II diabetes ; Type II Diabetes Mellitus ; Type 2 diabetes ; Type 2 Diabetes Mellitus ; T2DM ; T2D ; T2 DM ; Stable Diabetes Mellitus ; Slow-Onset Diabetes Mellitus ; Noninsulin Dependent Diabetes Mellitus ; Non-Insulin Dependent Diabetes ; NIDDM ; Maturity-Onset Diabetes Mellitus ; MODY ; Ketosis-Resistant Diabetes Mellitus ; Adult-Onset Diabetes Mellitus ; Non-Insulin-Dependent Diabetes Mellitus ; dietary ; Diet ; disease/disorder ; Disorder ; Disease ; Environment ; Ethiopia ; Food ; Geography ; Health ; Modern Man ; Man (Taxonomy) ; Human ; Human Genetics ; metabolism disorder ; Thesaurismosis ; Metabolic Disorder ; Metabolic Diseases ; Metabolic Processes ; Intermediary Metabolism ; Metabolism ; Nutritional Science ; nutrition ; obese population ; obese person ; obese people ; obese ; corpulentia ; corpulency ; corpulence ; adiposity ; Obesity ; Phenotype ; Reticuloendothelial System, Serum, Plasma ; Plasma Serum ; Blood Plasma ; Plasma ; Play ; Research ; Risk ; social role ; Role ; Mass Spectrum Analyses ; Mass Spectrum ; Mass Spectroscopy ; Mass Spectrometry ; Mass Photometry/Spectrum Analysis ; Mass Spectrum Analysis ; Tanzania ; Technology ; Testing ; Genetic Variation ; Genetic Diversity ; Variation (Genetics) ; black American ; Black or African American ; Black Populations ; Afroamerican ; Afro American ; African American ; Dataset ; Data Set ; Site ; Clinical ; Variation ; Variant ; insight ; Individual ; African ; Metabolic ; Genetic ; tool ; Frequency ; Frequencies (time pattern) ; Complex ; Source ; Pattern ; trait ; disease risk ; disorder risk ; environmental risk ; Environmental Factor ; Environmental Risk Factor ; Single Base Polymorphism ; Single Nucleotide Polymorphism ; Sampling ; Genomics ; Meta-Analyses ; Data Pooling ; Clinical Trial Overviews ; Meta-Analysis ; Metabolic Pathway ; metabolism measurement ; metabolomics ; genome sequencing ; Data ; Indigenous ; Intake ; Macronutrients ; Macronutrients Nutrition ; nutritious ; Nutritional ; pathway ; Pathway interactions ; nutritionally related genetics ; nutritional genetics ; nutrigenetics ; nutrition related genetics ; genomic variant ; allelic variant ; Gene variant ; genetic variant ; data integration ; Population ; public health relevance ; biomarker ; biologic marker ; Biological Markers ; genomewide ; genome-wide ; exomes ; exome ; nutrigenomics ; nutritional genomics ; ",
+            "pref_terms": "Affect;Africa;African;African American;Agriculture;Biological Markers;Botswana;Cardiovascular Diseases;Cardiovascular system;Clinical;Comparative Study;Complex;Data;Data Set;Diet;Disease;Environment;Environmental Risk Factor;Ethiopia;Food;Frequencies;Genetic;Genetic Variation;Genomics;Geography;Health;Human;Human Genetics;Indigenous;Individual;Intake;Macronutrients Nutrition;Mass Spectrum Analysis;Meta-Analysis;Metabolic;Metabolic Diseases;Metabolic Pathway;Metabolism;Non-Insulin-Dependent Diabetes Mellitus;Nutritional;Obesity;Pathway interactions;Pattern;Phenotype;Plasma;Play;Population;Research;Risk;Role;Sampling;Single Nucleotide Polymorphism;Site;Source;Tanzania;Technology;Testing;Variant;cardiometabolic risk;data integration;disorder risk;exome;genetic variant;genome sequencing;genome-wide;genomic variation;insight;metabolomics;nutrition;nutrition related genetics;nutritional genomics;public health relevance;tool;trait",
+            "abstract_text": "﻿   \r\nDESCRIPTION (provided by applicant): Most studies of human genomic variation, nutrition, and metabolic traits have focused on non- African populations. However, Africa is an important region to study as it is the site of origin of modern humans. Africa contains the greatest levels o human genetic variation and is the source of the worldwide range expansion of modern humans to regions outside of Africa. Several common complex diseases of metabolic origin, such as obesity, type 2 diabetes and certain cardiovascular diseases occur at higher frequency in African Americans, and are on the rise in urban centers in Africa. It has been postulated that this\r\nis due to genetic variants adaptive for past environments with intermittent access to food but maladaptive in nutritionally replete \"Westernized\" environments. Metabolomics technology has begun to provide insight into metabolic processes and can be used for biomarker identification for disease risk and provide insight into metabolic pathways associated with risk. Given the intimate relationship between nutrition and metabolism and subsequent disease risk, metabolomics provides a unique and powerful tool in nutritional research. In this proposal, we will exploit metabolomic profiling to interrogate extant plasma from a unique set of ethnically diverse, well phenotyped indigenous African populations who practice different subsistence patterns (agriculture, pastoralism, agro- pastoralism, and hunting-gathering) who vary markedly in markers of cardiometabolic risk. We will perform untargeted metabolomics profiling in a sample of 365 individuals and will do targeted profiling of informative metabolites in a sample of 1500 ethnically diverse Africans to identify differences in metabolites and metabolic pathways that correlate with diet and anthropometric and cardiovascular phenotypes associated with disease risk. We will integrate these data with a large genome-wide Single Nucleotide Polymorphism (SNP) and whole genome sequence dataset collected in the same individuals to gain insight into how genetic, nutritional and other environmental factors contribute to variation in cardiometabolic risk traits in ethnically diverse African populations.   \r\n   \r\n",
+            "project_title": "Integrative nutrigenomic and metabolomic analyses of Africans with variable diets",
+            "phr_text": "PUBLIC HEALTH RELEVANCE: We will perform untargeted and targeted metabolomic profiling in a sample of 1500 ethnically diverse Africans to identify differences in metabolites an metabolic pathways that correlate with diet and anthropometric and cardiovascular phenotypes associated with disease risk. We will integrate these data with a large genomic dataset collected in the same individuals to gain insight into how genetic, nutritional and other environmental factors contribute to variation in cardiometabolic risk traits in ethnically diverse African populations.   \r\n      \r\n\r\n",
+            "spending_categories_desc": "Biotechnology; Cardiovascular; Clinical Research; Genetics; Human Genome; Nutrition; Obesity; Prevention",
+            "awd_doc_num": "RDK104339A",
+            "init_encumbrance_date": "2014-11-21T05:00:00Z",
+            "can_task": [
+                "2015.100"
+            ],
+            "special_topic_code": null,
+            "agency_code": "NIH",
+            "covid_response": null
+        }
+    ]
+}
