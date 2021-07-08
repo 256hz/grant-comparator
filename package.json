@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "axios": "^0.21.1",
-    "node-html-parser": "^4.0.0"
+    "node-html-parser": "^4.0.0",
+    "prompt": "^1.1.0"
   },
   "scripts": {
-    "start": "source .env && node index.js"
+    "start": "node index.js"
   }
 }

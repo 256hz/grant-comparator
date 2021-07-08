@@ -1,22 +1,47 @@
 const axios = require('axios');
 const { parse } = require('node-html-parser');
+const prompt = require('prompt');
+
+const onError = (message) => {
+  console.log(message);
+  process.exit(1);
+}
+
+const getInputs = () => new Promise((res, rej) => {
+  const cookieDefault = prompt.history('cookie')?.value;
+  const cookieDescription = cookieDefault
+    ? ' cookie (hit enter to use the last value)'
+    : ' cookie (will be hidden; see readme for instructions)';
+
+  prompt.message = 'enter';
+  prompt.delimiter = ':';
+
+  prompt.start();
+
+  prompt.get([
+    { name: 'grantId', description: ' grant ID (6 numbers)' },
+    { name: 'cookie', description: cookieDescription, default: cookieDefault || '', hidden: true },
+  ], (err, result) => {
+    if (err) rej(err);
+
+    res({
+      grantId: result.grantId,
+      cookie: result.cookie,
+    })
+  })
+})
 
 const run = async () => {
-  const { COOKIE, GRANT_ID } = process.env;
+  if (prompt.history('cookie')?.value) console.log('\nenter another grant ID (or hit ctrl-c to exit)\n');
 
-  if (!COOKIE) {
-    console.error('No cookie found, see readme for more information');
-    process.exit(1);
-  }
+  const { grantId, cookie } = await getInputs();
 
-  if (!GRANT_ID) {
-    console.error('No grant ID found, see readme for more information')
-    process.exit(1);
-  }
+  if (!cookie) onError('No cookie entered, see readme for instructions');
+  if (!grantId) onError('No grant ID found, see readme for instructions');
 
   const config = {
     headers: {
-      Cookie: COOKIE,
+      Cookie: cookie,
       Host: 'gdb.pop.upenn.edu',
       Origin: 'https://gdb.pop.upenn.edu',
       Referer: 'https://gdb.pop.upenn.edu/grants_list.php',
@@ -26,7 +51,7 @@ const run = async () => {
   }
 
   const searchParams = {
-    post_grant_grant_number: GRANT_ID,
+    post_grant_grant_number: grantId,
     post_HidPerPage: 99,
     post_Submit: 'Y'
   };
@@ -35,10 +60,7 @@ const run = async () => {
   const grantSearchResponse = await axios.post('https://gdb.pop.upenn.edu/grants_list.php', { params: searchParams }, config);
   const parsedSearchResponse = parse(grantSearchResponse.data);
 
-  if (parsedSearchResponse.querySelector('#user_name__td')) {
-    console.error('bad cookie, see readme for steps to get a new one');
-    process.exit(1);
-  }
+  if (parsedSearchResponse.querySelector('#user_name__td')) onError('bad cookie, see readme for steps to get a new one');
 
   const searchRows = [
     ...parsedSearchResponse.querySelectorAll('tr.grid'),
@@ -49,7 +71,11 @@ const run = async () => {
   const revisionNumbers = grantIds.map(id => parseInt(id.split('-')[1].replace(/\D/g, '')));
   const maxId = Math.max(...revisionNumbers);
   const rowIndex = revisionNumbers.indexOf(maxId);
-  const grantLink = searchRows[rowIndex].childNodes[0].childNodes[0];
+  const grantLink = searchRows[rowIndex]?.childNodes[0].childNodes[0];
+
+  debugger;
+
+  if (!grantLink) onError('grant link not found')
   
   const grantSerial = grantLink
     .getAttribute('href')
@@ -89,7 +115,7 @@ const run = async () => {
     'https://api.reporter.nih.gov/v1/projects/Search',
     {
       "criteria": {
-        "project_nums": `??????${GRANT_ID}*`
+        "project_nums": `??????${grantId}*`
       }
     }
   );
@@ -98,6 +124,12 @@ const run = async () => {
   const [ mostRecentRecord ] = govtResponse.data.results
     .filter(result => result.agency_ic_admin.abbreviation === penn.institute)
     .sort((a, b) => new Date(b.project_end_date).getTime() - new Date(a.project_end_date).getTime());
+
+  if (!mostRecentRecord?.appl_id) {
+    console.error('\ngrant with that ID not found on NIH');
+    run();
+    return;
+  }
 
   // get the project's details (for dates) and funding details (for costs)
   const govFundingResponse = await axios.get(`https://reporter.nih.gov/services/Projects/ProjectFundingDetail?projectId=${mostRecentRecord.appl_id}`);
@@ -153,12 +185,12 @@ const run = async () => {
     }
   })
 
-  console.log('\n')
+  console.log('')
   console.log(`NIH Grant ID: ${govt.grantId}`);
   console.log(`Title: ${penn.grantTitle}`);
-  console.log('\n')
+  console.log('')
   console.log(`${diffs.length} changes found:`);
-  console.log('\n')
+  console.log('')
 
   diffs.forEach(key => {
     console.log(`${key}: ${
@@ -167,6 +199,8 @@ const run = async () => {
         : JSON.stringify(govt[key])
       }`);
   })
+
+  run();
 }
 
 run();

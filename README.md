@@ -4,18 +4,11 @@
 
 - Run `npm install`
 
-- Make a file called '.env' in this folder and copy this into it:
-
-```env
-  export COOKIE=""
-  export GRANT_ID=
-```
-
-These will be loaded into the environment by the start script.
-
-- For the cookie, log in normally.  Open the Web Developer Tools (⌥⌘i) and go to the Network tab.  Now click on any link (like Search), open the Headers tab, and grab the Cookie value out of the request headers.
+You'll need two things: a grant ID and a cookie.
 
 - For the grant ID, use the six-digit number only (ex: 104339).
+
+- For the cookie, log in normally.  Open the Web Developer Tools (⌥⌘I) and go to the Network tab.  Now click on any link (like Search), open the Headers tab, and grab the Cookie value out of the request headers.
 
 - Now run `npm start`.  This loads the environment variables and runs the program.  If all goes well, you should see something like this:
 
@@ -30,8 +23,4 @@ indirectCost: 90821
 currentStartDate: 12/1/2017
 ```
 
-## Notes
-
-The program takes the following steps:
-
-1. Search the school's database for the most recent
+You'll then get the option to enter another grant ID or exit.  When prompted for the cookie again, you can hit enter to re-use the last one.
